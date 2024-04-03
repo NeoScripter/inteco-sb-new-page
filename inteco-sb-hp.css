@@ -4,12 +4,12 @@
 }
 
 :root {
-    --header-section-font-size: 19.85px;
-    --header-links-font-size: 16px;
     --header-links-gr: linear-gradient(to right bottom, #025DF8 30%, #032C72 70%);
+    --linear-gr-str: linear-gradient(to right, rgba(2, 93, 248, 1)   30%, rgba(3, 44, 114, 1) 70%);
     --header-links-color: #025DF8;
     --main-line-height: 60px;
     --main-letter-spacing: 5%;
+    --header-large-fs: clamp(28px, 5vw, 55px);
     --header-fs: clamp(28px, 3vw, 45px);
     --medium-large-fs: clamp(23px, 2.5vw, 40px);
     --regular-fs: clamp(18px, 2vw, 35px);
@@ -274,8 +274,77 @@ img {
     line-height: 1;
 }
 
-.sale-grid-group > * {
-    
+/****** Projects section *******/
+
+.projects-outer-wrapper {
+    background: var(--linear-gr-str);
+    padding-block: clamp(2.5rem, 10vw, 5rem);
+}
+
+.projects-inner-wrapper {
+    text-align: center;
+    color: #fff;
+}
+
+.projects-inner-wrapper h2 {
+    font-size: var(--header-large-fs);
+}
+
+.project-par-wrapper {
+    font-size: var(--regular-fs);
+    margin-block: clamp(1.5em, 5vw, 3em);
+    width: 70%;
+    margin-inline: auto;
+}
+
+.projects-grid-group {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.2em;
+}
+
+.project-image {
+    position: relative;
+    aspect-ratio: 1 / 1;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    display: flex;
+    align-items: flex-end;
+    cursor: pointer;
+}
+
+.project-image:hover {
+    background-image: linear-gradient(to right, rgba(3, 44, 114, 0.6) 0%, rgba(3, 44, 114, 0.6) 100%);
+}
+
+.project-img-overlay {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(3, 44, 114, 0.6);
+}
+
+.gallery-img-text {
+    padding: 1em 3em;
+    font-size: 0.8vw;
+    background-color: rgba(3, 44, 114, 0.6);
+    border-radius: 0 0 15px 15px;
+}
+
+.project-image.first {
+    background-image: url(assets/images/gallery1.png);
+}
+
+.project-image.second {
+    background-image: url(assets/images/gallery2.png);
+}
+
+.project-image.third {
+    background-image: url(assets/images/gallery3.png);
+}
+
+.project-image.fourth {
+    background-image: url(assets/images/gallery4.png);
 }
 
 @media screen and (max-width: 1300px) {
