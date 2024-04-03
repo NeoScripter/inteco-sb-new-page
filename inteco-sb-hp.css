@@ -175,7 +175,7 @@ img {
     height: 90%;
     aspect-ratio: 3/4;
     position: relative;
-    bottom: -5%;
+    bottom: -10%;
 }
 
 .video-1, .video-2 {
@@ -308,20 +308,30 @@ img {
     aspect-ratio: 1 / 1;
     background-size: cover;
     background-position: center;
-    border-radius: 8px;
+    border-radius: 15px;
     display: flex;
     align-items: flex-end;
     cursor: pointer;
-}
-
-.project-image:hover {
-    background-image: linear-gradient(to right, rgba(3, 44, 114, 0.6) 0%, rgba(3, 44, 114, 0.6) 100%);
+    border: 1.5px solid white;
 }
 
 .project-img-overlay {
+    position: absolute;
     height: 100%;
     width: 100%;
     background-color: rgba(3, 44, 114, 0.6);
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.project-img-overlay:hover {
+    opacity: 1;
+}
+
+.loupe {
+    width: 20%;
+    margin-top: 25%;
 }
 
 .gallery-img-text {
@@ -363,6 +373,9 @@ img {
         top: 64%;
         bottom: 11%;
         left: 20.5%;
+    }
+    .bnr-img-holder {
+        bottom: -5%;
     }
 }
 
