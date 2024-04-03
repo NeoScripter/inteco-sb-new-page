@@ -11,7 +11,7 @@
     --main-line-height: 60px;
     --main-letter-spacing: 5%;
 
-    --phone-height: 460px;
+    --phone-height: 760px;
 }
 
 * {
@@ -158,28 +158,46 @@ img {
 .bnr-img-holder {
     height: 90%;
     aspect-ratio: 3/4;
-    position: absolute;
-    bottom: 10px;
-    right: 0;
+    position: relative;
+    bottom: -10%;
 }
 
 .video-1, .video-2 {
     position: absolute;
-    width: 183px;
+    width: 277px;
+    left: 19%;
     background-color: blueviolet;
     border-radius: 5px;
 }
 
 .video-1 {
-    top: 32%;
-    bottom: 43%;
-    left: 20.5%;
+    top: 29%;
+    bottom: 46%;
+
 }
 
 .video-2 {
-    top: 64%;
-    bottom: 11%;
-    left: 20.5%;
+    top: 59%;
+    bottom: 17%;
+}
+
+@media screen and (max-width: 1300px) {
+    :root { 
+        --phone-height: 560px;
+    }
+    .video-1 {
+        width: 222px;
+        top: 32%;
+        bottom: 43%;
+        left: 20.5%;
+    }
+    
+    .video-2 {
+        width: 222px;
+        top: 64%;
+        bottom: 11%;
+        left: 20.5%;
+    }
 }
 
 @media screen and (max-width: 900px) {
