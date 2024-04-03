@@ -1,0 +1,189 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url(assets/fonts/Montserrat-VariableFont_wght.ttf);
+}
+
+:root {
+    --header-section-font-size: 19.85px;
+    --header-links-font-size: 16px;
+    --header-links-gr: linear-gradient(to right, (#032C72, 50%), (#025DF8, 100%));
+    --header-links-color: #025DF8;
+    --main-line-height: 60px;
+    --main-letter-spacing: 5%;
+
+    --phone-height: 460px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat';
+    font-size: 1rem;
+    letter-spacing: 5%;
+}
+
+img {
+    max-width: 100%;
+}
+
+.outer-wrapper { 
+    min-height: 100vh;
+}
+
+.centering > * {
+    width: 75%;
+    margin-inline: auto;
+}
+
+/******* Header *******/
+
+.logo {
+    width: 18%;
+}
+
+.nav-wrapper {
+    display: flex;
+    align-items: center;
+    aspect-ratio: 6/1;
+    justify-content: space-evenly;
+    gap: 2em;
+}
+
+.primary-nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 2em;
+}
+
+.primary-nav li {
+    list-style: none;
+    text-transform: uppercase;
+    font-size: clamp(12px, 2vw, 19px);
+}
+
+.links-wrapper {
+    width: 28%;
+}
+
+/****** bnr *******/
+
+.bnr-outer-wrapper {
+    background-image: url(assets/images/banner-bg.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.bnr-wrapper {
+    display: flex;
+    gap: 2em;
+    height: var(--phone-height);
+    position: relative;
+    letter-spacing: 1px;
+}
+
+.bnr-left {
+    width: 60%;
+    padding-block: clamp(1em, 5vw, 2em);
+    color: #fff;
+}
+.bnr-left p {
+    margin-block: 1em;
+}
+
+.bnr-first-pr {
+    font-weight: 800;
+}
+
+.bnr-subgroup p {
+    background-image: url(assets/images/plus-mark.png);
+    background-repeat: no-repeat;
+    background-position: 0 50%;
+    padding-left: 1.2rem;
+}
+
+.bnr-right {
+    width: 40%;
+}
+
+.btn-subgroup-outer-wrapper {
+    display: grid;
+    gap: 1em;
+    justify-content: left;
+}
+
+.btn-subgroup-inner-wrapper {
+    display: flex;
+    gap: 1em;
+    justify-content: flex-start;
+}
+
+.bnr-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    border: none;
+    height: 38px;
+    font-weight: 800;
+    border-radius: 10px;
+}
+
+.bnr-btn.price {
+    width: 140px
+}
+
+.bnr-btn.call {
+    width: 197px;
+    color: #fff;
+    background-color: #025DF8;
+}
+
+.bnr-btn.phone {
+    font-weight: 500;
+    width: 175px;
+}
+
+.bnr-header {
+    font-size: clamp(28px, 3vw, 45px);
+}
+
+.bnr-subgroup {
+    margin-bottom: 2rem;
+}
+
+.bnr-img-holder {
+    height: 90%;
+    aspect-ratio: 3/4;
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+}
+
+.video-1, .video-2 {
+    position: absolute;
+    width: 183px;
+    background-color: blueviolet;
+    border-radius: 5px;
+}
+
+.video-1 {
+    top: 32%;
+    bottom: 43%;
+    left: 20.5%;
+}
+
+.video-2 {
+    top: 64%;
+    bottom: 11%;
+    left: 20.5%;
+}
+
+@media screen and (max-width: 900px) {
+    .centering > * {
+        width: 90%;
+    }
+}
