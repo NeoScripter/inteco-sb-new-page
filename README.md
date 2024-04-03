@@ -1,1 +1,1 @@
-# inteco-sb-new-page
+[# inteco-sb-new-page](https://neoscripter.github.io/inteco-sb-new-page/)

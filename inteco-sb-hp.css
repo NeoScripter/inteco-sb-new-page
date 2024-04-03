@@ -16,7 +16,7 @@
     --small-fs: clamp(15px, 1.5vw, 31px);
     --fine-print-fs: clamp(12px, 1vw, 28px);
 
-    --phone-height: 760px;
+    --phone-height: 800px;
 }
 
 * {
@@ -175,26 +175,26 @@ img {
     height: 90%;
     aspect-ratio: 3/4;
     position: relative;
-    bottom: -10%;
+    bottom: -15%;
 }
 
 .video-1, .video-2 {
     position: absolute;
     width: 277px;
-    left: 19%;
+    left: 18%;
     background-color: #fff;
     border-radius: 5px;
 }
 
 .video-1 {
-    top: 29%;
-    bottom: 46%;
+    top: 28%;
+    bottom: 50%;
 
 }
 
 .video-2 {
-    top: 59%;
-    bottom: 17%;
+    top: 56%;
+    bottom: 21%;
 }
 
 /****** Sale section *******/
@@ -203,6 +203,7 @@ img {
     margin-block: clamp(2.5rem, 10vw, 5rem);
     display: grid;
     grid-template-columns: 2fr 1fr;
+    gap: 3em;
 }
 
 .ads_image {
@@ -293,7 +294,7 @@ img {
 .project-par-wrapper {
     font-size: var(--regular-fs);
     margin-block: clamp(1.5em, 5vw, 3em);
-    width: 70%;
+    width: 80%;
     margin-inline: auto;
 }
 
@@ -359,17 +360,17 @@ img {
 
 @media screen and (max-width: 1300px) {
     :root { 
-        --phone-height: 560px;
+        --phone-height: 600px;
     }
     .video-1 {
-        width: 222px;
+        width: 237px;
         top: 32%;
         bottom: 43%;
         left: 20.5%;
     }
     
     .video-2 {
-        width: 222px;
+        width: 237px;
         top: 64%;
         bottom: 11%;
         left: 20.5%;
