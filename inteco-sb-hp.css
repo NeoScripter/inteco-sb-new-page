@@ -175,7 +175,7 @@ img {
     height: 90%;
     aspect-ratio: 3/4;
     position: relative;
-    bottom: -10%;
+    bottom: -5%;
 }
 
 .video-1, .video-2 {
@@ -200,7 +200,7 @@ img {
 /****** Sale section *******/
 
 .sale-grid-group {
-    margin-block: clamp(1.5rem, 7vw, 3rem);
+    margin-block: clamp(2.5rem, 10vw, 5rem);
     display: grid;
     grid-template-columns: 2fr 1fr;
 }
@@ -211,7 +211,10 @@ img {
 
 .right-subgroup-content {
     text-align: center;
-    font-size: var(--regular-fs);
+    font-size: var(--small-fs);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .grid-group-left {
@@ -261,6 +264,7 @@ img {
 }
 
 .right-subgroup-fineprint {
+    margin-top: 4em;
     position: relative;
     width: 110%;
     right: 5%;
