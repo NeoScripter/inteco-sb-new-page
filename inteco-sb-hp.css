@@ -83,6 +83,7 @@ img {
     height: var(--phone-height);
     position: relative;
     letter-spacing: 1px;
+    font-size: clamp(18px, 2vw, 35px);
 }
 
 .bnr-left {
@@ -102,7 +103,8 @@ img {
     background-image: url(assets/images/plus-mark.png);
     background-repeat: no-repeat;
     background-position: 0 50%;
-    padding-left: 1.2rem;
+    padding-left: 1.2em;
+    background-size: 1em;
 }
 
 .bnr-right {
@@ -127,24 +129,25 @@ img {
     align-items: center;
     text-transform: uppercase;
     border: none;
-    height: 38px;
+    height: 2.2em;
     font-weight: 800;
     border-radius: 10px;
+    font-size: clamp(18px, 2vw, 30px);
 }
 
 .bnr-btn.price {
-    width: 140px
+    width: 9em;
 }
 
 .bnr-btn.call {
-    width: 197px;
+    width: 13em;
     color: #fff;
     background-color: #025DF8;
 }
 
 .bnr-btn.phone {
     font-weight: 500;
-    width: 175px;
+    width: 11em;
 }
 
 .bnr-header {
@@ -152,7 +155,7 @@ img {
 }
 
 .bnr-subgroup {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5em;
 }
 
 .bnr-img-holder {
