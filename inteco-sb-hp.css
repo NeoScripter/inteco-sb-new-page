@@ -6,10 +6,15 @@
 :root {
     --header-section-font-size: 19.85px;
     --header-links-font-size: 16px;
-    --header-links-gr: linear-gradient(to right, (#032C72, 50%), (#025DF8, 100%));
+    --header-links-gr: linear-gradient(to right bottom, #025DF8 30%, #032C72 70%);
     --header-links-color: #025DF8;
     --main-line-height: 60px;
     --main-letter-spacing: 5%;
+    --header-fs: clamp(28px, 3vw, 45px);
+    --medium-large-fs: clamp(23px, 2.5vw, 40px);
+    --regular-fs: clamp(18px, 2vw, 35px);
+    --small-fs: clamp(15px, 1.5vw, 31px);
+    --fine-print-fs: clamp(12px, 1vw, 28px);
 
     --phone-height: 760px;
 }
@@ -24,6 +29,14 @@ body {
     font-family: 'Montserrat';
     font-size: 1rem;
     letter-spacing: 5%;
+}
+
+button {
+    font-family: 'Montserrat';
+}
+
+p {
+    margin-block: 0.3em;
 }
 
 img {
@@ -69,7 +82,7 @@ img {
     width: 28%;
 }
 
-/****** bnr *******/
+/****** Banner section *******/
 
 .bnr-outer-wrapper {
     background-image: url(assets/images/banner-bg.png);
@@ -169,7 +182,7 @@ img {
     position: absolute;
     width: 277px;
     left: 19%;
-    background-color: blueviolet;
+    background-color: #fff;
     border-radius: 5px;
 }
 
@@ -182,6 +195,83 @@ img {
 .video-2 {
     top: 59%;
     bottom: 17%;
+}
+
+/****** Sale section *******/
+
+.sale-grid-group {
+    margin-block: clamp(1.5rem, 7vw, 3rem);
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.ads_image {
+    width: 100%;
+}
+
+.right-subgroup-content {
+    text-align: center;
+    font-size: var(--regular-fs);
+}
+
+.grid-group-left {
+    position: relative;
+}
+
+.course-logo {
+    position: absolute;
+    width: 20%;
+    right: 3%;
+    top: 3%;
+}
+
+#video-play-button {
+    position: absolute;
+    width: 10%;
+    right: 32%;
+    top: 32%;
+    cursor: pointer;
+}
+
+.right-subgroup-title {
+    margin-block: 1em;
+    font-size: var(--header-fs);
+    background: var(--header-links-gr);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.right-subgroup-highlighted {
+    color: rgba(3, 44, 114, 1);
+}
+
+.invite {
+    text-transform: uppercase;
+    background: var(--header-links-gr);
+    border: none;
+    color: #fff;
+    padding: 1em;
+    font-weight: 800;
+    border-radius: 10px;
+    margin-block: 2em;
+    letter-spacing: 1px;
+    cursor: pointer;
+    font-size: var(--small-fs);
+}
+
+.right-subgroup-fineprint {
+    position: relative;
+    width: 110%;
+    right: 5%;
+    font-size: var(--fine-print-fs);
+    text-align: left;
+    font-weight: 500;
+    line-height: 1;
+}
+
+.sale-grid-group > * {
+    
 }
 
 @media screen and (max-width: 1300px) {
