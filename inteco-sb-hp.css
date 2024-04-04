@@ -370,8 +370,8 @@ img {
 .about-title {
     display: flex;
     align-items: center;
-    gap: 12%;
-    font-size: var(--medium-large-fs);
+    gap: 14%;
+    font-size: clamp(20px, 2vw, 40px);
     background: var(--header-links-gr);
     color: #032C72;
 
@@ -474,7 +474,6 @@ img {
     border-image: linear-gradient(to right, #025DF8, #032C72) 1;
     padding-bottom: 0.3em;
 }
-
 
 @media screen and (max-width: 1300px) {
     :root { 
