@@ -4,8 +4,8 @@
 }
 
 :root {
-    --header-links-gr: linear-gradient(to right bottom, #025DF8 30%, #032C72 70%);
-    --linear-gr-str: linear-gradient(to right, rgba(2, 93, 248, 1)   30%, rgba(3, 44, 114, 1) 70%);
+    --header-links-gr: linear-gradient(to right, #025DF8 0%, #032C72 70%);
+    --linear-gr-str: linear-gradient(to right, rgb(8, 80, 205) 0%, rgb(11, 56, 133) 70%);
     --header-links-color: #025DF8;
     --main-line-height: 60px;
     --main-letter-spacing: 5%;
@@ -101,7 +101,7 @@ img {
 
 .bnr-left {
     width: 60%;
-    padding-block: clamp(1em, 5vw, 2em);
+    padding-block: clamp(1em, 3vw, 2em);
     color: #fff;
 }
 .bnr-left p {
@@ -145,22 +145,23 @@ img {
     height: 2.2em;
     font-weight: 800;
     border-radius: 10px;
-    font-size: clamp(18px, 2vw, 30px);
+    font-size: clamp(18px, 1.5vw, 25px);
+    padding-block: 1.5em;
 }
 
 .bnr-btn.price {
-    width: 9em;
+    width: 10em;
 }
 
 .bnr-btn.call {
-    width: 13em;
+    width: 14em;
     color: #fff;
     background-color: #025DF8;
 }
 
 .bnr-btn.phone {
     font-weight: 500;
-    width: 11em;
+    width: 12em;
 }
 
 .bnr-header {
@@ -241,9 +242,11 @@ img {
     margin-block: 1em;
     font-size: var(--header-fs);
     background: var(--header-links-gr);
+    color: #032C72; 
+
     -webkit-background-clip: text;
     background-clip: text;
-    color: transparent;
+    color: transparent; /* This will be ignored if background-clip is not supported */
 }
 
 .right-subgroup-highlighted {
@@ -313,7 +316,7 @@ img {
     display: flex;
     align-items: flex-end;
     cursor: pointer;
-    border: 1.5px solid white;
+    border: 2px solid white;
 }
 
 .project-img-overlay {
@@ -357,6 +360,121 @@ img {
 .project-image.fourth {
     background-image: url(assets/images/gallery4.png);
 }
+
+/****** About section *******/
+
+.about-outer-wrapper {
+    padding-block: clamp(2.5rem, 10vw, 5rem);
+}
+
+.about-title {
+    display: flex;
+    align-items: center;
+    gap: 12%;
+    font-size: var(--medium-large-fs);
+    background: var(--header-links-gr);
+    color: #032C72;
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; /* This will be ignored if background-clip is not supported */
+}
+
+.about-grid-group {
+    display: grid;
+    grid-template-columns: 1fr 55%;
+    gap: 4vw;
+}
+
+.about-float-left {
+    float: left;
+    width: 15%;
+}
+
+.about-float-right {
+   object-fit: cover;
+   height: 100%;
+   object-position: center;
+   position: relative;
+   top: -2%;
+   border-radius: 10px;
+}
+
+.about-header {
+    font-size: var(--regular-fs);
+    margin-block: 1em;
+    text-transform: uppercase;
+}
+
+.about-par {
+    font-size: var(--fine-print-fs);
+    font-weight: 500;
+}
+
+.about-buttons-wrapper {
+    padding-block: clamp(1.5em, 7vw, 3em);
+}
+
+.about-btn {
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 10px;
+    padding: 1em;
+    font-size: clamp(12px, 1.1vw, 26px);
+    font-weight: 700;
+}
+
+.view-projects {
+    margin-right: 1em;
+    background: var(--header-links-gr);
+    color: #fff;
+}
+
+.contacts-btn {
+    border: 2px solid rgb(3, 44, 114);
+    color: rgb(3, 44, 114);
+}
+
+.about-flex-subgroup {
+    padding-block: clamp(1em, 3vw, 2em);
+    display: flex;
+    gap: 0.5em;
+}
+
+.about-flex-subgroup.top {
+    justify-content: space-between;
+}
+
+.about-flex-subgroup.bottom {
+    gap: 2em;
+}
+
+.flex-sb-extra-large {
+    font-size: clamp(18px, 5vw, 65px);
+    font-weight: 600;
+}
+
+.flex-sb-small {
+    font-size: var(--fine-print-fs);
+}
+
+.flex-sb-extra-large, .flex-sb-medium {
+    background: var(--header-links-gr);
+    color: #032C72;
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; /* This will be ignored if background-clip is not supported */
+}
+
+.flex-sb-medium {
+    font-weight: 700;
+    font-size: clamp(12px, 1.3vw, 26px);
+    border-bottom: 0.2em solid transparent;
+    border-image: linear-gradient(to right, #025DF8, #032C72) 1;
+    padding-bottom: 0.3em;
+}
+
 
 @media screen and (max-width: 1300px) {
     :root { 
