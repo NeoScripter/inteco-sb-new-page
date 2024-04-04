@@ -17,6 +17,7 @@
     --fine-print-fs: clamp(12px, 1vw, 28px);
 
     --phone-height: 800px;
+    --phone-height-2: 800px;
 }
 
 * {
@@ -246,7 +247,7 @@ img {
 
     -webkit-background-clip: text;
     background-clip: text;
-    color: transparent; /* This will be ignored if background-clip is not supported */
+    color: transparent; 
 }
 
 .right-subgroup-highlighted {
@@ -383,7 +384,7 @@ img {
 
     -webkit-background-clip: text;
     background-clip: text;
-    color: transparent; /* This will be ignored if background-clip is not supported */
+    color: transparent; 
 }
 
 .about-grid-group {
@@ -474,7 +475,7 @@ img {
 
     -webkit-background-clip: text;
     background-clip: text;
-    color: transparent; /* This will be ignored if background-clip is not supported */
+    color: transparent; 
 }
 
 .flex-sb-medium {
@@ -550,9 +551,67 @@ img {
     font-size: var(--fine-print-fs);
 }
 
+/****** Form section *******/
+
+.form-outer-wrapper {
+    height: calc(var(--phone-height-2) * 0.65);
+    background: var(--header-links-gr);
+}
+.form-inner-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-content: center;
+    margin-inline: auto;
+}
+
+.form-image-holder {
+    height: var(--phone-height-2);
+    position: relative;
+    top: -10%;
+    bottom: -10%;
+    aspect-ratio: 1 / 1.5;
+}
+
+.form-image {
+    height: 100%;
+}
+
+#call-us-form {
+    height: calc(var(--phone-height-2) * 0.55);
+    margin-top: clamp(1em, 3vw, 2em);
+    border: 2px solid red;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.form-header {
+    font-size: var(--header-large-fs);
+    font-weight: 800;
+}
+
+.form-par {
+    font-size: var(--regular-fs);
+    font-weight: 600;
+}
+
+.policy-par {
+    font-size: var(--fine-print-fs);
+}
+
+@media screen and (min-width: 1500px) {
+    :root {
+        --phone-height-2: 1000px;
+    }
+}
+
 @media screen and (max-width: 1300px) {
     :root { 
         --phone-height: 600px;
+        --phone-height-2: 600px;
     }
     .video-1 {
         width: 237px;
