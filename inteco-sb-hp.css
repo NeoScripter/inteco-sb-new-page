@@ -62,9 +62,10 @@ img {
 .nav-wrapper {
     display: flex;
     align-items: center;
-    aspect-ratio: 6/1;
-    justify-content: space-evenly;
-    gap: 2em;
+    padding-block: clamp(1em, 3vw, 2em);
+    justify-content: space-between;
+    gap: 1em;
+    width: 85%;
 }
 
 .primary-nav ul {
@@ -77,10 +78,32 @@ img {
     list-style: none;
     text-transform: uppercase;
     font-size: clamp(12px, 2vw, 19px);
+    font-weight: 600;
 }
 
 .links-wrapper {
-    width: 28%;
+    width: 45%;
+    display: flex;
+    gap: 0.5em;
+}
+
+.nav-link {
+    font-size: var(--fine-print-fs);
+    word-wrap: none;
+    font-weight: 600;
+    color: #000;
+    text-decoration: none;
+}
+
+.flex-nav-subgroup:first-of-type {
+    margin-bottom: 1em;
+}
+
+.flex-nav-subgroup {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.5em;
 }
 
 /****** Banner section *******/
@@ -97,7 +120,7 @@ img {
     height: var(--phone-height);
     position: relative;
     letter-spacing: 1px;
-    font-size: clamp(18px, 2vw, 35px);
+    font-size: var(--regular-fs);
 }
 
 .bnr-left {
@@ -166,7 +189,8 @@ img {
 }
 
 .bnr-header {
-    font-size: clamp(28px, 3vw, 45px);
+    font-size: clamp(20px, 4vw, 55px);
+    font-weight: 800;
 }
 
 .bnr-subgroup {
