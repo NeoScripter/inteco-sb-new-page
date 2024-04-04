@@ -481,6 +481,25 @@ img {
     padding-bottom: 0.3em;
 }
 
+.about-bottom-wrapper {
+    margin-top: clamp(1.5em, 5vw, 3em);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: clamp(1.5em, 4vw, 3em);
+}
+
+.about-grid-element h4 {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: clamp(14px, 1.5vw, 30px);
+    min-height: 3em;
+}
+
+.about-grid-element p {
+    font-size: var(--small-fs);
+    font-weight: 500;
+}
+
 @media screen and (max-width: 1300px) {
     :root { 
         --phone-height: 600px;
