@@ -406,6 +406,10 @@ img {
    border-radius: 10px;
 }
 
+.about-grid-group-right {
+    position: relative;
+}
+
 .about-header {
     font-size: var(--regular-fs);
     margin-block: 1em;
@@ -488,7 +492,7 @@ img {
     gap: clamp(1.5em, 4vw, 3em);
 }
 
-.about-grid-element h4 {
+.about-outer-wrapper h4 {
     text-transform: uppercase;
     letter-spacing: 1px;
     font-size: clamp(14px, 1.5vw, 30px);
@@ -498,6 +502,52 @@ img {
 .about-grid-element p {
     font-size: var(--small-fs);
     font-weight: 500;
+}
+
+.small-float {
+    border-radius: 15px;
+    text-align: center;
+    padding: 1em;
+    position: absolute;
+    box-shadow: 0 0.3em 0.3em 0 rgba(0, 0, 0, 0.25);
+}
+
+.small-float-left {
+    left: 0;
+    top: 30%;
+    translate: -50%;
+    width: 25%;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.small-float-top {
+    left: 40%;
+    top: -10%;
+    translate: -50%;
+    width: 25%;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.small-float-bottom {
+    background: var(--header-links-gr);
+    color: #fff;
+    width: 30%;
+    bottom: 0;
+    left: 50%;
+    translate: -50%;
+}
+
+.small-float-left, .small-float-top {
+    color: #134498;    
+}
+
+.small-float h4 {
+    min-height: 0;
+    margin-block: 0.5em;
+}
+
+.small-float {
+    font-size: var(--fine-print-fs);
 }
 
 @media screen and (max-width: 1300px) {
