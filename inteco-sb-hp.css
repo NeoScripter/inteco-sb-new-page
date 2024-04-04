@@ -9,15 +9,78 @@
     --header-links-color: #025DF8;
     --main-line-height: 60px;
     --main-letter-spacing: 5%;
-    --header-large-fs: clamp(28px, 5vw, 55px);
-    --header-fs: clamp(28px, 3vw, 45px);
-    --medium-large-fs: clamp(23px, 2.5vw, 40px);
-    --regular-fs: clamp(18px, 2vw, 35px);
-    --small-fs: clamp(15px, 1.5vw, 31px);
-    --fine-print-fs: clamp(12px, 1vw, 28px);
+    --header-large-fs: clamp(26px, 4vw, 50px);
+    --header-fs: clamp(26px, 2.8vw, 40px);
+    --medium-large-fs: clamp(21px, 2.2vw, 36px);
+    --regular-fs: clamp(16px, 1.8vw, 32px);
+    --small-fs: clamp(15px, 1.5vw, 28px);
+    --fine-print-fs: clamp(12px, 1vw, 26px);
 
-    --phone-height: 800px;
+    --phone-height: 752px;
     --phone-height-2: 800px;
+
+    --nav-sections-large-1920: 21px;
+    --nav-sections-large-1680: 19px;
+    --nav-sections-large-1440: 17px;
+    --nav-sections-large-1120: 13px;
+    --nav-sections-small-1920: 16.24px;
+    --nav-sections-small-1680: 14px;
+    --nav-sections-small-1440: 12.18px;
+    --nav-sections-small-1120: 9px;
+
+    --bnr-bullet-1920: 27.41px;
+    --bnr-title-1920: 55px;
+    --bnr-top-line-1920: 17.81px;
+    --bnr-call-btn-1920: 20px;
+    --bnr-price-btn-1920: 21.76px;
+    --bnr-phone-btn-1920: 17.81px;
+
+    --bnr-bullet-1680: 24px;
+    --bnr-title-1680: 48px;
+    --bnr-top-line-1680: 16px;
+    --bnr-call-btn-1680: 18.5px;
+    --bnr-price-btn-1680: 19px;
+    --bnr-phone-btn-1680: 15.35px;
+
+    --bnr-bullet-1440: 21px;
+    --bnr-title-1440: 42px;
+    --bnr-top-line-1440: 15px;
+    --bnr-call-btn-1440: 17px;
+    --bnr-price-btn-1440: 17px;
+    --bnr-phone-btn-1440: 13.35px;
+
+    --bnr-bullet-1120: 16px;
+    --bnr-title-1120: 32px;
+    --bnr-top-line-1120: 10.16px;
+    --bnr-call-btn-1120: 13px;
+    --bnr-price-btn-1120: 13px;
+    --bnr-phone-btn-1120: 10.16px;
+
+    --bnr-height-1920: 752px;
+    --bnr-height-1680: 670px;
+    --bnr-height-1440: 564px;
+    --bnr-height-1120: 438.67px;
+
+
+    --phone-height-1920: 806.37px;
+    --phone-width-1920: 515.29px;
+    --phone-top-offset-1920: 48px;
+    --phone-left-offset-1920: 1128.79px;
+
+    --phone-height-1680: 709px;
+    --phone-width-1680: 450px;
+    --phone-top-offset-1680: 42px;
+    --phone-left-offset-1680: 987px;
+
+    --phone-height-1440: 604.77px;
+    --phone-width-1440: 386.47px;
+    --phone-top-offset-1440: 36px;
+    --phone-left-offset-1440: 846.59px;
+
+    --phone-height-1120: 459.93px;
+    --phone-width-1120: 293.9px;
+    --phone-top-offset-1120: 24.08px;
+    --phone-left-offset-1120: 659.87px;
 }
 
 * {
@@ -65,7 +128,6 @@ img {
     padding-block: clamp(1em, 3vw, 2em);
     justify-content: space-between;
     gap: 1em;
-    width: 85%;
 }
 
 .primary-nav ul {
@@ -77,7 +139,7 @@ img {
 .primary-nav li {
     list-style: none;
     text-transform: uppercase;
-    font-size: clamp(12px, 2vw, 19px);
+ /*    font-size: clamp(12px, 2vw, 19px); */
     font-weight: 600;
 }
 
@@ -88,7 +150,7 @@ img {
 }
 
 .nav-link {
-    font-size: var(--fine-print-fs);
+  /*   font-size: var(--fine-print-fs); */
     word-wrap: none;
     font-weight: 600;
     color: #000;
@@ -112,19 +174,14 @@ img {
     background-image: url(assets/images/banner-bg.png);
     background-size: cover;
     background-position: center;
+    position: relative;
 }
 
 .bnr-wrapper {
-    display: flex;
-    gap: 2em;
-    height: var(--phone-height);
-    position: relative;
     letter-spacing: 1px;
-    font-size: var(--regular-fs);
 }
 
 .bnr-left {
-    width: 60%;
     padding-block: clamp(1em, 3vw, 2em);
     color: #fff;
 }
@@ -142,10 +199,6 @@ img {
     background-position: 0 50%;
     padding-left: 1.2em;
     background-size: 1em;
-}
-
-.bnr-right {
-    width: 40%;
 }
 
 .btn-subgroup-outer-wrapper {
@@ -168,8 +221,8 @@ img {
     border: none;
     height: 2.2em;
     font-weight: 800;
-    border-radius: 10px;
-    font-size: clamp(18px, 1.5vw, 25px);
+    border-radius: 9.38px;
+/*     font-size: clamp(18px, 1.5vw, 25px); */
     padding-block: 1.5em;
 }
 
@@ -189,7 +242,7 @@ img {
 }
 
 .bnr-header {
-    font-size: clamp(20px, 4vw, 55px);
+/*     font-size: clamp(20px, 4vw, 55px); */
     font-weight: 800;
 }
 
@@ -198,10 +251,12 @@ img {
 }
 
 .bnr-img-holder {
-    height: 90%;
-    aspect-ratio: 3/4;
-    position: relative;
-    bottom: -15%;
+    position: absolute;
+}
+
+.phone-img {
+    height: 100%;
+    width: 100%;
 }
 
 .video-1, .video-2 {
@@ -691,13 +746,184 @@ img {
         bottom: 11%;
         left: 20.5%;
     }
-    .bnr-img-holder {
-        bottom: -5%;
-    }
 }
 
 @media screen and (max-width: 900px) {
     .centering > * {
         width: 90%;
+    }
+}
+
+@media screen and (min-width: 1120px) {
+    .primary-nav li {
+        font-size: var(--nav-sections-large-1120);
+    }
+    
+    .nav-link {
+        font-size: var(--nav-sections-small-1120);
+    }
+    .bnr-header {
+        font-size: var(--bnr-title-1120);
+    }
+    
+    .bnr-subgroup p {
+        font-size: var(--bnr-bullet-1120);
+    }
+    
+    .bnr-btn.price {
+        font-size: var(--bnr-price-btn-1120);
+    }
+    
+    .bnr-btn.call {
+        font-size: var(--bnr-call-btn-1120);
+    }
+    
+    .bnr-btn.phone {
+        font-size: var(--bnr-phone-btn-1120);
+    }
+    
+    .bnr-first-pr {
+        font-size: var(--bnr-top-line-1120);
+    }
+    .bnr-wrapper { 
+        height: var(--bnr-height-1120);
+    }
+    .bnr-img-holder {
+        width: var(--phone-width-1120);
+        height: var(--phone-height-1120);
+        top: var(--phone-top-offset-1120);
+        left: var(--phone-left-offset-1120);
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .primary-nav li {
+        font-size: var(--nav-sections-large-1440);
+    }
+    
+    .nav-link {
+        font-size: var(--nav-sections-small-1440);
+    }
+    .bnr-header {
+        font-size: var(--bnr-title-1440);
+    }
+    
+    .bnr-subgroup p {
+        font-size: var(--bnr-bullet-1440);
+    }
+    
+    .bnr-btn.price {
+        font-size: var(--bnr-price-btn-1440);
+    }
+    
+    .bnr-btn.call {
+        font-size: var(--bnr-call-btn-1440);
+    }
+    
+    .bnr-btn.phone {
+        font-size: var(--bnr-phone-btn-1440);
+    }
+    
+    .bnr-first-pr {
+        font-size: var(--bnr-top-line-1440);
+    }
+    .bnr-wrapper { 
+        height: var(--bnr-height-1440);
+    }
+    .bnr-img-holder {
+        width: var(--phone-width-1440);
+        height: var(--phone-height-1440);
+        top: var(--phone-top-offset-1440);
+        left: var(--phone-left-offset-1440);
+    }
+}
+
+
+@media screen and (min-width: 1680px) {
+    .primary-nav li {
+        font-size: var(--nav-sections-large-1680);
+    }
+    
+    .nav-link {
+        font-size: var(--nav-sections-small-1680);
+    }
+    .bnr-header {
+        font-size: var(--bnr-title-1680);
+    }
+    
+    .bnr-subgroup p {
+        font-size: var(--bnr-bullet-1680);
+    }
+    
+    .bnr-btn.price {
+        font-size: var(--bnr-price-btn-1680);
+    }
+    
+    .bnr-btn.call {
+        font-size: var(--bnr-call-btn-1680);
+    }
+    
+    .bnr-btn.phone {
+        font-size: var(--bnr-phone-btn-1680);
+    }
+    
+    .bnr-first-pr {
+        font-size: var(--bnr-top-line-1680);
+    }
+    .bnr-wrapper { 
+        height: var(--bnr-height-1680);
+    }
+    .bnr-img-holder {
+        width: var(--phone-width-1680);
+        height: var(--phone-height-1680);
+        top: var(--phone-top-offset-1680);
+        left: var(--phone-left-offset-1680);
+    }
+}
+
+
+@media screen and (min-width: 1920px) {
+    .primary-nav li {
+        font-size: var(--nav-sections-large-1920);
+    }
+    
+    .nav-link {
+        font-size: var(--nav-sections-small-1920);
+    }
+    
+    .bnr-header {
+        font-size: var(--bnr-title-1920);
+    }
+    
+    .bnr-subgroup p {
+        font-size: var(--bnr-bullet-1920);
+    }
+    
+    .bnr-btn.price {
+        font-size: var(--bnr-price-btn-1920);
+    }
+    
+    .bnr-btn.call {
+        font-size: var(--bnr-call-btn-1920);
+    }
+    
+    .bnr-btn.phone {
+        font-size: var(--bnr-phone-btn-1920);
+    }
+    
+    .bnr-first-pr {
+        font-size: var(--bnr-top-line-1920);
+    }
+    .bnr-wrapper { 
+        height: var(--bnr-height-1920);
+    }
+    .bnr-wrapper { 
+        height: var(--bnr-height-1920);
+    }
+    .bnr-img-holder {
+        width: var(--phone-width-1920);
+        height: var(--phone-height-1920);
+        top: var(--phone-top-offset-1920);
+        left: var(--phone-left-offset-1920);
     }
 }
