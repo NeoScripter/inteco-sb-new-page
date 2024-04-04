@@ -367,11 +367,17 @@ img {
     padding-block: clamp(2.5rem, 10vw, 5rem);
 }
 
+.about-inner-wrapper {
+    width: 87.5%;
+    margin-inline: 0;
+    margin-left: auto;
+}
+
 .about-title {
     display: flex;
     align-items: center;
     gap: 14%;
-    font-size: clamp(20px, 2vw, 40px);
+    font-size: clamp(22px, 2.4vw, 50px);
     background: var(--header-links-gr);
     color: #032C72;
 
@@ -407,7 +413,7 @@ img {
 }
 
 .about-par {
-    font-size: var(--fine-print-fs);
+    font-size: var(--small-fs);
     font-weight: 500;
 }
 
@@ -420,7 +426,7 @@ img {
     text-transform: uppercase;
     border-radius: 10px;
     padding: 1em;
-    font-size: clamp(12px, 1.1vw, 26px);
+    font-size: clamp(14px, 1.4vw, 26px);
     font-weight: 700;
 }
 
@@ -446,7 +452,7 @@ img {
 }
 
 .about-flex-subgroup.bottom {
-    gap: 2em;
+    gap: 3em;
 }
 
 .flex-sb-extra-large {
@@ -469,7 +475,7 @@ img {
 
 .flex-sb-medium {
     font-weight: 700;
-    font-size: clamp(12px, 1.3vw, 26px);
+    font-size: clamp(14px, 1.5vw, 30px);
     border-bottom: 0.2em solid transparent;
     border-image: linear-gradient(to right, #025DF8, #032C72) 1;
     padding-bottom: 0.3em;
