@@ -18,7 +18,7 @@
 
     
 
-    --hdr-height: clamp(143.11px, 12.78vw, 245.33px);
+    --hdr-height: clamp(70px, 6.25vw, 120px);
     --hdr-logo-width: clamp(175.44px, 16.45vw, 315.79px);
     --hdr-logo-height: clamp(29.82px, 2.80vw, 53.68px);
     --hdr-cnts-width: clamp(239.44px, 22.45vw, 431px);
@@ -158,11 +158,11 @@ img {
 .list-item-underline::after {
     content: '';
     position: absolute;
-    bottom: -1.5em; /* Adjust as needed for spacing */
-    left: 0; /* Centering the underline */
-    width: 50%; /* Half the length of the text */
-    height: 0.2em; /* Thickness of the underline */
-    background: var(--header-links-gr); /* Color of the underline */
+    bottom: -1.5em; 
+    left: 0;
+    width: 50%; 
+    height: 0.2em; 
+    background: var(--header-links-gr); 
 }
 
 .nav-link {
@@ -194,15 +194,23 @@ img {
     justify-content: flex-end;
     align-items: center;
     gap: 0.7em;
-    margin: 0.5em;
 }
 
 .nav-emerging-par {
     opacity: 0;
+    font-size: 12px;
+    text-align: right;
     text-transform: uppercase;
-    letter-spacing: 10%;
-    font-weight: 500;
+    letter-spacing: 1.5px;
+    font-weight: 600;
     transition: opacity 0.5s ease-in-out;
+
+    background: var(--header-links-gr);
+    color: #025DF8; 
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; 
 }
 
 .nav-large-icon {
