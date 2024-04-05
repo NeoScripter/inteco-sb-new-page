@@ -19,6 +19,46 @@
     --phone-height: 752px;
     --phone-height-2: 800px;
 
+  /*   --hdr-height-1920: 245.33px; */
+    --hdr-height-1920: 196px;
+    --hdr-logo-width-1920: 315.79px;
+    --hdr-logo-height-1920: 53.68px;
+    --hdr-cnts-width-1920: 431px;
+    --hdr-cnts-height-1920: 70.9px;
+    --hdr-cnts-large-icon-width-1920: 34.14px;
+    --hdr-cnts-small-icon-width-1920: 19.54px;
+    --hdr-cnts-small-fs-1920: 16.24px;
+
+    /* --hdr-height-1680: 215.33px; */
+    --hdr-height-1680: 172px;
+    --hdr-logo-width-1680: 276px;
+    --hdr-logo-height-1680: 46.68px;
+    --hdr-cnts-width-1680: 380px;
+    --hdr-cnts-height-1680: 62px;
+    --hdr-cnts-large-icon-width-1680: 39.14px;
+    --hdr-cnts-small-icon-width-1680: 16.54px;
+    --hdr-cnts-small-fs-1680: 14px;
+
+/*     --hdr-height-1440: 184px; */
+    --hdr-height-1440: 147px;
+    --hdr-logo-width-1440: 236.84px;
+    --hdr-logo-height-1440: 40.26px;
+    --hdr-cnts-width-1440: 323.75px;
+    --hdr-cnts-height-1440: 53.93px;
+    --hdr-cnts-large-icon-width-1440: 25.6px;
+    --hdr-cnts-small-icon-width-1440: 14.65px;
+    --hdr-cnts-small-fs-1440: 12.18px;
+
+   /*  --hdr-height-1120: 143.11px; */
+    --hdr-height-1120: 114px;
+    --hdr-logo-width-1120: 175.44px;
+    --hdr-logo-height-1120: 29.82px;
+    --hdr-cnts-width-1120: 239.44px;
+    --hdr-cnts-height-1120: 39.83px;
+    --hdr-cnts-large-icon-width-1120: 18.96px;
+    --hdr-cnts-small-icon-width-1120: 10.85px;
+    --hdr-cnts-small-fs-1120: 9.02px;
+
     --nav-sections-large-1920: 21px;
     --nav-sections-large-1680: 19px;
     --nav-sections-large-1440: 17px;
@@ -91,7 +131,6 @@
 
 body {
     font-family: 'Montserrat';
-    font-size: 1rem;
     letter-spacing: 5%;
 }
 
@@ -118,14 +157,9 @@ img {
 
 /******* Header *******/
 
-.logo {
-    width: 18%;
-}
-
 .nav-wrapper {
     display: flex;
     align-items: center;
-    padding-block: clamp(1em, 3vw, 2em);
     justify-content: space-between;
     gap: 1em;
 }
@@ -139,18 +173,15 @@ img {
 .primary-nav li {
     list-style: none;
     text-transform: uppercase;
- /*    font-size: clamp(12px, 2vw, 19px); */
     font-weight: 600;
 }
 
 .links-wrapper {
-    width: 45%;
     display: flex;
     gap: 0.5em;
 }
 
 .nav-link {
-  /*   font-size: var(--fine-print-fs); */
     word-wrap: none;
     font-weight: 600;
     color: #000;
@@ -722,17 +753,7 @@ img {
     color: white;
 }
 
-@media screen and (min-width: 1500px) {
-    :root {
-        --phone-height-2: 1000px;
-    }
-}
-
 @media screen and (max-width: 1300px) {
-    :root { 
-        --phone-height: 600px;
-        --phone-height-2: 600px;
-    }
     .video-1 {
         width: 237px;
         top: 32%;
@@ -748,40 +769,42 @@ img {
     }
 }
 
-@media screen and (max-width: 900px) {
-    .centering > * {
-        width: 90%;
-    }
-}
-
-@media screen and (min-width: 1120px) {
+@media screen and (max-width: 1120px) {
     .primary-nav li {
         font-size: var(--nav-sections-large-1120);
     }
-    
+    .nav-wrapper {
+        height: var(--hdr-height-1120);
+    }
+    .main-logo {
+        width: var(--hdr-logo-width-1120);
+        height: var(--hdr-logo-height-1120);
+    }
+    .links-wrapper {
+        width: var(--hdr-cnts-width-1120);
+        height: var(--hdr-cnts-height-1120);
+    }
+    .cnts-small-icon {
+        width: var(--hdr-cnts-small-icon-width-1120);
+    }
     .nav-link {
         font-size: var(--nav-sections-small-1120);
     }
     .bnr-header {
         font-size: var(--bnr-title-1120);
     }
-    
     .bnr-subgroup p {
         font-size: var(--bnr-bullet-1120);
     }
-    
     .bnr-btn.price {
         font-size: var(--bnr-price-btn-1120);
     }
-    
     .bnr-btn.call {
         font-size: var(--bnr-call-btn-1120);
     }
-    
     .bnr-btn.phone {
         font-size: var(--bnr-phone-btn-1120);
     }
-    
     .bnr-first-pr {
         font-size: var(--bnr-top-line-1120);
     }
@@ -796,34 +819,43 @@ img {
     }
 }
 
-@media screen and (min-width: 1440px) {
+
+@media screen and (min-width: 1120px) and (max-width: 1440px) {
     .primary-nav li {
         font-size: var(--nav-sections-large-1440);
     }
-    
+    .nav-wrapper {
+        height: var(--hdr-height-1440);
+    }
+    .main-logo {
+        width: var(--hdr-logo-width-1440);
+        height: var(--hdr-logo-height-1440);
+    }
+    .links-wrapper {
+        width: var(--hdr-cnts-width-1440);
+        height: var(--hdr-cnts-height-1440);
+    }
+    .cnts-small-icon {
+        width: var(--hdr-cnts-small-icon-width-1440);
+    }
     .nav-link {
         font-size: var(--nav-sections-small-1440);
     }
     .bnr-header {
         font-size: var(--bnr-title-1440);
     }
-    
     .bnr-subgroup p {
         font-size: var(--bnr-bullet-1440);
     }
-    
     .bnr-btn.price {
         font-size: var(--bnr-price-btn-1440);
     }
-    
     .bnr-btn.call {
         font-size: var(--bnr-call-btn-1440);
     }
-    
     .bnr-btn.phone {
         font-size: var(--bnr-phone-btn-1440);
     }
-    
     .bnr-first-pr {
         font-size: var(--bnr-top-line-1440);
     }
@@ -838,35 +870,42 @@ img {
     }
 }
 
-
-@media screen and (min-width: 1680px) {
+@media screen and (min-width: 1440px) and (max-width: 1680px) {
     .primary-nav li {
         font-size: var(--nav-sections-large-1680);
     }
-    
+    .nav-wrapper {
+        height: var(--hdr-height-1680);
+    }
+    .main-logo {
+        width: var(--hdr-logo-width-1680);
+        height: var(--hdr-logo-height-1680);
+    }
+    .links-wrapper {
+        width: var(--hdr-cnts-width-1680);
+        height: var(--hdr-cnts-height-1680);
+    }
+    .cnts-small-icon {
+        width: var(--hdr-cnts-small-icon-width-1680);
+    }
     .nav-link {
         font-size: var(--nav-sections-small-1680);
     }
     .bnr-header {
         font-size: var(--bnr-title-1680);
     }
-    
     .bnr-subgroup p {
         font-size: var(--bnr-bullet-1680);
     }
-    
     .bnr-btn.price {
         font-size: var(--bnr-price-btn-1680);
     }
-    
     .bnr-btn.call {
         font-size: var(--bnr-call-btn-1680);
     }
-    
     .bnr-btn.phone {
         font-size: var(--bnr-phone-btn-1680);
     }
-    
     .bnr-first-pr {
         font-size: var(--bnr-top-line-1680);
     }
@@ -881,36 +920,42 @@ img {
     }
 }
 
-
-@media screen and (min-width: 1920px) {
+@media screen and (min-width: 1680px) {
     .primary-nav li {
         font-size: var(--nav-sections-large-1920);
     }
-    
     .nav-link {
         font-size: var(--nav-sections-small-1920);
     }
-    
+    .nav-wrapper {
+        height: var(--hdr-height-1920);
+    }
+    .main-logo {
+        width: var(--hdr-logo-width-1920);
+        height: var(--hdr-logo-height-1920);
+    }
+    .links-wrapper {
+        width: var(--hdr-cnts-width-1920);
+        height: var(--hdr-cnts-height-1920);
+    }
+    .cnts-small-icon {
+        width: var(--hdr-cnts-small-icon-width-1920);
+    }
     .bnr-header {
         font-size: var(--bnr-title-1920);
     }
-    
     .bnr-subgroup p {
         font-size: var(--bnr-bullet-1920);
     }
-    
     .bnr-btn.price {
         font-size: var(--bnr-price-btn-1920);
     }
-    
     .bnr-btn.call {
         font-size: var(--bnr-call-btn-1920);
     }
-    
     .bnr-btn.phone {
         font-size: var(--bnr-phone-btn-1920);
     }
-    
     .bnr-first-pr {
         font-size: var(--bnr-top-line-1920);
     }
