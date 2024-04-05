@@ -18,69 +18,71 @@
 
     
 
-    --hdr-height: clamp(70px, 6.25vw, 120px);
-    --hdr-logo-width: clamp(175.44px, 16.45vw, 315.79px);
-    --hdr-logo-height: clamp(29.82px, 2.80vw, 53.68px);
-    --hdr-cnts-width: clamp(239.44px, 22.45vw, 431px);
-    --hdr-cnts-height: clamp(39.83px, 3.69vw, 70.9px);
-    --hdr-cnts-large-icon-width: clamp(18.96px, 1.78vw, 34.14px);
-    --hdr-cnts-small-icon-width: clamp(10.85px, 1.02vw, 19.54px);
-    --hdr-cnts-small-fs: clamp(9.02px, 0.85vw, 16.24px);
-    --hdr-sections-wrapper: clamp(386px, 36.15vw, 694px);
+    --hdr-height: clamp(37.5px, 6.25vw, 120px);
+    --hdr-logo-width: clamp(98.7px, 16.45vw, 315.79px);
+    --hdr-logo-height: clamp(16.8px, 2.80vw, 53.68px);
+    --hdr-cnts-width: clamp(134.7px, 22.45vw, 431px);
+    --hdr-cnts-height: clamp(22.14px, 3.69vw, 70.9px);
+    --hdr-cnts-large-icon-width: clamp(10.68px, 1.78vw, 34.14px);
+    --hdr-cnts-small-icon-width: clamp(6.12px, 1.02vw, 19.54px);
+    --hdr-cnts-small-fs: clamp(5.1px, 0.85vw, 16.24px);
+    --hdr-sections-wrapper: clamp(216.9px, 36.15vw, 694px);
+    
+    --nav-sections-large: clamp(6.54px, 1.09vw, 21px);
+    --nav-sections-small: clamp(5.1px, 0.85vw, 16.24px);
+    
 
-    --nav-sections-large: clamp(13px, 1.09vw, 21px);
-    --nav-sections-small: clamp(9px, 0.85vw, 16.24px);
-
-    --bnr-bullet: clamp(16px, 1.43vw, 27.41px);
-    --bnr-title: clamp(32px, 2.86vw, 55px);
-    --bnr-top-line: clamp(10.16px, 0.93vw, 17.81px);
-    --bnr-call-btn: clamp(13px, 1.04vw, 20px);
-    --bnr-price-btn: clamp(13px, 1.13vw, 21.76px);
-    --bnr-phone-btn: clamp(10.16px, 0.93vw, 17.81px);
-
-    --bnr-height: clamp(438.67px, 39.17vw, 752px);
-
-    --bnr-margin-block: clamp(46.08px, 4.32vw, 83.02px);
-    --bnr-btn-hld-width: clamp(386px, 33.29vw, 639.18px);
-    --bnr-btn-hld-height: clamp(96.93px, 8.85vw, 169.94px);
-    --bnr-wrapper-width: clamp(386px, 33.29vw, 639.18px);
-    --bnr-wrapper-height: clamp(238.1px, 21.88vw, 420px);
-    --bnr-phone-btn-height: clamp(38.77px, 3.54vw, 67.97px);
-    --bnr-phone-btn-width: clamp(175.72px, 16.05vw, 308.08px);
-    --bnr-call-btn-height: clamp(39px, 3.54vw, 67.97px);
-    --bnr-call-btn-width: clamp(197px, 15.99vw, 306.98px);
-    --bnr-price-btn-height: clamp(38.93px, 3.55vw, 68.25px);
-    --bnr-price-btn-width: clamp(139.92px, 12.78vw, 245.32px);
-
-    --phone-height: clamp(459.93px, 42vw, 806.37px);
-    --phone-width: clamp(293.9px, 26.84vw, 515.29px);
-    --phone-top-offset: clamp(24.08px, 2.5vw, 48px);
-    --phone-left-offset: clamp(659.87px, 58.79vw, 1128.79px);
+    --bnr-bullet: clamp(8.58px, 1.43vw, 27.41px);
+    --bnr-title: clamp(17.16px, 2.86vw, 55px);
+    --bnr-top-line: clamp(5.58px, 0.93vw, 17.81px);
+    --bnr-call-btn: clamp(6.24px, 1.04vw, 20px);
+    --bnr-price-btn: clamp(6.78px, 1.13vw, 21.76px);
+    --bnr-phone-btn: clamp(5.58px, 0.93vw, 17.81px);
+    
+    --bnr-height: clamp(235.02px, 39.17vw, 752px);
+    
+    --bnr-margin-block: clamp(25.92px, 4.32vw, 83.02px);
+    --bnr-btn-hld-width: clamp(199.74px, 33.29vw, 639.18px);
+    --bnr-btn-hld-height: clamp(53.1px, 8.85vw, 169.94px);
+    --bnr-wrapper-width: clamp(199.74px, 33.29vw, 639.18px);
+    --bnr-wrapper-height: clamp(131.28px, 21.88vw, 420px);
+    --bnr-phone-btn-height: clamp(21.24px, 3.54vw, 67.97px);
+    --bnr-phone-btn-width: clamp(96.3px, 16.05vw, 308.08px);
+    --bnr-call-btn-height: clamp(21.24px, 3.54vw, 67.97px);
+    --bnr-call-btn-width: clamp(95.94px, 15.99vw, 306.98px);
+    --bnr-price-btn-height: clamp(21.3px, 3.55vw, 68.25px);
+    --bnr-price-btn-width: clamp(76.68px, 12.78vw, 245.32px);
+    
+    --phone-height: clamp(252px, 42vw, 806.37px);
+    --phone-width: clamp(161.04px, 26.84vw, 515.29px);
+    --phone-top-offset: clamp(15.0px, 2.5vw, 48px);
+    --phone-left-offset: clamp(352.74px, 58.79vw, 1128.79px);
+    
 
 
     /* Sale */
-    --sale-margin-top: clamp(71.42px, 8.7vw, 141px);
-    --sale-subgroup-margin-top: clamp(44px, 4.38vw, 79px);
-    --sale-subgroup-height: clamp(298.56px, 29.49vw, 534.48px);
-    --sale-subgroup-rgl-fs: clamp(17px, 1.63vw, 30px);
-    --sale-subgroup-span-fs: clamp(25px, 2.55vw, 45.36px);
-    --sale-subgroup-title-fs: clamp(35px, 2.5vw, 55px);
-    --sale-main-image-width: clamp(525.32px, 51.89vw, 940.42px);
-    --sale-main-image-height: clamp(410.98px, 40.59vw, 735.72px);
-    --sale-play-btn-width: clamp(50.68px, 5.01vw, 90.72px);
-    --sale-red-sticker-width: clamp(87.73px, 8.67vw, 157.05px);
-    --sale-red-sticker-height: clamp(62.6px, 6.18vw, 112.06px);
-    --sale-red-sticker-left: clamp(590.76px, 52.99vw, 1014.71px);
-    --sale-red-sticker-top:  calc(clamp(88.44px, 10.38vw, 171.49px) - var(--sale-margin-top));
-    --sale-invite-btn-fs: clamp(15px, 0.93vw, 25px);
-    --sale-invite-btn-width: clamp(212px, 13.19vw, 317.54px);
-    --sale-invite-btn-height: clamp(39px, 3.91vw, 70.31px);
-    --sale-fine-print-fs: clamp(14.93px, 0.89vw, 24.56px);
-    --sale-fine-print-width: clamp(350px, 25.53vw, 544.24px);
-    --sale-fine-print-top: clamp(442.42px, 38.45vw, 798px);
-    --sale-fine-print-left: clamp(546px, 62.0vw, 1120px);
-    --sale-play-btn-left: clamp(479.48px, 42.0vw, 815.51px);
-    --sale-play-btn-top: calc(clamp(196.14px, 21.02vw, 364.28px) - var(--sale-margin-top));
+    --sale-margin-top: clamp(52.2px, 8.7vw, 141px);
+    --sale-subgroup-margin-top: clamp(26.28px, 4.38vw, 79px);
+    --sale-subgroup-height: clamp(176.94px, 29.49vw, 534.48px);
+    --sale-subgroup-rgl-fs: clamp(9.78px, 1.63vw, 30px);
+    --sale-subgroup-span-fs: clamp(15.3px, 2.55vw, 45.36px);
+    --sale-subgroup-title-fs: clamp(15.0px, 2.5vw, 55px);
+    --sale-main-image-width: clamp(311.34px, 51.89vw, 940.42px);
+    --sale-main-image-height: clamp(243.54px, 40.59vw, 735.72px);
+    --sale-play-btn-width: clamp(30.06px, 5.01vw, 90.72px);
+    --sale-red-sticker-width: clamp(52.02px, 8.67vw, 157.05px);
+    --sale-red-sticker-height: clamp(37.08px, 6.18vw, 112.06px);
+    --sale-red-sticker-left: clamp(317.94px, 52.99vw, 1014.71px);
+    --sale-red-sticker-top:  calc(clamp(62.28px, 10.38vw, 171.49px) - var(--sale-margin-top));
+    --sale-invite-btn-fs: clamp(5.58px, 0.93vw, 25px);
+    --sale-invite-btn-width: clamp(79.14px, 13.19vw, 317.54px);
+    --sale-invite-btn-height: clamp(23.46px, 3.91vw, 70.31px);
+    --sale-fine-print-fs: clamp(5.34px, 0.89vw, 24.56px);
+    --sale-fine-print-width: clamp(153.18px, 25.53vw, 544.24px);
+    --sale-fine-print-top: clamp(230.7px, 38.45vw, 798px);
+    --sale-fine-print-left: clamp(372.0px, 62.0vw, 1120px);
+    --sale-play-btn-left: clamp(264.0px, 44.0vw, 815.51px);
+    --sale-play-btn-top: calc(clamp(126.12px, 21.02vw, 364.28px) - var(--sale-margin-top));
 }
 
 * {
