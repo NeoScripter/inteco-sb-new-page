@@ -30,6 +30,7 @@
     
     --nav-sections-large: clamp(6.54px, 1.09vw, 21px);
     --nav-sections-small: clamp(5.1px, 0.85vw, 16.24px);
+    --nav-emerging-part-fs: clamp(5px, 0.85vw, 17px);
     
 
     --bnr-bullet: clamp(8.58px, 1.43vw, 27.41px);
@@ -132,6 +133,10 @@ img {
     width: var(--hdr-sections-wrapper);
 }
 
+.link-group-left {
+    flex-shrink: 0;
+}
+
 .primary-nav li {
     list-style: none;
     text-transform: uppercase;
@@ -151,6 +156,7 @@ img {
     justify-content: space-between;
     width: var(--hdr-cnts-width);
     height: var(--hdr-cnts-height);
+    gap: 1em;
 }
 
 .list-item-underline {
@@ -200,7 +206,7 @@ img {
 
 .nav-emerging-par {
     opacity: 0;
-    font-size: 12px;
+    font-size: var(--nav-emerging-part-fs);
     text-align: right;
     text-transform: uppercase;
     letter-spacing: 1.5px;
