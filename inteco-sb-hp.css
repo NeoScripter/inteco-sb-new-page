@@ -110,7 +110,13 @@ img {
     text-transform: uppercase;
     font-weight: 600;
     font-size: var(--nav-sections-large);
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+}
 
+.primary-nav li:hover, .primary-nav li:focus {
+    color: #032C72;
+    font-weight: 800;
 }
 
 .links-wrapper {
@@ -127,11 +133,11 @@ img {
 .list-item-underline::after {
     content: '';
     position: absolute;
-    bottom: -2em; /* Adjust as needed for spacing */
+    bottom: -1.5em; /* Adjust as needed for spacing */
     left: 0; /* Centering the underline */
     width: 50%; /* Half the length of the text */
-    height: 0.3em; /* Thickness of the underline */
-    background-color: black; /* Color of the underline */
+    height: 0.2em; /* Thickness of the underline */
+    background: var(--header-links-gr); /* Color of the underline */
 }
 
 .nav-link {
@@ -167,9 +173,11 @@ img {
 }
 
 .nav-emerging-par {
+    opacity: 0;
     text-transform: uppercase;
     letter-spacing: 10%;
     font-weight: 500;
+    transition: opacity 0.5s ease-in-out;
 }
 
 .nav-large-icon {
