@@ -16,11 +16,7 @@
     --small-fs: clamp(15px, 1.5vw, 28px);
     --fine-print-fs: clamp(12px, 1vw, 26px);
 
-    --phone-height: 752px;
-    --phone-height-2: 800px;
-
-  /*   --hdr-height-1920: 245.33px; */
-    --hdr-height-1920: 196px;
+    --hdr-height-1920: 245.33px;
     --hdr-logo-width-1920: 315.79px;
     --hdr-logo-height-1920: 53.68px;
     --hdr-cnts-width-1920: 431px;
@@ -29,8 +25,7 @@
     --hdr-cnts-small-icon-width-1920: 19.54px;
     --hdr-cnts-small-fs-1920: 16.24px;
 
-    /* --hdr-height-1680: 215.33px; */
-    --hdr-height-1680: 172px;
+    --hdr-height-1680: 215.33px;
     --hdr-logo-width-1680: 276px;
     --hdr-logo-height-1680: 46.68px;
     --hdr-cnts-width-1680: 380px;
@@ -39,8 +34,7 @@
     --hdr-cnts-small-icon-width-1680: 16.54px;
     --hdr-cnts-small-fs-1680: 14px;
 
-/*     --hdr-height-1440: 184px; */
-    --hdr-height-1440: 147px;
+    --hdr-height-1440: 184px;
     --hdr-logo-width-1440: 236.84px;
     --hdr-logo-height-1440: 40.26px;
     --hdr-cnts-width-1440: 323.75px;
@@ -49,8 +43,7 @@
     --hdr-cnts-small-icon-width-1440: 14.65px;
     --hdr-cnts-small-fs-1440: 12.18px;
 
-   /*  --hdr-height-1120: 143.11px; */
-    --hdr-height-1120: 114px;
+    --hdr-height-1120: 143.11px;
     --hdr-logo-width-1120: 175.44px;
     --hdr-logo-height-1120: 29.82px;
     --hdr-cnts-width-1120: 239.44px;
@@ -96,13 +89,36 @@
     --bnr-price-btn-1120: 13px;
     --bnr-phone-btn-1120: 10.16px;
 
+
+
+    --hdr-height: clamp(143.11px, 12.78vw, 245.33px);
+    --hdr-logo-width: clamp(175.44px, 16.45vw, 315.79px);
+    --hdr-logo-height: clamp(29.82px, 2.80vw, 53.68px);
+    --hdr-cnts-width: clamp(239.44px, 22.45vw, 431px);
+    --hdr-cnts-height: clamp(39.83px, 3.69vw, 70.9px);
+    --hdr-cnts-large-icon-width: clamp(18.96px, 1.78vw, 34.14px);
+    --hdr-cnts-small-icon-width: clamp(10.85px, 1.02vw, 19.54px);
+    --hdr-cnts-small-fs: clamp(9.02px, 0.85vw, 16.24px);
+
+    --nav-sections-large: clamp(13px, 1.09vw, 21px);
+    --nav-sections-small: clamp(9px, 0.85vw, 16.24px);
+
+    --bnr-bullet: clamp(16px, 1.43vw, 27.41px);
+    --bnr-title: clamp(32px, 2.86vw, 55px);
+    --bnr-top-line: clamp(10.16px, 0.93vw, 17.81px);
+    --bnr-call-btn: clamp(13px, 1.04vw, 20px);
+    --bnr-price-btn: clamp(13px, 1.13vw, 21.76px);
+    --bnr-phone-btn: clamp(10.16px, 0.93vw, 17.81px);
+
     --bnr-height-1920: 752px;
     --bnr-height-1680: 670px;
     --bnr-height-1440: 564px;
     --bnr-height-1120: 438.67px;
 
+    --bnr-height: clamp(438.67px, 39.17vw, 752px);
 
-    --phone-height-1920: 806.37px;
+
+/*     --phone-height-1920: 806.37px;
     --phone-width-1920: 515.29px;
     --phone-top-offset-1920: 48px;
     --phone-left-offset-1920: 1128.79px;
@@ -120,7 +136,13 @@
     --phone-height-1120: 459.93px;
     --phone-width-1120: 293.9px;
     --phone-top-offset-1120: 24.08px;
-    --phone-left-offset-1120: 659.87px;
+    --phone-left-offset-1120: 659.87px; */
+
+
+    --phone-height: clamp(459.93px, 42vw, 806.37px);
+    --phone-width: clamp(293.9px, 26.84vw, 515.29px);
+    --phone-top-offset: clamp(24.08px, 2.5vw, 48px);
+    --phone-left-offset: clamp(659.87px, 58.79vw, 1128.79px);
 }
 
 * {
@@ -971,4 +993,52 @@ img {
         top: var(--phone-top-offset-1920);
         left: var(--phone-left-offset-1920);
     }
+}
+
+.primary-nav li {
+    font-size: var(--nav-sections-large);
+}
+.nav-link {
+    font-size: var(--nav-sections-small);
+}
+.nav-wrapper {
+    height: var(--hdr-height);
+}
+.main-logo {
+    width: var(--hdr-logo-width);
+    height: var(--hdr-logo-height);
+}
+.links-wrapper {
+    width: var(--hdr-cnts-width);
+    height: var(--hdr-cnts-height);
+}
+.cnts-small-icon {
+    width: var(--hdr-cnts-small-icon-width);
+}
+.bnr-header {
+    font-size: var(--bnr-title);
+}
+.bnr-subgroup p {
+    font-size: var(--bnr-bullet);
+}
+.bnr-btn.price {
+    font-size: var(--bnr-price-btn);
+}
+.bnr-btn.call {
+    font-size: var(--bnr-call-btn);
+}
+.bnr-btn.phone {
+    font-size: var(--bnr-phone-btn);
+}
+.bnr-first-pr {
+    font-size: var(--bnr-top-line);
+}
+.bnr-wrapper { 
+    height: var(--bnr-height);
+}
+.bnr-img-holder {
+    width: var(--phone-width);
+    height: var(--phone-height);
+    top: var(--phone-top-offset);
+    left: var(--phone-left-offset);
 }
