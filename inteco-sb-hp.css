@@ -56,6 +56,31 @@
     --phone-width: clamp(293.9px, 26.84vw, 515.29px);
     --phone-top-offset: clamp(24.08px, 2.5vw, 48px);
     --phone-left-offset: clamp(659.87px, 58.79vw, 1128.79px);
+
+
+    /* Sale */
+    --sale-margin-top: clamp(71.42px, 8.7vw, 141px);
+    --sale-subgroup-margin-top: clamp(44px, 4.38vw, 79px);
+    --sale-subgroup-height: clamp(298.56px, 29.49vw, 534.48px);
+    --sale-subgroup-rgl-fs: clamp(17px, 1.63vw, 30px);
+    --sale-subgroup-span-fs: clamp(25px, 2.55vw, 45.36px);
+    --sale-subgroup-title-fs: clamp(35px, 2.5vw, 55px);
+    --sale-main-image-width: clamp(525.32px, 51.89vw, 940.42px);
+    --sale-main-image-height: clamp(410.98px, 40.59vw, 735.72px);
+    --sale-play-btn-width: clamp(50.68px, 5.01vw, 90.72px);
+    --sale-red-sticker-width: clamp(87.73px, 8.67vw, 157.05px);
+    --sale-red-sticker-height: clamp(62.6px, 6.18vw, 112.06px);
+    --sale-red-sticker-left: clamp(590.76px, 52.99vw, 1014.71px);
+    --sale-red-sticker-top:  calc(clamp(88.44px, 10.38vw, 171.49px) - var(--sale-margin-top));
+    --sale-invite-btn-fs: clamp(15px, 0.93vw, 25px);
+    --sale-invite-btn-width: clamp(212px, 13.19vw, 317.54px);
+    --sale-invite-btn-height: clamp(39px, 3.91vw, 70.31px);
+    --sale-fine-print-fs: clamp(14.93px, 0.89vw, 24.56px);
+    --sale-fine-print-width: clamp(350px, 25.53vw, 544.24px);
+    --sale-fine-print-top: clamp(442.42px, 38.45vw, 798px);
+    --sale-fine-print-left: clamp(546px, 62.0vw, 1120px);
+    --sale-play-btn-left: clamp(479.48px, 42.0vw, 815.51px);
+    --sale-play-btn-top: calc(clamp(196.14px, 21.02vw, 364.28px) - var(--sale-margin-top));
 }
 
 * {
@@ -321,47 +346,59 @@ img {
 
 /****** Sale section *******/
 
+.sale-outer-wrapper {
+    position: relative;
+}
+
 .sale-grid-group {
-    margin-block: clamp(2.5rem, 10vw, 5rem);
+    margin-block: var(--sale-margin-top);
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 3em;
+    grid-template-columns: var(--sale-main-image-width) 1fr;
 }
 
 .ads_image {
     width: 100%;
+    height: 100%;
 }
 
 .right-subgroup-content {
+    margin-top: var(--sale-subgroup-margin-top);
+    height: var(--sale-subgroup-height);
     text-align: center;
-    font-size: var(--small-fs);
+    font-size: var(--sale-subgroup-rgl-fs);
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-around;
 }
 
 .grid-group-left {
-    position: relative;
+    width: var(--sale-main-image-width);
+    height: var(--sale-main-image-height);
+}
+
+.grid-group-right {
+    align-self: flex-start;
 }
 
 .course-logo {
     position: absolute;
-    width: 20%;
-    right: 3%;
-    top: 3%;
+    width: var(--sale-red-sticker-width);
+    height: var(--sale-red-sticker-height);
+    left: var(--sale-red-sticker-left);
+    top: var(--sale-red-sticker-top);
 }
 
 #video-play-button {
     position: absolute;
-    width: 10%;
-    right: 32%;
-    top: 32%;
+    width: var(--sale-play-btn-width);
+    left: var(--sale-play-btn-left);
+    top: var(--sale-play-btn-top);
     cursor: pointer;
 }
 
 .right-subgroup-title {
-    margin-block: 1em;
-    font-size: var(--header-fs);
+    font-size: var(--sale-subgroup-title-fs);
     background: var(--header-links-gr);
     color: #032C72; 
 
@@ -370,33 +407,37 @@ img {
     color: transparent; 
 }
 
-.right-subgroup-highlighted {
+.sale-subgroup-span {
     color: rgba(3, 44, 114, 1);
+    font-size: var(--sale-subgroup-span-fs);
+    font-weight: 600;
 }
 
 .invite {
     text-transform: uppercase;
     background: var(--header-links-gr);
+    width: var(--sale-invite-btn-width);
+    height: var(--sale-invite-btn-height);
     border: none;
     color: #fff;
-    padding: 1em;
     font-weight: 800;
     border-radius: 10px;
-    margin-block: 2em;
     letter-spacing: 1px;
     cursor: pointer;
-    font-size: var(--small-fs);
+    font-size: var(--sale-invite-btn-fs);
+    flex-shrink: 0;
 }
 
 .right-subgroup-fineprint {
-    margin-top: 4em;
-    position: relative;
-    width: 110%;
-    right: 5%;
-    font-size: var(--fine-print-fs);
-    text-align: left;
+    display: block;
+    position: absolute;
+    width: var(--sale-fine-print-width);
+    font-size: var(--sale-fine-print-fs);
+    top: var(--sale-fine-print-top);
+    left: var(--sale-fine-print-left);
     font-weight: 500;
     line-height: 1;
+    color: #1D1D1E;
 }
 
 /****** Projects section *******/
