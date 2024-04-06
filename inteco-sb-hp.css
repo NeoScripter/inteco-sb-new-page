@@ -98,46 +98,46 @@
 
     /* About */
 
-    --abt-padding-block: clamp(19.84px, 1.77vw, 34px);
-    --abt-main-cnt-width: clamp(980px, 87.5vw, 1680px);
-    --abt-big-btn-right-width: clamp(123.86px, 11.06vw, 212.33px);
-    --abt-float-left-small-fs: clamp(8.17px, 0.73vw, 14px);
-    --abt-float-left-large-fs: clamp(10.5px, 0.94vw, 18px);
-    --abt-float-left-height: clamp(106.49px, 9.51vw, 182.56px);
-    --abt-float-left-width: clamp(109.97px, 9.82vw, 188.51px);
-    --abt-float-left-left: clamp(522.67px, 46.67vw, 896px);
-    --abt-float-left-top: clamp(182.59px, 16.3vw, 313px);
-    --abt-float-top-small-fs: clamp(6.42px, 0.57vw, 11px);
-    --abt-float-top-large-fs: clamp(8.17px, 0.73vw, 14px);
-    --abt-float-top-height: clamp(77.56px, 6.92vw, 132.95px);
-    --abt-float-top-width: clamp(85.08px, 7.6vw, 145.85px);
-    --abt-float-top-left: clamp(727.08px, 64.92vw, 1246.42px);
-    --abt-float-top-top: clamp(74.24px, 6.63vw, 127.27px);
-    --abt-float-bottom-small-fs: clamp(8.17px, 0.73vw, 14px);
-    --abt-float-bottom-large-fs: clamp(10.5px, 0.94vw, 18px);
-    --abt-float-bottom-height: clamp(147.58px, 13.18vw, 253px);
-    --abt-float-bottom-width: clamp(143.5px, 12.81vw, 246px);
-    --abt-float-bottom-left: clamp(788.08px, 70.37vw, 1351px);
-    --abt-float-bottom-top: clamp(412.42px, 36.82vw, 707px);
-    --abt-float-img-left-width: clamp(116.33px, 10.39vw, 199.43px);
-    --abt-float-img-left-height: clamp(101.29px, 9.04vw, 173.63px);
-    --abt-flex-sb-small-fs: clamp(9px, 0.63vw, 14px);
-    --abt-flex-sb-extra-large-fs: clamp(32px, 2.88vw, 55px);
-    --abt-big-btn-fs: clamp(11px, 0.88vw, 18px);
-    --abt-big-btn-height: clamp(35.88px, 3.14vw, 61px);
-    --abt-big-btn-left-width: clamp(193.08px, 17.24vw, 331px);
-    --abt-about-par-fs: clamp(11px, 0.88vw, 18px);
-    --abt-about-header-fs: clamp(14px, 1.25vw, 24px);
-    --abt-about-title-fs: clamp(26px, 2.38vw, 45px);
-    --abt-main-img-width: clamp(596.85px, 53.29vw, 1023.18px);
-    --abt-main-img-height: clamp(434.08px, 38.76vw, 744.14px);
-    --abt-flex-sb-medium-fs: clamp(11px, 0.88vw, 18px);
-    --abt-small-float-hdr-fs: clamp(10px, 0.88vw, 17px);
-    --abt-small-float-par-fs: clamp(9px, 0.63vw, 14px);
-    --abt-small-float-width: clamp(178.26px, 15.92vw, 305.59px);
-    --abt-grid-gap: clamp(19.34px, 1.71vw, 33px);
-    --abt-par-wrapper-width: clamp(276.5px, 24.69vw, 474px);
-    --abt-float-left-offset: clamp(140px, 12.5vw, 240px);
+    --abt-padding-block: clamp(10.62px, 1.77vw, 34px);
+    --abt-main-cnt-width: clamp(525px, 87.5vw, 1680px);
+    --abt-big-btn-right-width: clamp(66.36px, 11.06vw, 212.33px);
+    --abt-float-left-small-fs: clamp(4.38px, 0.73vw, 14px);
+    --abt-float-left-large-fs: clamp(5.64px, 0.94vw, 18px);
+    --abt-float-left-height: clamp(57.06px, 9.51vw, 182.56px);
+    --abt-float-left-width: clamp(58.92px, 9.82vw, 188.51px);
+    --abt-float-left-left: clamp(280.02px, 46.67vw, 896px);
+    --abt-float-left-top: clamp(97.8px, 16.3vw, 313px);
+    --abt-float-top-small-fs: clamp(3.42px, 0.57vw, 11px);
+    --abt-float-top-large-fs: clamp(4.38px, 0.73vw, 14px);
+    --abt-float-top-height: clamp(41.52px, 6.92vw, 132.95px);
+    --abt-float-top-width: clamp(45.6px, 7.6vw, 145.85px);
+    --abt-float-top-left: clamp(389.52px, 64.92vw, 1246.42px);
+    --abt-float-top-top: clamp(39.78px, 6.63vw, 127.27px);
+    --abt-float-bottom-small-fs: clamp(4.38px, 0.73vw, 14px);
+    --abt-float-bottom-large-fs: clamp(5.64px, 0.94vw, 18px);
+    --abt-float-bottom-height: clamp(79.08px, 13.18vw, 253px);
+    --abt-float-bottom-width: clamp(76.86px, 12.81vw, 246px);
+    --abt-float-bottom-left: clamp(422.22px, 70.37vw, 1351px);
+    --abt-float-bottom-top: clamp(220.92px, 36.82vw, 707px);
+    --abt-float-img-left-width: clamp(62.34px, 10.39vw, 199.43px);
+    --abt-float-img-left-height: clamp(54.24px, 9.04vw, 173.63px);
+    --abt-flex-sb-small-fs: clamp(3.78px, 0.63vw, 14px);
+    --abt-flex-sb-extra-large-fs: clamp(17.28px, 2.88vw, 55px);
+    --abt-big-btn-fs: clamp(5.28px, 0.88vw, 18px);
+    --abt-big-btn-height: clamp(18.84px, 3.14vw, 61px);
+    --abt-big-btn-left-width: clamp(103.44px, 17.24vw, 331px);
+    --abt-about-par-fs: clamp(5.28px, 0.88vw, 18px);
+    --abt-about-header-fs: clamp(7.5px, 1.25vw, 24px);
+    --abt-about-title-fs: clamp(14.28px, 2.38vw, 45px);
+    --abt-main-img-width: clamp(319.74px, 53.29vw, 1023.18px);
+    --abt-main-img-height: clamp(232.56px, 38.76vw, 744.14px);
+    --abt-flex-sb-medium-fs: clamp(5.28px, 0.88vw, 18px);
+    --abt-small-float-hdr-fs: clamp(5.28px, 0.88vw, 17px);
+    --abt-small-float-par-fs: clamp(3.78px, 0.63vw, 14px);
+    --abt-small-float-width: clamp(95.52px, 15.92vw, 305.59px);
+    --abt-grid-gap: clamp(10.26px, 1.71vw, 33px);
+    --abt-par-wrapper-width: clamp(148.14px, 24.69vw, 474px);
+    --abt-float-left-offset: clamp(75px, 12.5vw, 240px);
 }
 
 * {
@@ -742,8 +742,7 @@ img {
     display: grid;
     grid-template-columns: repeat(4, calc(var(--abt-small-float-width)));
     justify-content: space-between;
-/*     width: calc(var(--abt-main-cnt-width) / 4 * 3);
- */}
+}
 
 .about-outer-wrapper h4 {
     text-transform: uppercase;
@@ -758,19 +757,22 @@ img {
 }
 
 .small-float {
-    border-radius: 15px;
+    border-radius: 10px;
     text-align: center;
-    padding: 1em;
+    padding: calc(var(--abt-padding-block) / 2);
     position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
     box-shadow: 0 0.3em 0.3em 0 rgba(0, 0, 0, 0.25);
     z-index: 10;
 }
 
 .small-float-left {
-    left: calc(var(--abt-float-left-left) - (var(--abt-float-left-offset) / 2));
+    left: calc(var(--abt-float-left-left) - var(--abt-padding-block));
     top: var(--abt-float-left-top);
     width: var(--abt-float-left-width);
-    height: var(--abt-float-left-height);
     background-color: rgba(255, 255, 255, 0.9);
 }
 
@@ -794,10 +796,9 @@ img {
 }
 
 .small-float-top {
-    left: calc(var(--abt-float-top-left) - (var(--abt-float-left-offset) / 2));
+    left: var(--abt-float-top-left);
     top: var(--abt-float-top-top);
     width: var(--abt-float-top-width);
-    height: var(--abt-float-top-height);
     background-color: rgba(255, 255, 255, 0.9);
 }
 
@@ -805,9 +806,8 @@ img {
     background: var(--header-links-gr);
     color: #fff;
     width: var(--abt-float-bottom-width);
-    height: var(--abt-float-bottom-height);
     left: calc(var(--abt-float-bottom-left) - (var(--abt-float-left-offset) / 2));
-    top: var(--abt-float-bottom-top);
+    top: calc(var(--abt-float-bottom-top) + var(--abt-padding-block) * 2);
 }
 
 .small-float-left, .small-float-top {
