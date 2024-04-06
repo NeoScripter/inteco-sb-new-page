@@ -178,7 +178,7 @@ img {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: calc(var(--hdr-height) + var(--abt-padding-block));
+    height: calc(var(--hdr-height) + var(--abt-padding-block) * 2);
 }
 
 .primary-nav ul {
@@ -256,6 +256,7 @@ img {
     justify-content: flex-end;
     align-items: center;
     gap: 0.7em;
+    margin-block: 0.5em;
 }
 
 .nav-emerging-par {
