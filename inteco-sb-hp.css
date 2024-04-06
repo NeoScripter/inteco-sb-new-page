@@ -178,7 +178,7 @@ img {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: var(--hdr-height);
+    height: calc(var(--hdr-height) + var(--abt-padding-block));
 }
 
 .primary-nav ul {
