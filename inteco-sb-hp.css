@@ -625,13 +625,16 @@ img {
     display: flex;
     align-items: center;
     gap: 14%;
-    font-size: var(--abt-about-title-fs);
     background: var(--header-links-gr);
     color: #032C72;
 
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent; 
+}
+
+.about-title h2 {
+    font-size: var(--abt-about-title-fs);
 }
 
 .about-grid-group {
@@ -732,10 +735,13 @@ img {
 
 .flex-sb-medium {
     font-weight: 700;
-    font-size: var(--abt-flex-sb-medium-fs);
     border-bottom: 0.2em solid transparent;
     border-image: linear-gradient(to right, #025DF8, #032C72) 1;
-    padding-bottom: 0.3em;
+    padding-bottom: 0.5em;
+}
+
+.flex-sb-medium a {
+    font-size: var(--abt-flex-sb-medium-fs);
 }
 
 .about-bottom-wrapper {
