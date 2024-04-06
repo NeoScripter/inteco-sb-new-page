@@ -151,6 +151,8 @@
     --form-form-cnt-margin-block: clamp(16.5px, 2.75vw, 54px);
 
     /* Camera */
+    --mrk-main-cnt-height: clamp(189.18px, 31.53vw, 605.33px);
+    --mrk-subwrapper-width: clamp(423.96px, 70.66vw, 1356.74px);
     --cmr-main-img-wrapper-width: clamp(316.68px, 52.78vw, 1013.33px);
     --cmr-subtitle-width: clamp(281.58px, 46.93vw, 901px);
     --cmr-main-img-wrapper-height: clamp(195.84px, 32.64vw, 626.67px);
@@ -166,6 +168,24 @@
     --cmr-main-img-top-offset: clamp(59.88px, 9.98vw, 238.75px);
     --cmr-icon-width: clamp(15.6px, 2.60vw, 50px);
     --cmr-list-item-fs: clamp(7.5px, 1.25vw, 24px);
+
+    /* Marketing */
+    --mrk-subwrapper-height: clamp(106.14px, 17.69vw, 340.48px);
+    --mrk-subwrapper-margin-top: clamp(29.52px, 4.92vw, 94.52px);
+    --mkr-top-btn-width: clamp(314.28px, 52.38vw, 1005.68px);
+    --mrk-top-btn-height: clamp(39.36px, 6.56vw, 125.97px);
+    --mrk-top-btn-large-fs: clamp(11.28px, 1.88vw, 36px);
+    --mrk-top-btn-small-fs: clamp(7.5px, 1.25vw, 24px);
+    --mrk-btm-btn-large-fs: clamp(14.28px, 2.38vw, 45px);
+    --mrk-btm-btn-small-fs: clamp(7.5px, 1.25vw, 24px);
+    --mrk-btn-icon-width: clamp(19.68px, 3.28vw, 62.99px);
+    --mrk-red-btn-fs: clamp(5.28px, 0.88vw, 18px);
+    --mrk-red-btn-width: clamp(83.46px, 13.91vw, 267px);
+    --mrk-red-btn-height: clamp(20.64px, 3.44vw, 66px);
+    --mrk-lowbtn-prg-width: clamp(143.46px, 23.91vw, 459px);
+    --mrk-lowbtn-header-width: clamp(142.08px, 23.68vw, 454.55px);
+    --mrk-lowbtn-icon-wrapper-width: clamp(49.86px, 8.31vw, 157.5px);
+    
 }
 
 * {
@@ -1109,4 +1129,105 @@ img {
     width: 60%; 
     height: 0.2em; 
     background: var(--header-links-gr); 
+}
+
+/****** Marketing section *******/
+
+.mrk-outer-wrapper {
+    background: var(--header-links-gr);
+    height: var(--mrk-main-cnt-height);
+    position: relative;
+    display: grid;
+}
+
+.mrk-outer-wrapper::after {
+    content: "";
+    background-image: url(assets/images/mrk-bg-img.jpeg);
+    background-size: cover;
+    background-position: center;
+    opacity: 0.25; 
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: 2;  
+  }
+
+.mrk-main-subwrapper {
+    height: var(--mrk-subwrapper-height);
+    width: var(--mrk-subwrapper-width);
+    margin-top: var(--mrk-subwrapper-margin-top);
+    margin-inline: auto;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    z-index: 4;  
+}
+
+.mrk-top-btn {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: var(--mkr-top-btn-width);
+    height: var(--mrk-top-btn-height);
+    background-color: rgb(255,255,255,0.95);
+    border-radius: 9.19px;
+}
+
+.mrk-tbtn-left {
+    font-size: var(--mrk-top-btn-large-fs);
+
+}
+
+.mrk-tbtn-right {
+    font-size: var(--mrk-top-btn-small-fs);
+
+}
+
+.mrk-tbtn-right, .mrk-tbtn-left {
+    font-weight: 600;
+    color: #1D1F1E;
+    display: grid;
+    place-content: center;
+}
+
+.mrk-btm-btn {
+    display: flex;
+    align-items: center;
+    color: #FFF;
+}
+
+.mrk-lowbtn-icon-wrapper {
+    display: flex;
+    width: var(--mrk-lowbtn-icon-wrapper-width);
+}
+
+.mrk-lowbtn-header {
+    font-size: var(--mrk-btm-btn-large-fs);
+    font-weight: 600;
+    width: var(--mrk-lowbtn-header-width);
+}
+
+.mrk-lowbtn-prg {
+    width: var(--mrk-lowbtn-prg-width);
+    font-size: var(--mrk-btm-btn-small-fs);
+    font-weight: 600;
+}
+
+.mrk-icon {
+    width: var(--mrk-btn-icon-width);
+}
+
+#mrk-red-btn {
+    width: var(--mrk-red-btn-width);
+    height: var(--mrk-red-btn-height);
+    background-color: #EA0000;
+    font-size: var(--mrk-red-btn-fs);
+    font-weight: 800;
+    display: grid;
+    place-content: center;
+    color: #FFF;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+    border-radius: 10px;
 }
