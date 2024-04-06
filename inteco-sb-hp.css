@@ -149,6 +149,23 @@
     --form-btn-cnt-width: clamp(203.1px, 33.85vw, 650px);
     --form-policy-fs: clamp(5.28px, 0.88vw, 16px);
     --form-form-cnt-margin-block: clamp(16.5px, 2.75vw, 54px);
+
+    /* Camera */
+    --cmr-main-img-wrapper-width: clamp(591.11px, 52.78vw, 1013.33px);
+    --cmr-subtitle-width: clamp(525.58px, 46.93vw, 901px);
+    --cmr-main-img-wrapper-height: clamp(365.56px, 32.64vw, 626.67px);
+    --cmr-float-img-hdr-fs: clamp(11px, 0.88vw, 18px);
+    --cmr-float-img-small-fs: clamp(10px, 0.75vw, 16px);
+    --cmr-float-img-width: clamp(146.42px, 13.07vw, 251px);
+    --cmr-float-img-height: clamp(203px, 18.13vw, 348px);
+    --cmr-float-img-top-offset: clamp(408.75px, 32.28vw, 667px);
+    --cmr-float-img-left-offset: clamp(814.17px, 72.73vw, 1396px);
+    --cmr-main-img-width: clamp(604.11px, 53.94vw, 1035.61px);
+    --cmr-main-img-height: clamp(402.74px, 35.96vw, 690.41px);
+    --cmr-main-img-left-offset: clamp(1036.42px, 92.57vw, 1777px);
+    --cmr-main-img-top-offset: clamp(158.94px, 9.98vw, 238.75px);
+    --cmr-icon-width: clamp(29.17px, 2.60vw, 50px);
+    --cmr-list-item-fs: clamp(14px, 1.25vw, 24px);
 }
 
 * {
@@ -933,4 +950,45 @@ img {
 .policy-link {
     font-weight: 800;
     color: white;
+}
+
+/****** Camera section *******/
+
+.camera-outer-wrapper {
+    position: relative;
+}
+
+.camera-title-wrapper {
+    width: var(--cmr-subtitle-width);
+    margin-inline: auto;
+    text-align: center;
+    margin-bottom: calc(var(--abt-padding-block) * 2);
+}
+
+.camera-title {
+    font-size: var(--abt-about-title-fs);
+    margin-block: var(--abt-padding-block);
+}
+
+.camera-subtitle {
+    font-size: var(--prj-subtitle-fs);
+}
+
+.camera-grid-group {
+    display: grid;
+    grid-template-columns: 1fr var(--cmr-main-img-wrapper-width);
+}
+
+.camera-sb-right {
+    background: var(--header-links-gr);
+    height: var(--cmr-main-img-wrapper-height);
+}
+
+.camera-main-img {
+    position: absolute;
+    width: var(--cmr-main-img-width);
+    height: var(--cmr-main-img-height);
+    left: calc(var(--cmr-main-img-left-offset) - var(--cmr-main-img-width));
+    top: calc(var(--cmr-main-img-top-offset) - var(--abt-padding-block)); 
+    z-index: 10;
 }
