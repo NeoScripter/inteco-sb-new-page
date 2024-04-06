@@ -58,7 +58,22 @@
     --phone-width: clamp(161.04px, 26.84vw, 515.29px);
     --phone-top-offset: clamp(15.0px, 2.5vw, 48px);
     --phone-left-offset: clamp(352.74px, 58.79vw, 1128.79px);
-    
+
+
+    /* Banner extra sections */
+
+    --bnr-float-left-width: clamp(60.96px, 10.16vw, 195.15px);
+    --bnr-float-left-height: clamp(46.92px, 7.82vw, 150.2px);
+    --bnr-float-left-left-offset: clamp(323.28px, 53.88vw, 1034.5px);
+    --bnr-float-left-top-offset: clamp(118.14px, 19.69vw, 377.94px);
+    --bnr-float-left-large-fs: clamp(9.78px, 1.63vw, 33px);
+    --bnr-float-left-small-fs: clamp(4.5px, 0.75vw, 15px);
+    --bnr-float-right-width: clamp(50.28px, 8.38vw, 160.84px);
+    --bnr-float-right-height: clamp(38.7px, 6.45vw, 123.79px);
+    --bnr-float-right-right-offset: clamp(468.66px, 78.11vw, 1499.68px);
+    --bnr-float-right-top-offset: clamp(189.36px, 31.56vw, 605.98px);
+    --bnr-float-right-large-fs: clamp(4.68px, 0.78vw, 15px);
+    --bnr-float-right-small-fs: clamp(4.08px, 0.68vw, 13px);    
 
 
     /* Sale */
@@ -411,7 +426,6 @@ img {
     width: var(--bnr-call-btn-width);
     height: var(--bnr-call-btn-height);
     font-size: var(--bnr-call-btn);
-
 }
 
 .bnr-btn.phone {
@@ -470,6 +484,63 @@ img {
 .video-2 {
     top: 55%;
     bottom: 24.5%;
+}
+
+.bnr-float {
+    position: absolute;
+    background-color: #FFFFFFE5;
+    border-radius: 9.59px;
+    padding: 0.8em 0.6em;
+    z-index: 20;
+    text-align: center;
+}
+
+.bnr-float-left {
+    width: var(--bnr-float-left-width);
+/*     height: var(--bnr-float-left-height);
+ */    top: var(--bnr-float-left-top-offset);
+    left: var(--bnr-float-left-left-offset);
+}
+
+.bnr-float-title {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding-bottom: 0.3em;
+    font-weight: 800;
+
+    background: var(--header-links-gr);
+    color: #032C72; 
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; 
+}
+
+.bnr-float-left-title {
+    font-size: var(--bnr-float-left-large-fs);
+}
+
+.bnr-float-right-title {
+    font-size: var(--bnr-float-right-large-fs);
+}
+
+.bnr-float-prg {
+    font-weight: 500;
+}
+
+.bnr-float-left-prg {
+    font-size: var(--bnr-float-left-small-fs);
+}
+
+.bnr-float-right-prg {
+    font-size: var(--bnr-float-right-small-fs);
+}
+
+.bnr-float-right {
+    width: var(--bnr-float-right-width);
+/*     height: var(--bnr-float-right-height);
+ */    top: var(--bnr-float-right-top-offset);
+    left: var(--bnr-float-right-right-offset);
 }
 
 /****** Sale section *******/
