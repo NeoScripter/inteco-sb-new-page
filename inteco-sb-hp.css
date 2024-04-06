@@ -95,6 +95,49 @@
     --prj-img-cnt-width: clamp(98.82px, 16.47vw, 316.16px);
     --prj-fine-print-fs: clamp(4.08px, 0.68vw, 13px);
     --prj-grid-gap: clamp(9.0px, 1.5vw, 28.5px);
+
+    /* About */
+
+    --abt-padding-block: clamp(19.84px, 1.77vw, 34px);
+    --abt-main-cnt-width: clamp(980px, 87.5vw, 1680px);
+    --abt-big-btn-right-width: clamp(123.86px, 11.06vw, 212.33px);
+    --abt-float-left-small-fs: clamp(8.17px, 0.73vw, 14px);
+    --abt-float-left-large-fs: clamp(10.5px, 0.94vw, 18px);
+    --abt-float-left-height: clamp(106.49px, 9.51vw, 182.56px);
+    --abt-float-left-width: clamp(109.97px, 9.82vw, 188.51px);
+    --abt-float-left-left: clamp(522.67px, 46.67vw, 896px);
+    --abt-float-left-top: clamp(182.59px, 16.3vw, 313px);
+    --abt-float-top-small-fs: clamp(6.42px, 0.57vw, 11px);
+    --abt-float-top-large-fs: clamp(8.17px, 0.73vw, 14px);
+    --abt-float-top-height: clamp(77.56px, 6.92vw, 132.95px);
+    --abt-float-top-width: clamp(85.08px, 7.6vw, 145.85px);
+    --abt-float-top-left: clamp(727.08px, 64.92vw, 1246.42px);
+    --abt-float-top-top: clamp(74.24px, 6.63vw, 127.27px);
+    --abt-float-bottom-small-fs: clamp(8.17px, 0.73vw, 14px);
+    --abt-float-bottom-large-fs: clamp(10.5px, 0.94vw, 18px);
+    --abt-float-bottom-height: clamp(147.58px, 13.18vw, 253px);
+    --abt-float-bottom-width: clamp(143.5px, 12.81vw, 246px);
+    --abt-float-bottom-left: clamp(788.08px, 70.37vw, 1351px);
+    --abt-float-bottom-top: clamp(412.42px, 36.82vw, 707px);
+    --abt-float-img-left-width: clamp(116.33px, 10.39vw, 199.43px);
+    --abt-float-img-left-height: clamp(101.29px, 9.04vw, 173.63px);
+    --abt-flex-sb-small-fs: clamp(9px, 0.63vw, 14px);
+    --abt-flex-sb-extra-large-fs: clamp(32px, 2.88vw, 55px);
+    --abt-big-btn-fs: clamp(11px, 0.88vw, 18px);
+    --abt-big-btn-height: clamp(35.88px, 3.14vw, 61px);
+    --abt-big-btn-left-width: clamp(193.08px, 17.24vw, 331px);
+    --abt-about-par-fs: clamp(11px, 0.88vw, 18px);
+    --abt-about-header-fs: clamp(14px, 1.25vw, 24px);
+    --abt-about-title-fs: clamp(26px, 2.38vw, 45px);
+    --abt-main-img-width: clamp(596.85px, 53.29vw, 1023.18px);
+    --abt-main-img-height: clamp(434.08px, 38.76vw, 744.14px);
+    --abt-flex-sb-medium-fs: clamp(11px, 0.88vw, 18px);
+    --abt-small-float-hdr-fs: clamp(10px, 0.88vw, 17px);
+    --abt-small-float-par-fs: clamp(9px, 0.63vw, 14px);
+    --abt-small-float-width: clamp(178.26px, 15.92vw, 305.59px);
+    --abt-grid-gap: clamp(19.34px, 1.71vw, 33px);
+    --abt-par-wrapper-width: clamp(276.5px, 24.69vw, 474px);
+    --abt-float-left-offset: clamp(140px, 12.5vw, 240px);
 }
 
 * {
@@ -566,7 +609,9 @@ img {
 /****** About section *******/
 
 .about-outer-wrapper {
-    padding-block: clamp(2.5rem, 10vw, 5rem);
+    padding-top: var(--abt-padding-block);
+    padding-bottom: calc(var(--abt-padding-block) * 2);
+    position: relative;
 }
 
 .about-inner-wrapper {
@@ -579,7 +624,7 @@ img {
     display: flex;
     align-items: center;
     gap: 14%;
-    font-size: clamp(22px, 2.4vw, 50px);
+    font-size: var(--abt-about-title-fs);
     background: var(--header-links-gr);
     color: #032C72;
 
@@ -590,71 +635,75 @@ img {
 
 .about-grid-group {
     display: grid;
-    grid-template-columns: 1fr 55%;
-    gap: 4vw;
+    grid-template-columns: 1fr var(--abt-main-img-width);
+    gap: var(--abt-grid-gap);
 }
 
 .about-float-left {
     float: left;
-    width: 15%;
+    width: var(--abt-float-img-left-width);
+    height: var(--abt-float-img-left-height);
 }
 
 .about-float-right {
-   object-fit: cover;
-   height: 100%;
-   object-position: center;
+   height: var(--abt-main-img-height);
+   width: var(--abt-main-img-width);
    position: relative;
-   top: -2%;
+   top: -1%;
    border-radius: 10px;
 }
 
-.about-grid-group-right {
-    position: relative;
-}
-
 .about-header {
-    font-size: var(--regular-fs);
-    margin-block: 1em;
+    font-size: var(--abt-about-header-fs);
+    margin-block: var(--abt-padding-block);
     text-transform: uppercase;
 }
 
 .about-par {
-    font-size: var(--small-fs);
+    font-size: var(--abt-about-par-fs);
+    width: var(--abt-par-wrapper-width);
     font-weight: 500;
 }
 
 .about-buttons-wrapper {
-    padding-block: clamp(1.5em, 7vw, 3em);
+    padding-block: var(--abt-padding-block);
+    display: flex;
 }
 
 .about-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-decoration: none;
     text-transform: uppercase;
     border-radius: 10px;
-    padding: 1em;
-    font-size: clamp(14px, 1.4vw, 26px);
-    font-weight: 700;
+    font-size: var(--abt-big-btn-fs);
+    font-weight: 800;
+    height: var(--abt-big-btn-height);
+    flex-shrink: 0;
 }
 
 .view-projects {
     margin-right: 1em;
     background: var(--header-links-gr);
     color: #fff;
+    width: var(--abt-big-btn-left-width);
 }
 
 .contacts-btn {
     border: 2px solid rgb(3, 44, 114);
     color: rgb(3, 44, 114);
+    width: var(--abt-big-btn-right-width);
 }
 
 .about-flex-subgroup {
-    padding-block: clamp(1em, 3vw, 2em);
+    padding-block: var(--abt-padding-block);
     display: flex;
     gap: 0.5em;
 }
 
 .about-flex-subgroup.top {
-    justify-content: space-between;
+    gap: var(--abt-padding-block);
 }
 
 .about-flex-subgroup.bottom {
@@ -662,12 +711,13 @@ img {
 }
 
 .flex-sb-extra-large {
-    font-size: clamp(18px, 5vw, 65px);
+    font-size: var(--abt-flex-sb-extra-large-fs);
     font-weight: 600;
 }
 
 .flex-sb-small {
-    font-size: var(--fine-print-fs);
+    font-size: var(--abt-flex-sb-small-fs);
+    display: block;
 }
 
 .flex-sb-extra-large, .flex-sb-medium {
@@ -681,28 +731,29 @@ img {
 
 .flex-sb-medium {
     font-weight: 700;
-    font-size: clamp(14px, 1.5vw, 30px);
+    font-size: var(--abt-flex-sb-medium-fs);
     border-bottom: 0.2em solid transparent;
     border-image: linear-gradient(to right, #025DF8, #032C72) 1;
     padding-bottom: 0.3em;
 }
 
 .about-bottom-wrapper {
-    margin-top: clamp(1.5em, 5vw, 3em);
+    margin-top: calc(var(--abt-padding-block) * 2);
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: clamp(1.5em, 4vw, 3em);
-}
+    grid-template-columns: repeat(4, calc(var(--abt-small-float-width)));
+    justify-content: space-between;
+/*     width: calc(var(--abt-main-cnt-width) / 4 * 3);
+ */}
 
 .about-outer-wrapper h4 {
     text-transform: uppercase;
     letter-spacing: 1px;
-    font-size: clamp(14px, 1.5vw, 30px);
-    min-height: 3em;
+    font-size: var(--abt-small-float-hdr-fs);
+    min-height: var(--abt-padding-block);
 }
 
 .about-grid-element p {
-    font-size: var(--small-fs);
+    font-size: var(--abt-small-float-par-fs);
     font-weight: 500;
 }
 
@@ -712,31 +763,51 @@ img {
     padding: 1em;
     position: absolute;
     box-shadow: 0 0.3em 0.3em 0 rgba(0, 0, 0, 0.25);
+    z-index: 10;
 }
 
 .small-float-left {
-    left: 0;
-    top: 30%;
-    translate: -50%;
-    width: 25%;
+    left: calc(var(--abt-float-left-left) - (var(--abt-float-left-offset) / 2));
+    top: var(--abt-float-left-top);
+    width: var(--abt-float-left-width);
+    height: var(--abt-float-left-height);
     background-color: rgba(255, 255, 255, 0.9);
 }
 
+.small-float-left h4 {
+    font-size: var(--abt-float-left-large-fs);
+}
+.small-float-left p {
+    font-size: var(--abt-float-left-small-fs);
+}
+.small-float-bottom h4 {
+    font-size: var(--abt-float-bottom-large-fs);
+}
+.small-float-bottom p {
+    font-size: var(--abt-float-bottom-small-fs);
+}
+.small-float-top h4 {
+    font-size: var(--abt-float-top-large-fs);
+}
+.small-float-top p {
+    font-size: var(--abt-float-top-small-fs);
+}
+
 .small-float-top {
-    left: 40%;
-    top: -10%;
-    translate: -50%;
-    width: 25%;
+    left: calc(var(--abt-float-top-left) - (var(--abt-float-left-offset) / 2));
+    top: var(--abt-float-top-top);
+    width: var(--abt-float-top-width);
+    height: var(--abt-float-top-height);
     background-color: rgba(255, 255, 255, 0.9);
 }
 
 .small-float-bottom {
     background: var(--header-links-gr);
     color: #fff;
-    width: 30%;
-    bottom: 0;
-    left: 50%;
-    translate: -50%;
+    width: var(--abt-float-bottom-width);
+    height: var(--abt-float-bottom-height);
+    left: calc(var(--abt-float-bottom-left) - (var(--abt-float-left-offset) / 2));
+    top: var(--abt-float-bottom-top);
 }
 
 .small-float-left, .small-float-top {
@@ -746,10 +817,6 @@ img {
 .small-float h4 {
     min-height: 0;
     margin-block: 0.5em;
-}
-
-.small-float {
-    font-size: var(--fine-print-fs);
 }
 
 /****** Form section *******/
