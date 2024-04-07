@@ -5,6 +5,7 @@
 
 :root {
     --header-links-gr: linear-gradient(to right, #025DF8 0%, #032C72 70%);
+    --main-gr2: linear-gradient(to right, #025DF8 0%, #032C72 90%);
     --linear-gr-str: linear-gradient(to right, rgb(8, 80, 205) 0%, rgb(11, 56, 133) 70%);
     --header-links-color: #025DF8;
     --header-large-fs: clamp(26px, 4vw, 50px);
@@ -1459,3 +1460,96 @@ img {
 
 /****** Team section *******/
 
+.team-outer-wrapper {
+    padding-block: var(--form-form-cnt-margin-block);
+}
+
+.team-inner-wrapper {
+    width: 67%;
+}
+
+.team-title-wrapper {
+    width: 75%;
+    margin-inline: auto;
+    text-align: center;
+}
+
+.team-title {
+    font-size: var(--abt-about-title-fs);
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-block: var(--abt-padding-block);
+    background: var(--header-links-gr);
+    color: #032C72;
+    border: none;
+    cursor: pointer;
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; 
+}
+
+.team-subtitle {
+    font-size: var(--prj-subtitle-fs);
+    margin-bottom: var(--abt-padding-block);
+    font-weight: 500;
+    color: #1D1F1E;
+}
+
+.team-grid-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: var(--abt-padding-block);
+    align-items: stretch;
+}
+
+.team-member {
+    display: flex;
+    flex-direction: column;
+  }
+  
+.team-desc-wrapper {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+}
+
+.team-member-img {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    border-radius: 10px 10px 0 0;
+}
+
+.team-desc-wrapper {
+    padding: calc(var(--abt-padding-block) / 1.5);
+    background: var(--main-gr2);
+    border-radius: 0 0 10px 10px;
+}
+
+.team-desc-wrapper > * {
+    margin-block: calc(var(--abt-padding-block) / 4);
+    letter-spacing: 0.05em;
+}
+
+.team-desc-title {
+    font-size: var(--abt-about-header-fs);
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 700;
+    margin-top: 0;
+}
+
+.team-desc-subtitle {
+    font-size: var(--abt-float-left-small-fs);
+    color: #fff;
+    font-weight: 400;
+}
+
+.team-desc-prg {
+    font-size: var(--cmr-float-img-small-fs);
+    color: #fff;
+    font-weight: 600;
+}
