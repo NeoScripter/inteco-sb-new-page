@@ -6,6 +6,8 @@
     <title>Интеко</title>
     <link rel="stylesheet" href="inteco-sb-hp.css">
     <script src="hmp.js" defer></script>
+    <script src="maps.js" defer></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 </head>
 <body>
     <header class="nav-outer-wrapper centering">
@@ -470,6 +472,58 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+        <section id="contacts">
+            <div class="contacts-outer-wrapper">
+                <div class="contacts-inner-wrapper">
+                    <div class="contact-details-wrapper">
+                        <h4 class="contacts-title">контакты</h4>
+                        <div class="contacts-grid-subgroup">
+                            <div class="cnts-sb-child">
+                                <h5 class="cnts-child-title">Адрес</h5>
+                                <p class="cnts-child-prg">Москва, Рязанский проспект, 8Ас1</p>
+                            </div>
+                            <div class="cnts-sb-child">
+                                <h5 class="cnts-child-title">email</h5>
+                                <p class="cnts-child-prg">info@inteco-sb.ru</p>
+                            </div>
+                            <div class="cnts-sb-child">
+                                <h5 class="cnts-child-title">телефон</h5>
+                                <p class="cnts-child-prg">+7 (499) 322-41-88</p>
+                                <p class="cnts-child-prg">+7 (926) 961-58-50</p>
+                            </div>
+                            <div class="cnts-sb-child icons-holder">
+                                <h5 class="cnts-child-title">мессенджеры</h5>
+                                <div class="cnts-icons-wrapper">
+                                    <a href="#" class="cnts-large-icon"><img src="assets/svg/cnts-msg-icon.png" alt="Иконка телеграма"></a>
+                                    <a href="#" class="cnts-large-icon"><img src="assets/svg/cnts-wsp-icon.png" alt="Иконка вотсапа"></a>
+                                </div>
+                            </div>
+                            <div class="cnts-sb-child">
+                                <h5 class="cnts-child-title">график работы</h5>
+                                <p class="cnts-child-prg">Ежедневно, без выходных <br> с 8:00 до 23:00</p>
+                            </div>
+                        </div>
+                        <form action="" id="call-us-form-contacts">
+                            <h2 class="cts-form-header">Если у вас остались вопросы</h2>
+                            <p class="cts-form-par">Напишите нам! И мы очень быстро вам перезвоним</p>
+                            <div class="cts-form-btn-group">
+                                <div class="cts-input-wrapper">
+                                    <input type="text" id="form-name-cts" class="form-input" name="your-name" placeholder="Ваше имя" required>
+                                    <input type="number" id="form-phone-cts" class="form-input"  name="your-phone" placeholder="+7 (999) 999-99-99" required>
+                                </div>
+                                <div class="cts-submit-btn-wrapper">
+                                    <button type="submit" class="form-input" id="submit-form-btn-cts">Отправить</button>
+                                </div>
+                            </div>
+                            <div class="cts-policy-wrapper">
+                                <p class="cts-policy-par">Отправляя данные вы соглашаетесь с <a href="#" class="cts-policy-link">Политикой конфиденциальности</a></p>
+                            </div>
+                        </form>
+                    </div>
+                    <div id="inteco-map"></div>
                 </div>
             </div>
         </section>
