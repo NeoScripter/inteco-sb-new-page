@@ -237,11 +237,17 @@ img {
 
 /******* Header *******/
 
+.nav-outer-wrapper {
+/*     position: sticky;
+    top: 0; */
+    z-index: 400;
+    background-color: #FFF;
+}
 .nav-wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: calc(var(--hdr-height) + var(--abt-padding-block) * 2);
+    height: calc(var(--hdr-height) + var(--abt-padding-block));
 }
 
 .primary-nav ul {
@@ -1059,6 +1065,7 @@ img {
 .camera-title {
     font-size: var(--abt-about-title-fs);
     font-weight: 700;
+    text-transform: uppercase;
     margin-block: var(--abt-padding-block);
     background: var(--header-links-gr);
     color: #032C72;
@@ -1301,4 +1308,59 @@ img {
     letter-spacing: 1px;
     text-decoration: none;
     border-radius: 10px;
+}
+
+/****** Calculation section *******/
+
+.calculate-price {
+    background: var(--header-links-gr) !important;
+    visibility: hidden;
+}
+
+.calculation-title {
+    color: #FFF !important;
+}
+
+/****** Customers section *******/
+
+.ctms-outer-wrapper {
+    padding-block: var(--mrk-subwrapper-margin-top);
+}
+
+.ctms-inner-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: var(--mrk-top-btn-height);
+}
+
+.ctms-title {
+    font-size: var(--abt-about-title-fs);
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-block: var(--abt-padding-block);
+    background: var(--header-links-gr);
+    color: #032C72;
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; 
+}
+
+.ctms-subtitle {
+    font-size: var(--prj-subtitle-fs);
+    font-weight: 500;
+}
+
+.ctms-grid-el-right {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.partner {
+    font-size: calc(var(--abt-about-title-fs) * 0.8);
+    font-weight: 600;
+}
+
+.partner:first-of-type {
+    color: rgb(149, 98, 199);
 }
