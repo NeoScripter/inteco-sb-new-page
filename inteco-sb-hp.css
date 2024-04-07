@@ -7,8 +7,6 @@
     --header-links-gr: linear-gradient(to right, #025DF8 0%, #032C72 70%);
     --linear-gr-str: linear-gradient(to right, rgb(8, 80, 205) 0%, rgb(11, 56, 133) 70%);
     --header-links-color: #025DF8;
-    --main-line-height: 60px;
-    --main-letter-spacing: 5%;
     --header-large-fs: clamp(26px, 4vw, 50px);
     --header-fs: clamp(26px, 2.8vw, 40px);
     --medium-large-fs: clamp(21px, 2.2vw, 36px);
@@ -211,7 +209,6 @@
 
 body {
     font-family: 'Montserrat';
-    letter-spacing: 5%;
 }
 
 button {
@@ -310,7 +307,7 @@ img {
 }
 
 .flex-nav-subgroup.margin-bottom {
-    margin-bottom: 1em;
+    margin-bottom: 0.8em;
 }
 
 .flex-nav-subgroup {
@@ -325,7 +322,7 @@ img {
     justify-content: flex-end;
     align-items: center;
     gap: 0.7em;
-    margin-block: 0.5em;
+    margin-block: 0.4em;
 }
 
 .nav-emerging-par {
@@ -363,7 +360,6 @@ img {
 }
 
 .bnr-wrapper {
-    letter-spacing: 1px;
     height: var(--bnr-height);
 }
 
@@ -387,7 +383,7 @@ img {
     font-weight: 600;
     font-size: var(--bnr-top-line);
     text-transform: uppercase;
-    letter-spacing: 1.5px;
+    letter-spacing: 0.15em;
 }
 
 .btn-subgroup-outer-wrapper {
@@ -417,7 +413,7 @@ img {
     border-radius: 14.45px;
     flex-shrink: 0;
     cursor: pointer;
-    letter-spacing: 1.3px;
+    letter-spacing: 0.15em;
 }
 
 .bnr-btn.price {
@@ -510,7 +506,7 @@ img {
 
 .bnr-float-title {
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 0.08em;
     padding-bottom: 0.3em;
     font-weight: 800;
 
@@ -627,7 +623,7 @@ img {
     color: #fff;
     font-weight: 800;
     border-radius: 10px;
-    letter-spacing: 1px;
+    letter-spacing: 0.1em;
     cursor: pointer;
     font-size: var(--sale-invite-btn-fs);
     flex-shrink: 0;
@@ -878,7 +874,7 @@ img {
 
 .about-outer-wrapper h4 {
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 0.1em;
     font-size: var(--abt-small-float-hdr-fs);
     min-height: var(--abt-padding-block);
 }
@@ -1025,7 +1021,7 @@ img {
     height: var(--bnr-phone-btn-height);
     font-size: var(--bnr-phone-btn);
     color: black;
-    letter-spacing: 1px;
+    letter-spacing: 0.1em;
     border-radius: 15px;
     border: none;
 }
@@ -1041,7 +1037,7 @@ img {
     font-weight: 800;
     border: none;
     cursor: pointer;
-    letter-spacing: 1px;
+    letter-spacing: 0.1em;
 }
 
 .policy-link {
@@ -1172,7 +1168,7 @@ img {
     font-weight: 700;
     color: #1D1F1E;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 0.0.8em;
     list-style: none;
     padding-block: calc(var(--abt-padding-block) / 2);
     padding-left: 2.8em;
@@ -1305,16 +1301,16 @@ img {
     place-content: center;
     color: #FFF;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 0.1em;
     text-decoration: none;
     border-radius: 10px;
 }
 
 /****** Calculation section *******/
 
-.calculate-price {
+#calculate-price {
     background: var(--header-links-gr) !important;
-    visibility: hidden;
+    display: none;
 }
 
 .calculation-title {
@@ -1323,17 +1319,17 @@ img {
 
 /****** Customers section *******/
 
-.ctms-outer-wrapper {
+.customers-outer-wrapper {
     padding-block: var(--mrk-subwrapper-margin-top);
 }
 
-.ctms-inner-wrapper {
+.customers-inner-wrapper {
     display: grid;
     grid-template-columns: 1fr 3fr;
     gap: var(--mrk-top-btn-height);
 }
 
-.ctms-title {
+.customers-title {
     font-size: var(--abt-about-title-fs);
     font-weight: 700;
     text-transform: uppercase;
@@ -1346,12 +1342,12 @@ img {
     color: transparent; 
 }
 
-.ctms-subtitle {
+.customers-subtitle {
     font-size: var(--prj-subtitle-fs);
     font-weight: 500;
 }
 
-.ctms-grid-el-right {
+.customers-grid-right {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
@@ -1364,3 +1360,98 @@ img {
 .partner:first-of-type {
     color: rgb(149, 98, 199);
 }
+
+/****** Reviews section *******/
+
+.reviews-outer-wrapper {
+    background: var(--header-links-gr);
+    padding-block: var(--form-form-cnt-margin-block);
+}
+
+.reviews-title-wrapper {
+    width: 75%;
+    margin-inline: auto;
+    text-align: center;
+}
+
+.reviews-title {
+    font-size: var(--abt-about-title-fs);
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-block: var(--abt-padding-block);
+    color: #FFF;
+}
+
+.reviews-subtitle {
+    font-size: var(--prj-subtitle-fs);
+    margin-bottom: var(--abt-padding-block);
+    font-weight: 500;
+    color: #FFF;
+}
+
+.reviews-grid-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    overflow: hidden;
+    gap: 1em;
+    align-items: start;
+}
+
+.review {
+    padding: 1.5em;
+    cursor: pointer;
+    margin-bottom: 1em;
+    transition: all 0.5s ease-in-out;
+    color: #1D1F1E;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.review p {
+    font-weight: 600;
+    font-size: var(--prj-subtitle-fs);
+}
+
+.review .light-fw {
+    font-weight: 400;
+}
+
+.expanded {
+    opacity: 0;
+    display: none;
+    transition: opacity 0.15s;
+}
+
+.expand_button {
+    font-size: var(--form-policy-fs);
+    text-align: left;
+    border: 1px solid var(--primary-text-color);
+    cursor: pointer;
+    margin-bottom: 2.5em;
+    position: relative;
+	font-weight: 700;
+    background: var(--header-links-gr);
+    color: #032C72;
+    border: none;
+    cursor: pointer;
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; 
+}
+
+.expand_button::after {
+    content: '';
+    position: absolute;
+    bottom: -1em; 
+    left: 0;
+    width: var(--expand-button-after-width, 45%); 
+    height: 0.15em; 
+    background: var(--header-links-gr); 
+}
+
+.expand_button:focus, .expand_button:hover {
+    color: rgba(0, 0, 0, 0.8);
+    outline: none;
+}
+
