@@ -1308,7 +1308,7 @@ img {
 
 /****** Calculation section *******/
 
-#calculate-price {
+.calculation {
     background: var(--header-links-gr) !important;
     display: none;
 }
@@ -1423,6 +1423,7 @@ img {
 }
 
 .expand_button {
+    --expand-btn-gr: linear-gradient(to right, #025DF8 0%, #032C72 70%);
     font-size: var(--form-policy-fs);
     text-align: left;
     border: 1px solid var(--primary-text-color);
@@ -1447,11 +1448,14 @@ img {
     left: 0;
     width: var(--expand-button-after-width, 45%); 
     height: 0.15em; 
-    background: var(--header-links-gr); 
+    background: var(--expand-btn-gr); 
 }
 
 .expand_button:focus, .expand_button:hover {
-    color: rgba(0, 0, 0, 0.8);
+    color: #03245c;
     outline: none;
+    --expand-btn-gr: #03245c;
 }
+
+/****** Team section *******/
 
