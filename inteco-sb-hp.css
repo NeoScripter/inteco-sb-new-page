@@ -1561,7 +1561,7 @@ img {
 }
 
 .contacts-inner-wrapper {
-    width: 84.5%;
+    width: 90%;
     margin-left: auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1569,7 +1569,7 @@ img {
 }
 
 #inteco-map { 
-    width: var(--sale-play-btn-left);
+    width: calc(var(--sale-play-btn-left) - var(--abt-padding-block));
     height: var(--phone-left-offset); 
 } 
 
@@ -1629,7 +1629,7 @@ img {
 }
 
 #call-us-form-contacts {
-    width: var(--sale-play-btn-left);
+    width: calc(var(--sale-play-btn-left) - var(--abt-padding-block));
     height: var(--mrk-lowbtn-prg-width);
     background: var(--header-links-gr);
     display: flex;
@@ -1701,4 +1701,14 @@ img {
     color: #fff;
     background-color: #025DF8;
     font-weight: 700;
+}
+
+/****** Footer *******/
+
+.footer {
+    background-color: #01000C;
+    padding-block: var(--hdr-height);
+}
+
+.footer-subwrapper {
 }
