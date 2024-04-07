@@ -1711,4 +1711,24 @@ img {
 }
 
 .footer-subwrapper {
+    width: 75%;
+    height: var(--phone-width);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    color: #FFF;
+}
+
+.footer-sb-left {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr var(--cmr-icon-width);
+}
+
+.footer-sb-bottom-wrapper {
+
+    grid-column: span 2;
+}
+
+.footer-sb-left-bottom-prg {
+    font-size: var(--prj-fine-print-fs);
 }
