@@ -498,10 +498,10 @@ img {
 
 .bnr-img-holder {
     position: absolute;
-    width: var(--phone-width);
-    height: var(--phone-height);
-    top: var(--phone-top-offset);
-    left: var(--phone-left-offset);
+    width: calc(var(--phone-width) - var(--phone-top-offset) * 2);
+    height: calc(var(--phone-height));
+    top: calc(var(--phone-top-offset));
+    left: calc(var(--phone-left-offset) + var(--phone-top-offset) * 2);
 }
 
 .phone-img {
@@ -511,19 +511,19 @@ img {
 
 .video-1, .video-2 {
     position: absolute;
-    width: 58%;
-    left: 21%;
+    width: 79%;
+    left: 10.5%;
     border-radius: 5px;
 }
 
 .video-1 {
-    top: 27.5%;
+    top: 25.5%;
     bottom: 51.5%;
 }
 
 .video-2 {
-    top: 55%;
-    bottom: 24.5%;
+    top: 54%;
+    bottom: 23%;
 }
 
 .bnr-float {
@@ -538,7 +538,7 @@ img {
 .bnr-float-left {
     width: var(--bnr-float-left-width);
     top: var(--bnr-float-left-top-offset);
-    left: var(--bnr-float-left-left-offset);
+    left: calc(var(--bnr-float-left-left-offset) + var(--phone-top-offset));
 }
 
 .bnr-float-title {
@@ -577,9 +577,8 @@ img {
 
 .bnr-float-right {
     width: var(--bnr-float-right-width);
-/*     height: var(--bnr-float-right-height);
- */    top: var(--bnr-float-right-top-offset);
-    left: var(--bnr-float-right-right-offset);
+    top: var(--bnr-float-right-top-offset);
+    left: calc(var(--bnr-float-right-right-offset) + var(--phone-top-offset));
 }
 
 /****** Sale section *******/
