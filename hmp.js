@@ -15,22 +15,22 @@ document.querySelectorAll('.nav-large-icon').forEach(socialLink => {
 });
 
 firstNavItem.addEventListener('mouseenter', () => {
-    emergingCatalog.style.opacity = '1';
+    emergingCatalog.style.visibility = 'visible';
 });
 firstNavItem.addEventListener('mouseleave', () => {
     setTimeout(() => {
-    emergingCatalog.style.opacity = '0'; 
+    emergingCatalog.style.visibility = 'hidden'; 
     }, 200);
 });
 
 emergingCatalogChild.addEventListener('mouseenter', () => {
     setTimeout(() => {
-        emergingCatalog.style.opacity = '1'; 
+        emergingCatalog.style.visibility = 'visible'; 
         }, 200);
 });
 emergingCatalogChild.addEventListener('mouseleave', () => {
     setTimeout(() => {
-    emergingCatalog.style.opacity = '0'; 
+    emergingCatalog.style.visibility = 'hidden'; 
     }, 200);
 });
 
