@@ -1,6 +1,9 @@
 // Navigation large icon section
 
 const emergingField = document.querySelector('.nav-emerging-par');
+const emergingCatalog = document.querySelector('.catalog-emerging-wrapper');
+const emergingCatalogChild = document.querySelector('.catalog-emerging');
+const firstNavItem = document.querySelector('.list-item-underline');
 
 document.querySelectorAll('.nav-large-icon').forEach(socialLink => {
     socialLink.addEventListener('mouseenter', () => {
@@ -9,6 +12,26 @@ document.querySelectorAll('.nav-large-icon').forEach(socialLink => {
     socialLink.addEventListener('mouseleave', () => {
         emergingField.style.opacity = '0'; 
     });
+});
+
+firstNavItem.addEventListener('mouseenter', () => {
+    emergingCatalog.style.opacity = '1';
+});
+firstNavItem.addEventListener('mouseleave', () => {
+    setTimeout(() => {
+    emergingCatalog.style.opacity = '0'; 
+    }, 200);
+});
+
+emergingCatalogChild.addEventListener('mouseenter', () => {
+    setTimeout(() => {
+        emergingCatalog.style.opacity = '1'; 
+        }, 200);
+});
+emergingCatalogChild.addEventListener('mouseleave', () => {
+    setTimeout(() => {
+    emergingCatalog.style.opacity = '0'; 
+    }, 200);
 });
 
 
