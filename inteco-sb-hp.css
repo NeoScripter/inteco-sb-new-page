@@ -213,6 +213,7 @@
     --mb-nav-open-nav-fs-small: 4.17vw;
     --mb-nav-open-nav-small-icon: 5.56vw;
     --mb-nav-open-nav-large-icon: 6.94vw;
+    --mb-nav-unfolding-padding-inline: 11.67vw;
 }
 
 * {
@@ -253,8 +254,8 @@ img {
 /******* Header *******/
 
 .header {
-    position: sticky;
-    top: 0;
+  /*   position: sticky;
+    top: 0; */
     z-index: 400;
     background-color: #FFF;
 }
@@ -436,7 +437,6 @@ img {
 }
 
 .mb-nav-phone-link {
-
     font-size: var(--mb-nav-phone-fs);
     font-weight: 800;
     text-decoration: none;
@@ -446,6 +446,79 @@ img {
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent; 
+}
+
+.nav-mb-flex-group-right {
+    flex-grow: 100;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.burger-menu-closed {
+    width: var(--mb-nav-burger-width);
+    cursor: pointer;
+}
+
+.nav-mb-unfolding-menu {
+    display: none;
+}
+
+.burger-menu-open {
+    display: none;
+    width: var(--mb-nav-open-burger-width);
+    cursor: pointer;
+}
+
+.nav-mb-unfolding-menu > * {
+    padding: calc(var(--mb-nav-unfolding-padding-inline) / 2) var(--mb-nav-unfolding-padding-inline);
+}
+
+.nav-mb-folding-menu-top a {
+    font-size: var(--mb-nav-open-nav-fs-large);
+    color: #1D1F1E;
+    font-weight: 600;
+    margin-bottom: calc(var(--mb-nav-unfolding-padding-inline) / 4);
+}
+
+.nav-mb-folding-menu-bottom > a {
+    font-size: var(--mb-nav-open-nav-fs-small);
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: calc(var(--mb-nav-unfolding-padding-inline) / 2);
+    display: flex;
+    align-items: center;
+    gap: 0.4em;
+}
+
+.nav-mb-folding-menu-bottom {
+    background: var(--header-links-gr);
+    padding-bottom: calc(var(--mb-nav-unfolding-padding-inline) / 4);
+}
+
+.folding-link {
+    display: block;
+    text-decoration: none;
+}
+
+.nav-mb-large-icon img {
+    width: var(--mb-nav-open-nav-large-icon);
+}
+
+.nav-mb-large-icon:first-child {
+    padding-right: 0.5em;
+}
+
+.nav-mb-large-icons-wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 0.4em;
+    margin-bottom: 0;
+}
+
+.phone-icon-small-mb {
+    width: var(--mb-nav-open-nav-small-icon);
 }
 
 /****** Banner section *******/
@@ -1906,4 +1979,13 @@ img {
     font-size: calc(var(--abt-float-bottom-large-fs) / 1.2);
     font-weight: 500;
     line-height: 1.5;
+}
+
+@media screen and (max-width: 599px) {
+    .desktop {
+        display: none;
+    }
+    .mobile {
+        display: block;
+    }
 }

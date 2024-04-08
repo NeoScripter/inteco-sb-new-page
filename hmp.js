@@ -42,7 +42,6 @@ document.querySelectorAll('.expand_button').forEach(button => {
         const expandedText = review.querySelector('.expanded');
         const ellipsis = review.querySelector('.ellipsis');
 
-        // Toggle visibility
         if (expandedText.style.display === "none" || !expandedText.style.display) {
             expandedText.style.display = 'inline';
             setTimeout(() => { 
@@ -61,4 +60,25 @@ document.querySelectorAll('.expand_button').forEach(button => {
               }, 150);
         }
     });
+});
+
+// Expanding mobile menu
+const mobileExpandedNav = document.querySelector('.nav-mb-unfolding-menu');
+const burgerMenuOpen = document.querySelector('.burger-menu-open');
+const burgerMenuClosed = document.querySelector('.burger-menu-closed');
+const phoneNumberMobileNav = document.querySelector('.mb-nav-phone-link');
+
+burgerMenuClosed.addEventListener('click', () => {
+    burgerMenuClosed.style.display = 'none';
+    burgerMenuOpen.style.display = 'block';
+    mobileExpandedNav.style.display = 'block';
+    phoneNumberMobileNav.style.display = 'none';
+});
+
+burgerMenuOpen.addEventListener('click', () => {
+    burgerMenuClosed.style.display = 'block';
+    burgerMenuOpen.style.display = 'none';
+    mobileExpandedNav.style.display = 'none';
+    phoneNumberMobileNav.style.display = 'inline';
+
 });
