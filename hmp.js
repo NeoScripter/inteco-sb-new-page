@@ -88,35 +88,47 @@ const phoneLinks = document.querySelectorAll('.copy-phone');
 
 phoneLinks.forEach(link => {
     link.addEventListener('click', function(event) {
-        event.preventDefault(); 
+        event.preventDefault();
 
-        const phoneNumber = this.getAttribute('data-phone');
+        const targetElement = event.target.closest('.copy-phone');
+
+        const phoneNumber = targetElement.getAttribute('data-phone');
+        const textContainer = targetElement.querySelector('.phone-text') || targetElement.nextElementSibling.querySelector('.phone-text');
+
         if (!phoneNumber) return;
 
         navigator.clipboard.writeText(phoneNumber).then(() => {
-            this.textContent = 'Скопировано!'
-            setTimeout(() => { this.textContent = `${phoneNumber}`; }, 1500);
+            const originalText = textContainer.textContent;
+            textContainer.textContent = 'Скопировано!';
+            setTimeout(() => { textContainer.textContent = originalText; }, 1200);
         }).catch(err => {
             console.error('Не удалось скопировать номер: ', err);
         });
     });
 });
 
+
 // Coping the email to clipboard
+
 const emailLinks = document.querySelectorAll('.copy-email');
 
 emailLinks.forEach(link => {
     link.addEventListener('click', function(event) {
-        event.preventDefault(); 
+        event.preventDefault();
 
-        const emailAddress = this.getAttribute('data-email');
-        if (!emailAddress) return;
+        const targetElement = event.target.closest('.copy-email');
 
-        navigator.clipboard.writeText(emailAddress).then(() => {
-            this.textContent = 'Скопировано!'
-            setTimeout(() => { this.textContent = `${emailAddress}`; }, 1500);
+        const phoneNumber = targetElement.getAttribute('data-email');
+        const textContainer = targetElement.querySelector('.email-text') || targetElement.nextElementSibling.querySelector('.email-text');
+
+        if (!phoneNumber) return;
+
+        navigator.clipboard.writeText(phoneNumber).then(() => {
+            const originalText = textContainer.textContent;
+            textContainer.textContent = 'Скопировано!';
+            setTimeout(() => { textContainer.textContent = originalText; }, 1200);
         }).catch(err => {
-            console.error('Не удалось скопировать емаил: ', err);
+            console.error('Не удалось скопировать номер: ', err);
         });
     });
 });
