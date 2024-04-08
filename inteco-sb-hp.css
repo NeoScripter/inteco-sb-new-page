@@ -368,7 +368,7 @@ img {
     font-size: var(--nav-emerging-part-fs);
     text-align: right;
     text-transform: uppercase;
-    letter-spacing: 1.5px;
+    letter-spacing: 0.1em;
     font-weight: 600;
     transition: opacity 0.5s ease-in-out;
 
@@ -387,6 +387,10 @@ img {
 .cnts-small-icon {
     width: var(--hdr-cnts-small-icon-width);
 }
+
+/******* Header mobile *******/
+
+
 
 /****** Banner section *******/
 
@@ -451,7 +455,7 @@ img {
     border-radius: 14.45px;
     flex-shrink: 0;
     cursor: pointer;
-    letter-spacing: 0.15em;
+    letter-spacing: 0.1em;
 }
 
 .bnr-btn.price {
@@ -1776,13 +1780,25 @@ img {
 
 .footer-nav-item {
     font-size: calc(var(--prj-fine-print-fs) * 2);
-    font-weight: 500;
     height: var(--mrk-top-btn-large-fs);
     cursor: pointer;
     margin-bottom: var(--abt-about-header-fs);
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 400;
 }
 
-.footer-nav-item:first-of-type {
+.footer-nav-item:visited {
+    font-weight: 400;
+}
+
+.footer-nav-item.extended > * {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-nav-item:first-child {
     font-weight: 700;
 }
 
