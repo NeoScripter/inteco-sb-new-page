@@ -165,40 +165,40 @@
     --form-form-cnt-margin-block: clamp(16.5px, 2.75vw, 66px);    
 
     /* Camera */
-    --mrk-main-cnt-height: clamp(189.18px, 31.53vw, 605.33px);
-    --mrk-subwrapper-width: clamp(423.96px, 70.66vw, 1356.74px);
-    --cmr-main-img-wrapper-width: clamp(316.68px, 52.78vw, 1013.33px);
-    --cmr-subtitle-width: clamp(281.58px, 46.93vw, 901px);
-    --cmr-main-img-wrapper-height: clamp(195.84px, 32.64vw, 626.67px);
-    --cmr-float-img-hdr-fs: clamp(5.28px, 0.88vw, 18px);
-    --cmr-float-img-small-fs: clamp(4.5px, 0.75vw, 16px);
-    --cmr-float-img-width: clamp(78.42px, 13.07vw, 251px);
-    --cmr-float-img-height: clamp(108.78px, 18.13vw, 348px);
-    --cmr-float-img-top-offset: clamp(193.68px, 32.28vw, 667px);
-    --cmr-float-img-left-offset: clamp(436.38px, 72.73vw, 1396px);
-    --cmr-main-img-width: clamp(323.64px, 53.94vw, 1035.61px);
-    --cmr-main-img-height: clamp(215.76px, 35.96vw, 690.41px);
-    --cmr-main-img-left-offset: clamp(555.42px, 92.57vw, 1777px);
-    --cmr-main-img-top-offset: clamp(59.88px, 9.98vw, 238.75px);
-    --cmr-icon-width: clamp(15.6px, 2.60vw, 50px);
-    --cmr-list-item-fs: clamp(7.5px, 1.25vw, 24px);
+    --mrk-main-cnt-height: clamp(189.18px, 31.53vw, 756.72px);
+    --mrk-subwrapper-width: clamp(423.96px, 70.66vw, 1695.84px);
+    --cmr-main-img-wrapper-width: clamp(316.68px, 52.78vw, 1266.72px);
+    --cmr-subtitle-width: clamp(281.58px, 46.93vw, 1126.32px);
+    --cmr-main-img-wrapper-height: clamp(195.84px, 32.64vw, 783.36px);
+    --cmr-float-img-hdr-fs: clamp(5.28px, 0.88vw, 21.12px);
+    --cmr-float-img-small-fs: clamp(4.5px, 0.75vw, 18px);
+    --cmr-float-img-width: clamp(78.42px, 13.07vw, 313.68px);
+    --cmr-float-img-height: clamp(108.78px, 18.13vw, 435.12px);
+    --cmr-float-img-top-offset: clamp(193.68px, 32.28vw, 774.72px);
+    --cmr-float-img-left-offset: clamp(436.38px, 72.73vw, 1745.52px);
+    --cmr-main-img-width: clamp(323.64px, 53.94vw, 1294.56px);
+    --cmr-main-img-height: clamp(215.76px, 35.96vw, 863.04px);
+    --cmr-main-img-left-offset: clamp(555.42px, 92.57vw, 2221.68px);
+    --cmr-main-img-top-offset: clamp(59.88px, 9.98vw, 239.52px);
+    --cmr-icon-width: clamp(15.6px, 2.60vw, 62.4px);
+    --cmr-list-item-fs: clamp(7.5px, 1.25vw, 30px);    
 
     /* Marketing */
-    --mrk-subwrapper-height: clamp(106.14px, 17.69vw, 340.48px);
-    --mrk-subwrapper-margin-top: clamp(29.52px, 4.92vw, 94.52px);
-    --mkr-top-btn-width: clamp(314.28px, 52.38vw, 1005.68px);
-    --mrk-top-btn-height: clamp(39.36px, 6.56vw, 125.97px);
-    --mrk-top-btn-large-fs: clamp(11.28px, 1.88vw, 36px);
-    --mrk-top-btn-small-fs: clamp(7.5px, 1.25vw, 24px);
-    --mrk-btm-btn-large-fs: clamp(14.28px, 2.38vw, 45px);
-    --mrk-btm-btn-small-fs: clamp(7.5px, 1.25vw, 24px);
-    --mrk-btn-icon-width: clamp(19.68px, 3.28vw, 62.99px);
-    --mrk-red-btn-fs: clamp(5.28px, 0.88vw, 18px);
-    --mrk-red-btn-width: clamp(83.46px, 13.91vw, 267px);
-    --mrk-red-btn-height: clamp(20.64px, 3.44vw, 66px);
-    --mrk-lowbtn-prg-width: clamp(143.46px, 23.91vw, 459px);
-    --mrk-lowbtn-header-width: clamp(142.08px, 23.68vw, 454.55px);
-    --mrk-lowbtn-icon-wrapper-width: clamp(49.86px, 8.31vw, 157.5px);
+    --mrk-subwrapper-height: clamp(106.14px, 17.69vw, 424.56px);
+    --mrk-subwrapper-margin-top: clamp(29.52px, 4.92vw, 118.08px);
+    --mkr-top-btn-width: clamp(314.28px, 52.38vw, 1257.12px);
+    --mrk-top-btn-height: clamp(39.36px, 6.56vw, 157.44px);
+    --mrk-top-btn-large-fs: clamp(11.28px, 1.88vw, 45.12px);
+    --mrk-top-btn-small-fs: clamp(7.5px, 1.25vw, 30px);
+    --mrk-btm-btn-large-fs: clamp(14.28px, 2.38vw, 57.12px);
+    --mrk-btm-btn-small-fs: clamp(7.5px, 1.25vw, 30px);
+    --mrk-btn-icon-width: clamp(19.68px, 3.28vw, 78.72px);
+    --mrk-red-btn-fs: clamp(5.28px, 0.88vw, 21.12px);
+    --mrk-red-btn-width: clamp(83.46px, 13.91vw, 333.84px);
+    --mrk-red-btn-height: clamp(20.64px, 3.44vw, 82.56px);
+    --mrk-lowbtn-prg-width: clamp(143.46px, 23.91vw, 573.84px);
+    --mrk-lowbtn-header-width: clamp(142.08px, 23.68vw, 568.32px);
+    --mrk-lowbtn-icon-wrapper-width: clamp(49.86px, 8.31vw, 199.44px);    
     
     /* Mobile */
     --mb-nav-height: 21.39vw;
@@ -752,6 +752,7 @@ img {
     grid-template-columns: repeat(4, 1fr);
     width: var(--prj-outer-wrapper-width);
     gap: var(--prj-grid-gap);
+    margin-inline: auto;
 }
 
 .project-image {
