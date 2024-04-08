@@ -252,12 +252,13 @@ img {
 
 /******* Header *******/
 
-.nav-outer-wrapper {
-/*     position: sticky;
-    top: 0; */
+.header {
+    position: sticky;
+    top: 0;
     z-index: 400;
     background-color: #FFF;
 }
+
 .nav-wrapper {
     position: relative;
     display: flex;
@@ -270,12 +271,14 @@ img {
     position: absolute;
     top: calc(var(--hdr-height) + var(--abt-padding-block) + 1%);
     left: 28%;
-    padding: 1px;
+    padding: 0.09em;
     z-index: 99;
     background: var(--header-links-gr);
     border-radius: 15px;
     transition: opacity 0.5s ease-in-out, visibility 0s 0.5s;
-    visibility: hidden
+    visibility: hidden;
+    display: grid;
+    place-content: center;
   }
 
 .catalog-emerging {
@@ -408,7 +411,7 @@ img {
 /******* Header mobile *******/
 
 .nav-outer-wrapper-mb {
-    height: var(--mb-nav-height);
+    min-height: var(--mb-nav-height);
     background-color: #fff;
     padding: var(--mb-nav-padding-top) var(--mb-nav-padding-left);
 
@@ -430,7 +433,19 @@ img {
 .mb-logo {
     width: var(--mb-nav-logo-width);
     height: var(--mb-nav-logo-height);
-    display: none;
+}
+
+.mb-nav-phone-link {
+
+    font-size: var(--mb-nav-phone-fs);
+    font-weight: 800;
+    text-decoration: none;
+    background: var(--header-links-gr);
+    color: #032C72; 
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; 
 }
 
 /****** Banner section *******/
