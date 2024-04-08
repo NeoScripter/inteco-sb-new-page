@@ -82,3 +82,41 @@ burgerMenuOpen.addEventListener('click', () => {
     phoneNumberMobileNav.style.display = 'inline';
 
 });
+
+// Coping the phone number to clipboard
+const phoneLinks = document.querySelectorAll('.copy-phone');
+
+phoneLinks.forEach(link => {
+    link.addEventListener('click', function(event) {
+        event.preventDefault(); 
+
+        const phoneNumber = this.getAttribute('data-phone');
+        if (!phoneNumber) return;
+
+        navigator.clipboard.writeText(phoneNumber).then(() => {
+            this.textContent = 'Скопировано!'
+            setTimeout(() => { this.textContent = `${phoneNumber}`; }, 1500);
+        }).catch(err => {
+            console.error('Не удалось скопировать номер: ', err);
+        });
+    });
+});
+
+// Coping the email to clipboard
+const emailLinks = document.querySelectorAll('.copy-email');
+
+emailLinks.forEach(link => {
+    link.addEventListener('click', function(event) {
+        event.preventDefault(); 
+
+        const emailAddress = this.getAttribute('data-email');
+        if (!emailAddress) return;
+
+        navigator.clipboard.writeText(emailAddress).then(() => {
+            this.textContent = 'Скопировано!'
+            setTimeout(() => { this.textContent = `${emailAddress}`; }, 1500);
+        }).catch(err => {
+            console.error('Не удалось скопировать емаил: ', err);
+        });
+    });
+});

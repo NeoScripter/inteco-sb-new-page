@@ -714,6 +714,10 @@ img {
     left: calc(var(--bnr-float-right-right-offset) + var(--phone-top-offset));
 }
 
+/******* Banner mobile *******/
+
+
+
 /****** Sale section *******/
 
 .sale-outer-wrapper {
@@ -723,7 +727,9 @@ img {
 .sale-grid-group {
     margin-block: var(--sale-margin-top);
     display: grid;
-    grid-template-columns: var(--sale-main-image-width) 1fr;
+    grid-template-columns: calc(var(--sale-main-image-width) * 0.63) var(--bnr-wrapper-height);
+    place-content: center;
+    gap: var(--sale-margin-top);
 }
 
 .ads_image {
@@ -732,7 +738,7 @@ img {
 }
 
 .right-subgroup-content {
-    margin-top: var(--sale-subgroup-margin-top);
+/*     margin-top: var(--sale-subgroup-margin-top); */
     height: var(--sale-subgroup-height);
     text-align: center;
     font-size: var(--sale-subgroup-rgl-fs);
@@ -743,8 +749,22 @@ img {
 }
 
 .grid-group-left {
-    width: var(--sale-main-image-width);
-    height: var(--sale-main-image-height);
+    width: calc(var(--sale-main-image-width) * 0.63);
+    height: calc(var(--sale-main-image-height) * 0.63);
+    display: grid;
+    justify-content: right;
+    position: relative;
+    z-index: -1;
+}
+
+.ads_image_anx {
+    position: absolute;
+    width: var(--bnr-wrapper-height);
+    bottom: -20%;
+    left: 50%;
+    translate: -55%;
+    border: 1px solid black;
+    border-radius: 15px;
 }
 
 .grid-group-right {
@@ -755,15 +775,15 @@ img {
     position: absolute;
     width: var(--sale-red-sticker-width);
     height: var(--sale-red-sticker-height);
-    left: var(--sale-red-sticker-left);
-    top: var(--sale-red-sticker-top);
+    left: calc(var(--sale-red-sticker-left) * 0.78);
+    top: calc(var(--sale-red-sticker-top) - var(--sale-subgroup-margin-top));
 }
 
 #video-play-button {
     position: absolute;
     width: var(--sale-play-btn-width);
-    left: var(--sale-play-btn-left);
-    top: var(--sale-play-btn-top);
+    left: calc(var(--sale-play-btn-left) * 0.74);
+    top: calc(var(--sale-play-btn-top) - var(--sale-subgroup-margin-top) * 1.2);
     cursor: pointer;
 }
 
@@ -803,8 +823,8 @@ img {
     position: absolute;
     width: var(--sale-fine-print-width);
     font-size: var(--sale-fine-print-fs);
-    top: var(--sale-fine-print-top);
-    left: var(--sale-fine-print-left);
+    top: calc(var(--sale-fine-print-top) * 0.8);
+    left: calc(var(--sale-fine-print-left) * 0.95);
     font-weight: 500;
     line-height: 1;
     color: #1D1D1E;
