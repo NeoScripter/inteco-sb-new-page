@@ -88,7 +88,14 @@ const phoneLinks = document.querySelectorAll('.copy-phone');
 
 phoneLinks.forEach(link => {
     link.addEventListener('click', function(event) {
+        if (this.classList.contains('disabled-link')) {
+            event.preventDefault();
+            return;
+        }
+
         event.preventDefault();
+
+        this.classList.add('disabled-link');
 
         const targetElement = event.target.closest('.copy-phone');
 
@@ -100,12 +107,18 @@ phoneLinks.forEach(link => {
         navigator.clipboard.writeText(phoneNumber).then(() => {
             const originalText = textContainer.textContent;
             textContainer.textContent = 'Скопировано!';
-            setTimeout(() => { textContainer.textContent = originalText; }, 1200);
+            
+            setTimeout(() => {
+                textContainer.textContent = originalText;
+                this.classList.remove('disabled-link');
+            }, 1200); 
         }).catch(err => {
             console.error('Не удалось скопировать номер: ', err);
+            this.classList.remove('disabled-link');
         });
     });
 });
+
 
 
 // Coping the email to clipboard
@@ -114,7 +127,14 @@ const emailLinks = document.querySelectorAll('.copy-email');
 
 emailLinks.forEach(link => {
     link.addEventListener('click', function(event) {
+        if (this.classList.contains('disabled-link')) {
+            event.preventDefault();
+            return;
+        }
+
         event.preventDefault();
+
+        this.classList.add('disabled-link');
 
         const targetElement = event.target.closest('.copy-email');
 
@@ -126,9 +146,14 @@ emailLinks.forEach(link => {
         navigator.clipboard.writeText(phoneNumber).then(() => {
             const originalText = textContainer.textContent;
             textContainer.textContent = 'Скопировано!';
-            setTimeout(() => { textContainer.textContent = originalText; }, 1200);
+            
+            setTimeout(() => {
+                textContainer.textContent = originalText;
+                this.classList.remove('disabled-link');
+            }, 1200); 
         }).catch(err => {
             console.error('Не удалось скопировать номер: ', err);
+            this.classList.remove('disabled-link');
         });
     });
 });

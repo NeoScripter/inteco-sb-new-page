@@ -2001,6 +2001,11 @@ img {
     line-height: 1.5;
 }
 
+.disabled-link {
+    pointer-events: none;
+    cursor: default;
+  }
+
 @media screen and (max-width: 599px) {
     .desktop {
         display: none;
