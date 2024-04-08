@@ -214,6 +214,14 @@
     --mb-nav-open-nav-small-icon: 5.56vw;
     --mb-nav-open-nav-large-icon: 6.94vw;
     --mb-nav-unfolding-padding-inline: 11.67vw;
+
+    --sale-mb-margin-block: 7.78vw;
+    --sale-mb-title-fs: 8.33vw;
+    --sale-mb-subtitle-fs: 4.72vw;
+    --sale-mb-fine-print-fs: 3.37vw;
+    --sale-mb-btn-fs: 4.17vw;
+    --sale-mb-btn-width: 58.89vw;
+    --sale-mb-btn-height: 10.83vw;
 }
 
 * {
@@ -779,7 +787,7 @@ img {
     top: calc(var(--sale-red-sticker-top) - var(--sale-subgroup-margin-top));
 }
 
-#video-play-button {
+.video-play-button {
     position: absolute;
     width: var(--sale-play-btn-width);
     left: calc(var(--sale-play-btn-left) * 0.74);
@@ -828,6 +836,73 @@ img {
     font-weight: 500;
     line-height: 1;
     color: #1D1D1E;
+}
+
+/****** Sale mobile *******/
+
+.sale-inner-wrapper-mb {
+    padding: var(--sale-mb-margin-block);
+    text-align: center;
+}
+
+.sale-mb-img-holder {
+    position: relative;
+    margin-bottom: calc(var(--sale-mb-margin-block) / 2);
+}
+
+.video-play-btn-mb {
+    position: absolute;
+    width: 16.6%;
+    left: 50%;
+    top: 27%;
+    translate: -30%;
+    cursor: pointer;
+}
+
+.course-logo-mb {
+    position: absolute;
+    width: 32%;
+    left: 65%;
+    top: -10%;
+}
+
+.mb-sale-title {
+    font-size: var(--sale-mb-title-fs);
+    font-weight: 700;
+    margin-bottom: var(--sale-mb-margin-block);
+    background: var(--header-links-gr);
+    color: #032C72;
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; 
+}
+
+.mb-sale-subtitle {
+    width: 80%;
+    margin-inline: auto;
+    font-size: var(--sale-mb-subtitle-fs);
+    font-weight: 500;
+    margin-bottom: var(--sale-mb-margin-block);
+}
+
+.sale-mb-prg {
+    font-size: var(--sale-mb-fine-print-fs);
+}
+
+.sale-mb-invite-btn {
+    text-transform: uppercase;
+    background: var(--header-links-gr);
+    width: var(--sale-mb-btn-width);
+    height: var(--sale-mb-btn-height);
+    border: none;
+    color: #fff;
+    font-weight: 800;
+    border-radius: 10px;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    font-size: var(--sale-mb-btn-fs);
+    margin-top: var(--sale-mb-margin-block);
 }
 
 /****** Projects section *******/
