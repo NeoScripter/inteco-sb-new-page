@@ -563,7 +563,7 @@ img {
 
 .order-call {
     display: block;
-    padding-left: 20%;
+    padding-left: 2.5em;
     font-size: calc(var(--mb-nav-open-nav-fs-small) * 0.8);
     font-weight: 500;
     margin-bottom: calc(var(--mb-nav-unfolding-padding-inline) / 3);
