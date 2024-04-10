@@ -251,7 +251,6 @@
 
 body {
     font-family: 'Montserrat';
-    word-wrap: break-word;
 }
 
 button {
@@ -1148,17 +1147,25 @@ img {
     margin-inline: auto;
 }
 
-.project-image {
+.project-image-holder {
     position: relative;
     aspect-ratio: 1 / 1;
     width: var(--prj-img-cnt-width);
-    background-size: cover;
-    background-position: center;
     border-radius: 15px;
     display: flex;
     align-items: flex-end;
     cursor: pointer;
     border: 2px solid white;
+}
+
+.project-image {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
 }
 
 .project-img-overlay {
@@ -1169,6 +1176,7 @@ img {
     border-radius: 10px;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
+    z-index: 2;
 }
 
 .project-img-overlay:hover {
@@ -1185,22 +1193,7 @@ img {
     font-size: var(--prj-fine-print-fs);
     background-color: rgba(3, 44, 114, 0.6);
     border-radius: 0 0 15px 15px;
-}
-
-.project-image.first {
-    background-image: url(assets/images/gallery1.png);
-}
-
-.project-image.second {
-    background-image: url(assets/images/gallery2.png);
-}
-
-.project-image.third {
-    background-image: url(assets/images/gallery3.png);
-}
-
-.project-image.fourth {
-    background-image: url(assets/images/gallery4.png);
+    z-index: 2;
 }
 
 /****** About section *******/
@@ -2310,5 +2303,28 @@ img {
     }
     .mobile {
         display: block;
+    }
+    .projects-grid-group {
+        grid-template-columns: 1fr;
+        width: 100%;
+        gap: 1em;
+    }
+    .project-image-holder {
+        width: 90%;
+        margin-inline: auto;
+    }
+    .projects-inner-wrapper h2 {
+        font-size: var(--sale-mb-title-fs);
+    }
+    
+    .project-par-wrapper {
+        font-size: var(--sale-mb-subtitle-fs);
+        margin-block: calc(var(--bnr-mb-margin-block) / 1.5);
+        width: 100%;
+        margin-inline: auto;
+    }
+    .gallery-img-text {
+        font-size: var(--sale-mb-fine-print-fs);
+        padding: calc(var(--bnr-mb-margin-block) / 3) calc(var(--bnr-mb-margin-block) / 2);
     }
 }
