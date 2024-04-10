@@ -251,6 +251,7 @@
 
 body {
     font-family: 'Montserrat';
+    word-wrap: break-word;
 }
 
 button {
@@ -747,7 +748,7 @@ img {
     background: var(--header-links-gr);
     text-align: center;
     color: #fff;
-    letter-spacing: 0.07em;
+    letter-spacing: 0.04em;
 }
 
 .bnr-mb-subtitle {
@@ -761,7 +762,7 @@ img {
     letter-spacing: 0.07em;
     font-size: var(--bnr-mb-title-fs);
     font-weight: 800;
-    margin-bottom: calc(var(--bnr-mb-margin-block) / 4);
+    margin-bottom: calc(var(--bnr-mb-margin-block) / 2);
 }
 
 .bnr-mb-icon {
@@ -800,7 +801,7 @@ img {
 }
 
 .bnr-mb-float-left-title {
-    font-size: var(--bnr-mb-float-left-title-fs);
+    font-size: calc(var(--bnr-mb-float-left-title-fs) * 0.9);
     font-weight: 800;
     text-transform: uppercase;
     background: var(--header-links-gr);
@@ -813,12 +814,12 @@ img {
 
 .bnr-mb-float-left-subtitle {
     color: #000;
-    font-size: var(--bnr-mb-float-left-subtitle-fs);
+    font-size: calc(var(--bnr-mb-float-left-subtitle-fs) * 0.9);
     font-weight: 600;
 }
 
 .bnr-mb-float-right-title {
-    font-size: var(--bnr-mb-float-right-title-fs);
+    font-size: calc(var(--bnr-mb-float-right-title-fs) * 0.9);
     font-weight: 800;
     text-transform: uppercase;
     background: var(--header-links-gr);
@@ -831,7 +832,7 @@ img {
 
 .bnr-mb-float-right-subtitle {
     color: #000;
-    font-size: var(--bnr-mb-float-right-subtitle-fs);
+    font-size: calc(var(--bnr-mb-float-right-subtitle-fs) * 0.9);
     font-weight: 600;
 }
 
@@ -877,7 +878,7 @@ img {
 }
 
 .bnr-mb-btn.price {
-    font-size: var(--bnr-mb-upper-btn-fs);
+    font-size: calc(var(--bnr-mb-upper-btn-fs) * 0.9);
     width: var(--bnr-mb-upper-btn-width);
     height: var(--bnr-mb-upper-btn-height);
     margin-bottom: var(--bnr-mb-margin-block);
@@ -888,14 +889,14 @@ img {
     background-color: #025DF8;
     width: var(--bnr-mb-btn-group-width);
     height: var(--bnr-mb-btn-height);
-    font-size: var(--bnr-mb-bottom-btn-fs);
+    font-size: calc(var(--bnr-mb-bottom-btn-fs) * 0.9);
 }
 
 .bnr-mb-btn.phone {
     font-weight: 500;
     width: var(--bnr-mb-btn-group-width);
     height: var(--bnr-mb-btn-height);
-    font-size: var(--bnr-mb-middle-btn-fs);
+    font-size: calc(var(--bnr-mb-middle-btn-fs) * 0.9);
     margin-bottom: calc(var(--bnr-mb-margin-block) / 2);
 }
 
