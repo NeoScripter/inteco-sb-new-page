@@ -71,17 +71,17 @@ const phoneNumberMobileNav = document.querySelector('.mb-nav-phone-link');
 burgerMenuClosed.addEventListener('click', () => {
     burgerMenuClosed.style.display = 'none';
     burgerMenuOpen.style.display = 'block';
-    mobileExpandedNav.style.display = 'block';
+    mobileExpandedNav.classList.add('active');
     phoneNumberMobileNav.style.display = 'none';
 });
 
 burgerMenuOpen.addEventListener('click', () => {
     burgerMenuClosed.style.display = 'block';
     burgerMenuOpen.style.display = 'none';
-    mobileExpandedNav.style.display = 'none';
+    mobileExpandedNav.classList.remove('active'); 
     phoneNumberMobileNav.style.display = 'inline';
-
 });
+
 
 // Coping the phone number to clipboard
 const phoneLinks = document.querySelectorAll('.copy-phone');
