@@ -1415,6 +1415,100 @@ img {
     margin-block: 0.5em;
 }
 
+/******* About mobile *******/
+
+.about-mb-upper-wrapper {
+    padding: var(--bnr-mb-margin-block) calc(var(--bnr-mb-margin-block) / 2);
+    text-align: center;
+}
+
+.about-mb-title {
+    font-size: var(--sale-mb-title-fs);
+    text-transform: uppercase;
+    margin-bottom: calc(var(--bnr-mb-margin-block) / 2);
+    background: var(--header-links-gr);
+    color: #032C72;
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; 
+}
+
+h4.about-mb-subtitle {
+    font-size: var(--sale-mb-subtitle-fs);
+    text-transform: uppercase;
+    margin-bottom: calc(var(--bnr-mb-margin-block) / 2);
+}
+
+.about-mb-prg {
+    width: 85%;
+    margin-inline: auto;
+    font-size: var(--sale-mb-fine-print-fs);
+}
+
+.about-mb-img-holder {
+    position: relative;
+    margin-bottom: calc(var(--bnr-mb-margin-block) * 1.3);
+}
+
+.about-mb-float-left {
+    position: absolute;
+    width: 35%;
+    left: 5%;
+    top: -10%;
+}
+
+.about-mb-float-bottom {
+    position: absolute;
+    padding: calc(var(--bnr-mb-margin-block) / 3) calc(var(--bnr-mb-margin-block) / 1.5);
+    bottom: -15%;
+    width: 90%;
+    left: 5%;
+    background-color: #FFFFFFE5;
+    border-radius: 9.55px;
+    box-shadow: 0 0.3em 0.3em 0 rgba(0, 0, 0, 0.25);
+}
+
+.about-flex-subgroup-mb {
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex-sb-small-mb {
+    font-size: var(--bnr-mb-float-left-title-fs);
+    display: block;
+}
+
+.flex-sb-extra-large-mb {
+    font-size: var(--mb-nav-logo-height);
+    font-weight: 600;
+    background: var(--header-links-gr);
+    color: #032C72;
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; 
+}
+
+.about-bottom-wrapper-mb {
+    padding: calc(var(--bnr-mb-float-right-subtitle-fs) * 1.5);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: var(--bnr-mb-float-right-subtitle-fs);
+    column-gap: calc(var(--bnr-mb-float-right-subtitle-fs) * 2.5);
+}
+
+.abt-mb-grid-title {
+    font-size: var(--bnr-mb-float-right-subtitle-fs);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.abt-mb-grid-subtitle {
+    font-size: var(--bnr-mb-float-left-title-fs);
+    font-weight: 500;
+}
+
 /****** Form section *******/
 
 .form-outer-wrapper {
