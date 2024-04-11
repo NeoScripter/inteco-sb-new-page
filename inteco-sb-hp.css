@@ -1813,6 +1813,49 @@ h4.about-mb-subtitle {
     background: var(--header-links-gr); 
 }
 
+/****** Camera mobile *******/
+
+.camera-mb-title {
+    margin-block: calc(var(--bnr-mb-float-right-subtitle-fs) * 1.5);
+    font-size: var(--sale-mb-title-fs);
+    text-transform: uppercase;
+    background: var(--header-links-gr);
+    color: #032C72;
+    border: none;
+    cursor: pointer;
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; 
+}
+
+.camera-mb-subtitle {
+    font-size: var(--bnr-mb-bottom-btn-fs);
+    font-weight: 500;
+}
+
+.camera-mb-upper-ctn {
+    width: 70%;
+    margin-inline: auto;
+    text-align: center;
+    margin-block: calc(var(--bnr-mb-float-right-subtitle-fs) * 1.5)
+}
+
+.camera-mb-middle-ctn {
+    position: relative;
+/*     height: var(--bnr-mb-btn-group-width); */
+    background: var(--header-links-gr);
+    width: 80%;
+    margin-left: auto;
+    overflow-x: hidden;
+}
+
+.camera-mb-main-img {
+    right: 0;
+    height: calc(var(--bnr-mb-float-right-width) * 2.7);
+    width: calc(var(--bnr-mb-btn-group-width) * 2);
+}
+
 /****** Marketing section *******/
 
 .mrk-outer-wrapper {
