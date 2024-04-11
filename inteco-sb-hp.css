@@ -2037,12 +2037,81 @@ h4.about-mb-subtitle {
     width: var(--mrk-btn-icon-width);
 }
 
-#mrk-red-btn {
+.mrk-red-btn {
     width: var(--mrk-red-btn-width);
     height: var(--mrk-red-btn-height);
     background-color: #EA0000;
     font-size: var(--mrk-red-btn-fs);
     font-weight: 800;
+    display: grid;
+    place-content: center;
+    color: #FFF;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+/****** Marketing mobile *******/
+
+.mrk-mb-outer-wrapper {
+    background: var(--header-links-gr);
+    padding-block: calc(var(--bnr-mb-float-right-subtitle-fs) * 2);
+}
+
+.mrk-mb-inner-wrapper {
+    width: 90%;
+    margin-inline: auto;
+    text-align: center;
+}
+
+.mrk-mb-top-btn {
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0.3em 0.3em 0 rgba(0, 0, 0, 0.25);
+    border-radius: 8.84px;
+    padding: calc(var(--bnr-mb-float-right-subtitle-fs) * 0.5);
+    position: relative;
+    top: calc(var(--bnr-mb-float-right-subtitle-fs) * -5);
+}
+
+.mrk-mb-float-title {
+    font-size: var(--mb-nav-open-nav-fs-large);
+    font-weight: 600;
+    margin-bottom: calc(var(--bnr-mb-float-right-subtitle-fs) * 0.5);
+}
+
+.mrk-mb-float-subtitle {
+    font-size: var(--sale-mb-subtitle-fs);
+    font-weight: 600;
+    width: 80%;
+    margin-inline: auto;
+}
+
+.mrk-mb-btm-btn {
+    color: #fff;
+    width: 90%;
+    margin-inline: auto;
+}
+
+.mrk-mb-title {
+    font-size: var(--mb-nav-open-nav-fs-large);
+    font-weight: 700;
+    margin-bottom: calc(var(--bnr-mb-float-right-subtitle-fs) * 1.5);
+}
+
+.mrk-mb-prg {
+    font-size: var(--mb-nav-phone-fs);
+    font-weight: 600;
+}
+
+.mrk-mb-red-btn {
+    background-color: #EA0000;
+    font-size: var(--mb-nav-phone-fs);
+    font-weight: 800;
+    width: 80%;
+    height: var(--mb-nav-open-burger-width);
+    margin-inline: auto;
+    margin-block: calc(var(--bnr-mb-float-right-subtitle-fs) * 2);
     display: grid;
     place-content: center;
     color: #FFF;
