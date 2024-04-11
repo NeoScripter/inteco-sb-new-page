@@ -159,9 +159,9 @@ emailLinks.forEach(link => {
 });
 
 // Review carousel 
-let currentIndex = 0;
-const arrowLeft = document.querySelector('.arrow-left');
-const arrowRight = document.querySelector('.arrow-right');
+let currentReviewIndex = 0;
+const arrowLeftReview = document.querySelector('.arrow-left-review');
+const arrowRightReview = document.querySelector('.arrow-right-review');
 const reviews = document.querySelectorAll('.reviews-grid-group .review');
 const reviewsArray = Array.from(reviews);
 
@@ -169,21 +169,53 @@ function updateReviewsDisplay() {
     reviewsArray.forEach(review => {
         review.classList.add('desktop');
     });
-    reviewsArray[currentIndex].style.opacity = '0';
-    reviewsArray[currentIndex].classList.remove('desktop');
+    reviewsArray[currentReviewIndex].style.opacity = '0';
+    reviewsArray[currentReviewIndex].classList.remove('desktop');
     setTimeout(() => { 
-        reviewsArray[currentIndex].style.opacity = '1'; 
+        reviewsArray[currentReviewIndex].style.opacity = '1'; 
       }, 300);
 }
 
 updateReviewsDisplay();
 
-arrowLeft.addEventListener('click', function() {
-    currentIndex = (currentIndex === 0) ? reviewsArray.length - 1 : currentIndex - 1;
+arrowLeftReview.addEventListener('click', function() {
+    currentReviewIndex = (currentReviewIndex === 0) ? reviewsArray.length - 1 : currentReviewIndex - 1;
     updateReviewsDisplay();
 });
 
-arrowRight.addEventListener('click', function() {
-    currentIndex = (currentIndex + 1) % reviewsArray.length;
+arrowRightReview.addEventListener('click', function() {
+    currentReviewIndex = (currentReviewIndex + 1) % reviewsArray.length;
     updateReviewsDisplay(); 
+});
+
+
+
+// Team carousel 
+let currentTeamIndex = 0;
+const arrowLeftTeam = document.querySelector('.arrow-left-team');
+const arrowRightTeam = document.querySelector('.arrow-right-team');
+const teamMembers = document.querySelectorAll('.team-member');
+const teamMembersArray = Array.from(teamMembers);
+
+function updateteamMembersDisplay() {
+    teamMembersArray.forEach(teamMember => {
+        teamMember.classList.add('desktop');
+    });
+    teamMembersArray[currentTeamIndex].style.opacity = '0';
+    teamMembersArray[currentTeamIndex].classList.remove('desktop');
+    setTimeout(() => { 
+        teamMembersArray[currentTeamIndex].style.opacity = '1'; 
+      }, 300);
+}
+
+updateteamMembersDisplay();
+
+arrowLeftTeam.addEventListener('click', function() {
+    currentTeamIndex = (currentTeamIndex === 0) ? teamMembersArray.length - 1 : currentTeamIndex - 1;
+    updateteamMembersDisplay();
+});
+
+arrowRightTeam.addEventListener('click', function() {
+    currentTeamIndex = (currentTeamIndex + 1) % teamMembersArray.length;
+    updateteamMembersDisplay(); 
 });
