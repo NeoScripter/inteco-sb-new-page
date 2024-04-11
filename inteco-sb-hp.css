@@ -2209,7 +2209,7 @@ h4.about-mb-subtitle {
 
 .reviews-grid-group {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fit(var(--abt-big-btn-left-width)));
     overflow: hidden;
     gap: 1em;
     align-items: start;
@@ -2684,7 +2684,6 @@ h4.about-mb-subtitle {
     
     .customers-inner-wrapper {
         width: 90%;
-        display: grid;
         grid-template-columns: 1fr;
         gap: calc(var(--bnr-mb-float-right-subtitle-fs) * 1.5);
         margin-bottom: calc(var(--bnr-mb-float-right-subtitle-fs) * 1.5);
@@ -2696,15 +2695,6 @@ h4.about-mb-subtitle {
     
     .customers-title {
         font-size: var(--sale-mb-title-fs);
-        font-weight: 700;
-        text-transform: uppercase;
-        margin-block: var(--abt-padding-block);
-        background: var(--header-links-gr);
-        color: #032C72;
-    
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent; 
     }
     
     .customers-subtitle {
@@ -2713,13 +2703,50 @@ h4.about-mb-subtitle {
     }
     
     .customers-grid-right {
-        display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
 
     .partner {
         font-size: calc(var(--mb-nav-padding-left) * 0.8);
-        font-weight: 600;
         text-align: center;
     }
+
+
+    .reviews-outer-wrapper {
+        padding-block: calc(var(--bnr-mb-float-right-subtitle-fs) * 1.5);
+    }
+    .reviews-inner-wrapper {
+        width: 85%;
+    }
+    .reviews-title-wrapper {
+        width: 90%;
+    }
+    .reviews-title {
+        font-size: var(--sale-mb-title-fs);
+        margin-block: calc(var(--bnr-mb-float-right-subtitle-fs) * 0.5);
+    }
+    .reviews-subtitle {
+        font-size: var(--sale-mb-subtitle-fs);
+        margin-bottom: calc(var(--bnr-mb-float-right-subtitle-fs) * 1.5);
+    }
+    .reviews-grid-group {
+        grid-template-columns: 1fr;
+        gap: calc(var(--bnr-mb-float-right-subtitle-fs) * 0.5);
+    }
+    .review {
+        padding: calc(var(--bnr-mb-float-right-subtitle-fs) * 2);
+        margin-bottom: calc(var(--bnr-mb-float-right-subtitle-fs) * 1.5);
+    }
+    .review p {
+        font-size: var(--mb-nav-phone-fs);
+    }
+    .expand_button {
+        font-size: var(--bnr-mb-upper-btn-fs);
+        margin-bottom: calc(var(--bnr-mb-float-right-subtitle-fs) * 2.5);
+    }
+    .expand_button::after {
+        bottom: -0.5em; 
+        width: var(--expand-button-after-width, 55%); 
+    }
+
 }

@@ -49,7 +49,7 @@ document.querySelectorAll('.expand_button').forEach(button => {
               }, 150);
             ellipsis.style.display = 'none';
             this.textContent = 'Скрыть';
-            button.style.setProperty('--expand-button-after-width', '18%');
+            button.style.setProperty('--expand-button-after-width', '23%');
         } else {
             expandedText.style.opacity = '0'; 
             setTimeout(() => { 
