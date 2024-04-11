@@ -281,8 +281,8 @@ img {
 /******* Header *******/
 
 .header {
-  /*   position: sticky;
-    top: 0; */
+    position: sticky;
+    top: 0;
     z-index: 400;
     background-color: #FFF;
 }
@@ -498,7 +498,7 @@ img {
     position: fixed;
     top: 0;
     left: 0;
-    bottom: 0;
+    height: 100vh;
     width: calc(var(--mb-nav-logo-width) * 1.5);
     background-color: #fff;
     z-index: 100;
