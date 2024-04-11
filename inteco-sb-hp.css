@@ -2125,7 +2125,10 @@ h4.about-mb-subtitle {
 
 .calculation {
     background: var(--header-links-gr) !important;
-    display: none;
+}
+
+.calculation .container-page {
+    text-align: center;
 }
 
 .calculation-title {
@@ -2673,5 +2676,50 @@ h4.about-mb-subtitle {
     .gallery-img-text {
         font-size: var(--sale-mb-fine-print-fs);
         padding: calc(var(--bnr-mb-margin-block) / 3) calc(var(--bnr-mb-margin-block) / 2);
+    }
+
+    .customers-outer-wrapper {
+        padding-block: calc(var(--bnr-mb-float-right-subtitle-fs) * 1.5);
+    }
+    
+    .customers-inner-wrapper {
+        width: 90%;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: calc(var(--bnr-mb-float-right-subtitle-fs) * 1.5);
+        margin-bottom: calc(var(--bnr-mb-float-right-subtitle-fs) * 1.5);
+    }
+
+    .customers-grid-left {
+        text-align: center;
+    }
+    
+    .customers-title {
+        font-size: var(--sale-mb-title-fs);
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-block: var(--abt-padding-block);
+        background: var(--header-links-gr);
+        color: #032C72;
+    
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent; 
+    }
+    
+    .customers-subtitle {
+        font-size: var(--sale-mb-subtitle-fs);
+        font-weight: 500;
+    }
+    
+    .customers-grid-right {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .partner {
+        font-size: calc(var(--mb-nav-padding-left) * 0.8);
+        font-weight: 600;
+        text-align: center;
     }
 }
