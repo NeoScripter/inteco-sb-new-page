@@ -498,8 +498,8 @@ img {
     position: fixed;
     top: 0;
     left: 0;
+    bottom: 0;
     width: calc(var(--mb-nav-logo-width) * 1.5);
-    height: 100vh;
     background-color: #fff;
     z-index: 100;
 }
