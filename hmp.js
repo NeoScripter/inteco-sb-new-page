@@ -55,7 +55,7 @@ document.querySelectorAll('.expand_button').forEach(button => {
             setTimeout(() => { 
                 expandedText.style.display = 'none';
                 ellipsis.style.display = 'inline';
-                this.textContent = 'Читать полностью';
+                this.textContent = 'Читать весь отзыв';
                 button.style.removeProperty('--expand-button-after-width');
               }, 150);
         }
@@ -156,4 +156,34 @@ emailLinks.forEach(link => {
             this.classList.remove('disabled-link');
         });
     });
+});
+
+// Review carousel 
+let currentIndex = 0;
+const arrowLeft = document.querySelector('.arrow-left');
+const arrowRight = document.querySelector('.arrow-right');
+const reviews = document.querySelectorAll('.reviews-grid-group .review');
+const reviewsArray = Array.from(reviews);
+
+function updateReviewsDisplay() {
+    reviewsArray.forEach(review => {
+        review.classList.add('desktop');
+    });
+    reviewsArray[currentIndex].style.opacity = '0';
+    reviewsArray[currentIndex].classList.remove('desktop');
+    setTimeout(() => { 
+        reviewsArray[currentIndex].style.opacity = '1'; 
+      }, 300);
+}
+
+updateReviewsDisplay();
+
+arrowLeft.addEventListener('click', function() {
+    currentIndex = (currentIndex === 0) ? reviewsArray.length - 1 : currentIndex - 1;
+    updateReviewsDisplay();
+});
+
+arrowRight.addEventListener('click', function() {
+    currentIndex = (currentIndex + 1) % reviewsArray.length;
+    updateReviewsDisplay(); 
 });

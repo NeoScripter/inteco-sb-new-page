@@ -2207,9 +2207,13 @@ h4.about-mb-subtitle {
     color: #FFF;
 }
 
+.reviews-inner-wrapper {
+    position: relative;
+}
+
 .reviews-grid-group {
     display: grid;
-    grid-template-columns: repeat(auto-fit(var(--abt-big-btn-left-width)));
+    grid-template-columns: repeat(3, 1fr);
     overflow: hidden;
     gap: 1em;
     align-items: start;
@@ -2273,6 +2277,19 @@ h4.about-mb-subtitle {
     color: #03245c;
     outline: none;
     --expand-btn-gr: #03245c;
+}
+
+.arrow-switch {
+    position: absolute;
+    width: 40%;
+    bottom: calc(var(--mb-nav-phone-fs) / -1);
+    display: none;
+    height: var(--mb-nav-phone-fs);
+    cursor: pointer;
+}
+
+.arrow-left {
+    right: 0;
 }
 
 /****** Team section *******/
@@ -2713,7 +2730,7 @@ h4.about-mb-subtitle {
 
 
     .reviews-outer-wrapper {
-        padding-block: calc(var(--bnr-mb-float-right-subtitle-fs) * 1.5);
+        padding-block: calc(var(--bnr-mb-float-right-subtitle-fs) * 1.5) calc(var(--bnr-mb-float-right-subtitle-fs) * 5);
     }
     .reviews-inner-wrapper {
         width: 85%;
@@ -2748,5 +2765,7 @@ h4.about-mb-subtitle {
         bottom: -0.5em; 
         width: var(--expand-button-after-width, 55%); 
     }
-
+    .arrow-switch {
+        display: block;
+    }
 }
