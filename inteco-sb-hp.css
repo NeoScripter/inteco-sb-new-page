@@ -2223,7 +2223,7 @@ h4.about-mb-subtitle {
     padding: 1.5em;
     cursor: pointer;
     margin-bottom: 1em;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.3s ease-in-out;
     color: #1D1F1E;
     background-color: #fff;
     border-radius: 10px;
@@ -2348,6 +2348,7 @@ h4.about-mb-subtitle {
 .team-member {
     display: flex;
     flex-direction: column;
+    transition: all 0.5s ease-in-out;
   }
   
 .team-desc-wrapper {
@@ -2825,5 +2826,14 @@ h4.about-mb-subtitle {
     
     .team-desc-prg {
         font-size: calc(var(--mb-nav-phone-fs) * 1);
+    }
+
+
+    .contacts-inner-wrapper {
+        width: 90%;
+        margin-left: auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: var(--abt-padding-block);
     }
 }
