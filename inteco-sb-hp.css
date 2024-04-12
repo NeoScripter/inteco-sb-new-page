@@ -2352,6 +2352,16 @@ h4.about-mb-subtitle {
     bottom: calc(var(--mb-nav-phone-fs) / -0.5);
 }
 
+
+.carousel-item {
+    transform: translateX(-100%); 
+    transition: transform 0.5s ease;
+}
+
+.carousel-item.active {
+    transform: translateX(0%); 
+}
+
 /****** Team section *******/
 
 .team-outer-wrapper {
@@ -2890,7 +2900,7 @@ h4.about-mb-subtitle {
     }
 
     .contacts-outer-wrapper {
-        margin-block: var(--form-form-cnt-margin-block);
+        margin-block: calc(var(--bnr-mb-margin-block) / 2);
     }
     
     #inteco-map { 
@@ -2899,30 +2909,21 @@ h4.about-mb-subtitle {
     } 
     
     .contacts-title {
-        padding-left: calc(var(--abt-padding-block) * 2);
-        font-size: var(--abt-about-title-fs);
-        font-weight: 700;
-        text-transform: uppercase;
-        background: var(--header-links-gr);
-        color: #032C72;
-        border: none;
-    
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent; 
+        font-size: var(--sale-mb-title-fs);
+        text-align: center;
+        margin-bottom: calc(var(--bnr-mb-margin-block));
     }
     
     .contacts-grid-subgroup {
-        height: calc(var(--mrk-lowbtn-prg-width) * 1);
-        margin-block: calc(var(--abt-padding-block) * 2);
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        padding-inline: calc(var(--abt-padding-block) * 2);
+        height: auto;
+        margin-block: calc(var(--bnr-mb-margin-block) / 2);
+        display: block;
+        width: 70%;
+        padding-inline: calc(var(--bnr-mb-margin-block));
     }
     
     .cnts-sb-child {
-        padding-bottom: calc(var(--abt-padding-block));
+        padding-bottom: calc(var(--bnr-mb-margin-block) / 2);
     }
     
     .icons-holder {
@@ -2930,27 +2931,23 @@ h4.about-mb-subtitle {
     }
     
     .cnts-child-title {
-        font-size: var(--prj-subtitle-fs);
+        font-size: var(--sale-mb-subtitle-fs);
         text-transform: uppercase;
         font-weight: 700;
-        margin-bottom: calc(var(--abt-padding-block) / 1.5);
+        margin-bottom: 0;
     }
     
     .cnts-child-prg {
-        font-size: var(--prj-subtitle-fs);
-        font-weight: 400;
+        font-size: calc(var(--mb-nav-phone-fs) * 1);
     }
     
     .cnts-icons-wrapper {
-        display: flex;
-        justify-content: flex-start;
-        align-items: flex-end;
         gap: calc(var(--abt-padding-block) * 1.3);
-        margin-top: calc(var(--abt-padding-block) * 1.5);
+        margin-block: calc(var(--bnr-mb-margin-block) * 0.4);
     }
     
     .cnts-large-icon {
-        width: var(--abt-flex-sb-extra-large-fs);
+        width: var(--bnr-mb-margin-block);
     }
     
     #call-us-form-contacts {
