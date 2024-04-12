@@ -655,6 +655,7 @@ img {
     font-size: var(--bnr-price-btn);
     width: var(--bnr-price-btn-width);
     height: var(--bnr-price-btn-height);
+    animation: pulse 2s infinite;
 }
 
 .bnr-btn:focus, .bnr-btn:hover {
@@ -926,8 +927,17 @@ img {
     }
 }
 
+@keyframes jump {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
 .bnr-mb-btn.price {
-    animation: pulse 2s infinite;
+    animation: jump 1s ease-in-out infinite;
     transition: transform 0.5s ease-in-out;
     box-shadow: 0 0.3em 0.3em 0 rgba(0, 0, 0, 0.25);
 }
@@ -2872,10 +2882,78 @@ h4.about-mb-subtitle {
 
 
     .contacts-inner-wrapper {
-        width: 90%;
+        width: 100%;
         margin-left: auto;
-        display: grid;
+        display: block;
         grid-template-columns: 1fr;
         gap: var(--abt-padding-block);
+    }
+
+    .contacts-outer-wrapper {
+        margin-block: var(--form-form-cnt-margin-block);
+    }
+    
+    #inteco-map { 
+        width: calc(var(--mb-nav-logo-width) * 2);
+        height: var(--sale-mb-btn-width); 
+    } 
+    
+    .contacts-title {
+        padding-left: calc(var(--abt-padding-block) * 2);
+        font-size: var(--abt-about-title-fs);
+        font-weight: 700;
+        text-transform: uppercase;
+        background: var(--header-links-gr);
+        color: #032C72;
+        border: none;
+    
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent; 
+    }
+    
+    .contacts-grid-subgroup {
+        height: calc(var(--mrk-lowbtn-prg-width) * 1);
+        margin-block: calc(var(--abt-padding-block) * 2);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        padding-inline: calc(var(--abt-padding-block) * 2);
+    }
+    
+    .cnts-sb-child {
+        padding-bottom: calc(var(--abt-padding-block));
+    }
+    
+    .icons-holder {
+        grid-row: span 2;
+    }
+    
+    .cnts-child-title {
+        font-size: var(--prj-subtitle-fs);
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-bottom: calc(var(--abt-padding-block) / 1.5);
+    }
+    
+    .cnts-child-prg {
+        font-size: var(--prj-subtitle-fs);
+        font-weight: 400;
+    }
+    
+    .cnts-icons-wrapper {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+        gap: calc(var(--abt-padding-block) * 1.3);
+        margin-top: calc(var(--abt-padding-block) * 1.5);
+    }
+    
+    .cnts-large-icon {
+        width: var(--abt-flex-sb-extra-large-fs);
+    }
+    
+    #call-us-form-contacts {
+        display: none;
     }
 }

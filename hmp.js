@@ -75,12 +75,29 @@ burgerMenuClosed.addEventListener('click', () => {
     phoneNumberMobileNav.style.display = 'none';
 });
 
-burgerMenuOpen.addEventListener('click', () => {
+burgerMenuOpen.addEventListener('click', closeMenu);
+
+function closeMenu() {
     burgerMenuClosed.style.display = 'block';
     burgerMenuOpen.style.display = 'none';
-    mobileExpandedNav.classList.remove('active'); 
+    mobileExpandedNav.classList.remove('active');
     phoneNumberMobileNav.style.display = 'inline';
+}
+
+document.addEventListener('click', (event) => {
+    if (!mobileExpandedNav.contains(event.target) && !burgerMenuClosed.contains(event.target) && mobileExpandedNav.classList.contains('active')) {
+        closeMenu();
+    }
 });
+
+mobileExpandedNav.addEventListener('click', (event) => {
+    event.stopPropagation();
+});
+
+burgerMenuClosed.addEventListener('click', (event) => {
+    event.stopPropagation();
+});
+
 
 
 // Coping the phone number to clipboard
