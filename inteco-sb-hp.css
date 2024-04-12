@@ -1895,9 +1895,9 @@ h4.about-mb-subtitle {
 
 .camera-mb-middle-ctn {
     position: relative;
-    height: calc(var(--bnr-mb-btn-group-width) * 1.4);
+    height: calc(var(--bnr-mb-btn-group-width) * 1.68);
     background: var(--header-links-gr);
-    width: 80%;
+    width: 100%;
     margin-left: auto;
     overflow: visible;
 }
@@ -1905,7 +1905,7 @@ h4.about-mb-subtitle {
 .camera-mb-main-img {
     position: absolute;
     top: 10%;
-    height: calc(var(--bnr-mb-float-right-width) * 2.7);
+    height: calc(var(--bnr-mb-float-right-width) * 3.24);
     width: calc(var(--bnr-mb-btn-group-width) * 2);
 }
 
@@ -1928,7 +1928,7 @@ h4.about-mb-subtitle {
 }
 
 .camera-mb-bottom-ctn {
-    height: calc(var(--bnr-mb-float-right-width) * 1.5);
+    height: calc(var(--bnr-mb-float-right-width) * 1.8);
     width: 40%;
     margin-left: auto;
     display: flex;
@@ -1962,7 +1962,7 @@ h4.about-mb-subtitle {
 .camera-mb-float {
     position: absolute;
     bottom: -33%;
-    left: -5%;
+    left: 5%;
     background-color: rgba(255, 255, 255, 0.9);
     box-shadow: 0 0.3em 0.3em 0 rgba(0, 0, 0, 0.25);
     border-radius: 15.84px;
