@@ -1895,7 +1895,7 @@ h4.about-mb-subtitle {
 
 .camera-mb-middle-ctn {
     position: relative;
-    height: calc(var(--bnr-mb-btn-group-width) * 1.68);
+    height: calc(var(--bnr-mb-btn-group-width) * 1.48);
     background: var(--header-links-gr);
     width: 100%;
     margin-left: auto;
@@ -1904,8 +1904,8 @@ h4.about-mb-subtitle {
 
 .camera-mb-main-img {
     position: absolute;
-    top: 10%;
-    height: calc(var(--bnr-mb-float-right-width) * 3.24);
+    top: 5%;
+    height: calc(var(--bnr-mb-float-right-width) * 2.8);
     width: calc(var(--bnr-mb-btn-group-width) * 2);
 }
 
