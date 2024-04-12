@@ -937,7 +937,7 @@ img {
 }
 
 .bnr-mb-btn.price {
-    animation: jump 1s ease-in-out infinite;
+    animation: jump 1.5s ease-in-out infinite;
     transition: transform 0.5s ease-in-out;
     box-shadow: 0 0.3em 0.3em 0 rgba(0, 0, 0, 0.25);
 }
@@ -1904,7 +1904,7 @@ h4.about-mb-subtitle {
 
 .camera-mb-main-img {
     position: absolute;
-    top: 5%;
+    top: 10%;
     height: calc(var(--bnr-mb-float-right-width) * 2.8);
     width: calc(var(--bnr-mb-btn-group-width) * 2);
 }
@@ -2954,6 +2954,10 @@ h4.about-mb-subtitle {
     }
     
     #call-us-form-contacts {
+        display: none;
+    }
+
+    .calculation {
         display: none;
     }
 }
