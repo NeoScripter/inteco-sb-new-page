@@ -1,7 +1,7 @@
 // Navigation large icon section
 
 const emergingField = document.querySelector('.nav-emerging-par');
-const emergingCatalog = document.querySelector('.catalog-emerging-wrapper');
+const emergingCatalog = document.querySelector('.catalog-emerging-ctn');
 const emergingCatalogChild = document.querySelector('.catalog-emerging');
 const firstNavItem = document.querySelector('.list-item-underline');
 
