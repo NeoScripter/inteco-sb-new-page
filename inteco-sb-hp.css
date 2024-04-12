@@ -452,7 +452,7 @@ img {
 }
 
 .nav-mb-flex-group-left {
-    height: calc(var(--mb-nav-logo-height) * 2);
+    height: calc(var(--mb-nav-logo-height) * 1.5);
     width: var(--mb-nav-logo-width);
     display: flex;
     flex-direction: column;
@@ -544,7 +544,8 @@ img {
 }
 
 .nav-mb-folding-menu-bottom {
-    padding: calc(var(--mb-nav-padding-top) / 2) calc(var(--mb-nav-padding-left) / 2);
+    padding-inline: calc(var(--mb-nav-padding-left) / 2);
+    /* padding-block: calc(var(--mb-nav-padding-top) / 2); */
     padding-top: 0;
     display: flex;
     justify-content: space-between;
