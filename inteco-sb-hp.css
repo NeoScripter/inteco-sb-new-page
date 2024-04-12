@@ -648,6 +648,7 @@ img {
     flex-shrink: 0;
     cursor: pointer;
     letter-spacing: 0.1em;
+    background-color: #fff;
 }
 
 .bnr-btn.price {
@@ -657,7 +658,7 @@ img {
 }
 
 .bnr-btn:focus, .bnr-btn:hover {
-    background-color: #fff;
+    background-color: #e9e4e4;
 }
 
 .bnr-btn.call {
@@ -906,7 +907,7 @@ img {
 .bnr-mb-btn {
     display: block;
     margin-inline: auto;
-    background-color: #ece8e8;
+    background-color: #fff;
     text-decoration: none;
 }
 
@@ -961,7 +962,7 @@ img {
 }
 
 .bnr-mb-btn:focus, .bnr-mb-btn:hover {
-    background-color: #fff;
+    background-color: #e9e4e4;;
 }
 
 .bnr-mb-btn.call:focus, .bnr-mb-btn.call:hover {
