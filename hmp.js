@@ -175,85 +175,44 @@ emailLinks.forEach(link => {
     });
 });
 
-// Team and reviews carousel 
 
-let currentReviewIndex = 0;
-let currentTeamIndex = 0;
-
-const reviews = document.querySelectorAll('.reviews-grid-group .review');
+// Review and team member carousels 
+const teamGridGroup = document.querySelector('.team-grid-group');
 const teamMembers = document.querySelectorAll('.team-member');
+let offset = 0;
+let startX; 
 
-const arrowLeftReview = document.querySelector('.arrow-left-review');
-const arrowRightReview = document.querySelector('.arrow-right-review');
-const arrowLeftTeam = document.querySelector('.arrow-left-team');
-const arrowRightTeam = document.querySelector('.arrow-right-team');
-
-function updateDisplayElements(elements, index) {
-    elements.forEach((element, idx) => {
-        element.classList.toggle('desktop', idx !== index);
-        element.style.opacity = idx === index ? '0' : '1';
-    });
-    setTimeout(() => { 
-        elements[index].style.opacity = '1'; 
-    }, 300);
+function changeMember(direction) {
+    offset = (direction === 'right' ? offset + 1 : offset - 1 + teamMembers.length) % teamMembers.length;
+    teamGridGroup.style.transform = `translateX(-${offset * (100 / teamMembers.length)}%)`;
 }
 
-function addSwipeFunctionality(selector, updateIndexCallback) {
-    const swipeContainer = document.querySelector(selector);
-    let touchStartX = 0;
-
-    swipeContainer.addEventListener('touchstart', e => {
-        touchStartX = e.touches[0].clientX;
-    }, false);
-
-    swipeContainer.addEventListener('touchend', e => {
-        const touchEndX = e.changedTouches[0].clientX;
-        const threshold = 50; 
-
-        if (touchEndX + threshold < touchStartX) {
-            updateIndexCallback(true);
-        } else if (touchEndX > touchStartX + threshold) {
-            updateIndexCallback(false);
-        }
-    }, false);
-}
-
-function navigateReviews(next) {
-    const elementsArray = Array.from(reviews);
-    currentReviewIndex = next ? (currentReviewIndex + 1) % elementsArray.length : 
-        (currentReviewIndex === 0 ? elementsArray.length - 1 : currentReviewIndex - 1);
-    updateDisplayElements(elementsArray, currentReviewIndex);
-}
-
-function navigateTeamMembers(next) {
-    const elementsArray = Array.from(teamMembers);
-    currentTeamIndex = next ? (currentTeamIndex + 1) % elementsArray.length : 
-        (currentTeamIndex === 0 ? elementsArray.length - 1 : currentTeamIndex - 1);
-    updateDisplayElements(elementsArray, currentTeamIndex);
-}
-
-addSwipeFunctionality('.reviews-grid-group', navigateReviews);
-addSwipeFunctionality('.team-grid-group', navigateTeamMembers);
-
-updateDisplayElements(Array.from(reviews), currentReviewIndex);
-updateDisplayElements(Array.from(teamMembers), currentTeamIndex);
-
-arrowRightReview.addEventListener('click', function() {
-    currentReviewIndex = (currentReviewIndex === 0) ? reviews.length - 1 : currentReviewIndex - 1;
-    updateDisplayElements(reviews, currentReviewIndex);
+document.querySelector('.arrow-right-team').addEventListener('click', () => {
+    changeMember('right');
 });
 
-arrowLeftReview.addEventListener('click', function() {
-    currentReviewIndex = (currentReviewIndex + 1) % reviews.length;
-    updateDisplayElements(reviews, currentReviewIndex);
+document.querySelector('.arrow-left-team').addEventListener('click', () => {
+    changeMember('left');
 });
 
-arrowLeftTeam.addEventListener('click', function() {
-    currentTeamIndex = (currentTeamIndex === 0) ? teamMembers.length - 1 : currentTeamIndex - 1;
-    updateDisplayElements(teamMembers, currentTeamIndex);
-});
+teamGridGroup.addEventListener('touchstart', (e) => {
+    startX = e.touches[0].clientX; 
+}, false);
 
-arrowRightTeam.addEventListener('click', function() {
-    currentTeamIndex = (currentTeamIndex + 1) % teamMembers.length;
-    updateDisplayElements(teamMembers, currentTeamIndex);
+teamGridGroup.addEventListener('touchend', (e) => {
+    const endX = e.changedTouches[0].clientX;  
+    const threshold = 50;  
+
+    if (startX - endX > threshold) {
+        changeMember('right');
+    } else if (endX - startX > threshold) {
+        changeMember('left');
+    }
+}, false);
+
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 600) {
+        offset = 0; 
+        teamGridGroup.style.transform = 'translateX(0)';
+    }
 });
