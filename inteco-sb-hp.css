@@ -619,6 +619,8 @@ img {
     width: var(--bnr-price-btn-width);
     height: var(--bnr-price-btn-height);
     animation: pulse 2s infinite;
+    text-decoration: none;
+    color: black;
     text-transform: uppercase;
     cursor: pointer;
 }
@@ -1739,7 +1741,7 @@ h4.about-mb-subtitle {
 .camera-float {
     position: absolute;
     top: calc(var(--cmr-float-img-top-offset) + var(--abt-padding-block));
-    left: var(--cmr-float-img-left-offset);
+    left: calc(var(--cmr-float-img-left-offset) * 1.03);
     background-color: rgba(255, 255, 255, 0.9);
     box-shadow: 0 0.3em 0.3em 0 rgba(0, 0, 0, 0.25);
     border-radius: 19.84px;
@@ -2242,7 +2244,6 @@ h4.about-mb-subtitle {
     grid-template-columns: repeat(3, 1fr);
     overflow: hidden;
     gap: 1em;
-    align-items: start;
 }
 
 .review {
@@ -2769,7 +2770,7 @@ h4.about-mb-subtitle {
     font-size: var(--bnr-mb-float-left-subtitle-fs);
 }
 
-.footer-copyright {
+.footer-mb-copyright {
     font-size: var(--bnr-mb-float-left-subtitle-fs);
     font-weight: 400;
     letter-spacing: 0.1em;

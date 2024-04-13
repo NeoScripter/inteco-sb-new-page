@@ -36,7 +36,7 @@ emergingCatalogChild.addEventListener('mouseleave', () => {
 
 
 // Reviews sections gradually appearing and disappearing
-document.querySelectorAll('.expand_button').forEach(button => {
+/* document.querySelectorAll('.expand_button').forEach(button => {
     button.addEventListener('click', function() {
         const review = this.previousElementSibling;
         const expandedText = review.querySelector('.expanded');
@@ -60,7 +60,7 @@ document.querySelectorAll('.expand_button').forEach(button => {
               }, 150);
         }
     });
-});
+}); */
 
 // Expanding mobile menu
 const mobileExpandedNav = document.querySelector('.nav-mb-unfolding-menu');
