@@ -2691,6 +2691,91 @@ h4.about-mb-subtitle {
     line-height: 1.5;
 }
 
+/****** Footer mobile *******/
+
+.footer-subctn-mb {
+    color: #FFF;
+    width: 80%;
+    margin-inline: auto;
+}
+
+.footer-mb-sb-title {
+    font-size: calc(var(--sale-mb-margin-block) * 1);
+    font-weight: 600;
+    margin-bottom: calc(var(--sale-mb-margin-block));
+}
+
+.footer-mb-nav-item {
+    font-size: calc(var(--bnr-mb-bottom-btn-fs) * 1.1);
+    cursor: pointer;
+    margin-bottom: calc(var(--sale-mb-margin-block) / 3);
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 400;
+}
+
+.footer-mb-nav-item.extended > * {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-mb-nav-item.extended {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.footer-mb-float {
+    width: var(--bnr-mb-btn-group-width);
+    border-radius: 10.15px;
+    background-color: #FFFFFF;
+    color: #000;
+    padding: calc(var(--sale-mb-margin-block) / 1.5);
+    margin-block: calc(var(--sale-mb-margin-block) / 1);
+}
+
+.footer-mb-float-title {
+    font-size: var(--bnr-mb-middle-btn-fs);
+}
+
+.footer-mb-float-prg {
+    margin: 0;
+    font-size: calc(var(--bnr-mb-middle-btn-fs) * 0.8);
+    font-weight: 600;
+}
+
+.footer-mb-nav-item:first-child {
+    font-weight: 700;
+}
+
+.footer-mb-ext-right {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: calc(var(--bnr-mb-middle-btn-fs) * 0.8);
+    font-weight: 700;
+    background: var(--main-gr2);
+    display: grid;
+    place-content: center;
+    border-radius: 2px;
+    position: relative;
+    left: -30%;
+}
+
+.footer-mb-sb-bottom-ctn {
+    margin-block: calc(var(--sale-mb-margin-block) / 1);
+}
+
+.footer-mb-sb-left-bottom-prg {
+    font-size: var(--bnr-mb-float-left-subtitle-fs);
+}
+
+.footer-copyright {
+    font-size: var(--bnr-mb-float-left-subtitle-fs);
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    color: rgb(255,255,255, 0.6);
+}
+
 .disabled-link {
     pointer-events: none;
     cursor: default;
@@ -2710,9 +2795,6 @@ h4.about-mb-subtitle {
 }
 
 @media screen and (max-width: 599px) {
-    .desktop {
-        display: none;
-    }
     .mobile {
         display: block;
     }
@@ -2930,5 +3012,12 @@ h4.about-mb-subtitle {
 
     .calculation {
         display: none;
+    }
+    .desktop {
+        display: none;
+    }
+    .footer {
+        padding-block: 0;
+        padding-block: calc(var(--abt-float-bottom-large-fs) * 4);
     }
 }
