@@ -266,10 +266,10 @@ const expandables = document.querySelectorAll(selector);
 
     expandables.forEach(element => {
         element.addEventListener('click', function() {
-            const imgSrc = this.querySelector('img').src; // Ensure there's an <img> inside the element
+            const imgSrc = this.querySelector('img').src; 
             const overlay = document.createElement('div');
             overlay.className = 'fullscreen-overlay';
-            overlay.style.opacity = '0'; // Start transparent
+            overlay.style.opacity = '0'; 
             overlay.style.position = 'fixed';
             overlay.style.top = '0';
             overlay.style.left = '0';
@@ -289,10 +289,10 @@ const expandables = document.querySelectorAll(selector);
             overlay.appendChild(img);
             document.body.appendChild(overlay);
 
-            setTimeout(() => { // Ensure CSS is applied
+            setTimeout(() => { 
                 overlay.style.opacity = '1';
                 img.style.transform = 'scale(1)';
-            }, 10);
+            }, 200);
 
             overlay.addEventListener('click', function() {
                 this.style.opacity = '0';
@@ -338,6 +338,10 @@ function setupOverlay(button, overlay, images, closeBtn) {
     function showImage(index) {
         images.forEach(img => img.style.display = 'none');
         images[index].style.display = 'block';
+        setTimeout(() => { 
+            images[index].style.opacity = '1';
+            images[index].style.transform = 'scale(1)';
+        }, 200);
         images[index].addEventListener('click', () => {
             currentIndex = (currentIndex + 1) % images.length;
             showImage(currentIndex);
