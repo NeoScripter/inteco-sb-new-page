@@ -346,3 +346,84 @@ function setupOverlay(button, overlay, images, closeBtn) {
 
     showImage(0);
 }
+
+// Youtube video button
+function createVideoOverlay(videoPath) {
+    const overlay = document.createElement('div');
+    overlay.className = 'fullscreen-overlay';
+    overlay.style.opacity = '0';
+    overlay.style.display = 'flex'; 
+
+    const video = document.createElement('video');
+    video.setAttribute('src', videoPath);
+    video.style.width = '90%';
+    video.style.height = '90%';
+    video.style.transform = 'scale(0)'; 
+    video.setAttribute('controls', ''); 
+    video.setAttribute('autoplay', ''); 
+
+    const closeButton = document.createElement('div');
+    closeButton.className = 'close-overlay';
+    closeButton.style.position = 'absolute';
+    closeButton.style.top = '20px';
+    closeButton.style.right = '20px';
+    closeButton.style.width = '30px';
+    closeButton.style.height = '30px';
+    closeButton.style.cursor = 'pointer';
+    closeButton.style.backgroundColor = '#fff';
+
+    const closeBar1 = document.createElement('span');
+    closeBar1.className = 'close-bar';
+    closeBar1.style.position = 'absolute';
+    closeBar1.style.height = '3px';
+    closeBar1.style.width = '100%';
+    closeBar1.style.backgroundColor = '#000';
+    closeBar1.style.transform = 'rotate(45deg)';
+
+    const closeBar2 = document.createElement('span');
+    closeBar2.className = 'close-bar';
+    closeBar2.style.position = 'absolute';
+    closeBar2.style.height = '3px';
+    closeBar2.style.width = '100%';
+    closeBar2.style.backgroundColor = '#000';
+    closeBar2.style.transform = 'rotate(-45deg)';
+
+    closeButton.appendChild(closeBar1);
+    closeButton.appendChild(closeBar2);
+
+    setTimeout(() => {
+        overlay.style.opacity = '1';
+        video.style.transform = 'scale(1)'; 
+    }, 200); 
+
+
+    closeButton.addEventListener('click', function() {
+        overlay.style.opacity = '0';
+        video.style.transform = 'scale(0)';
+        setTimeout(() => {
+            document.body.removeChild(overlay);
+        }, 300);
+    });
+
+    // Prevent clicks on the video from propagating to the overlay
+    video.addEventListener('click', function(event) {
+        event.stopPropagation(); // This stops the click from reaching the overlay
+    });
+
+    overlay.appendChild(video);
+    overlay.appendChild(closeButton);
+    document.body.appendChild(overlay);
+
+    setTimeout(() => {
+        overlay.style.visibility = 'visible';
+        overlay.style.opacity = '1';
+        video.style.transform = 'scale(1)';
+    }, 10);
+}
+
+// Example of setting up a trigger for the overlay
+document.querySelectorAll('.video-play').forEach(button => {
+    button.addEventListener('click', () => {
+        createVideoOverlay('assets/video/trailer.mov');
+    });
+});
