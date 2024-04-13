@@ -2870,13 +2870,23 @@ h4.about-mb-subtitle {
         font-size: var(--sale-mb-subtitle-fs);
         margin-bottom: calc(var(--bnr-mb-float-right-subtitle-fs) * 1.5);
     }
-    .reviews-grid-group {
+/*     .reviews-grid-group {
         grid-template-columns: 1fr;
         gap: calc(var(--bnr-mb-float-right-subtitle-fs) * 0.5);
+    } */
+    .reviews-inner-ctn {
+        overflow-x: hidden;
+    }
+
+    .reviews-grid-group {
+        display: flex;
+        transition: transform 0.5s ease;
+        width: calc(100% * 3);
     }
     .review {
         padding: calc(var(--bnr-mb-float-right-subtitle-fs) * 2);
         margin-bottom: calc(var(--bnr-mb-float-right-subtitle-fs) * 1.5);
+        width: 100%;
     }
     .review p {
         font-size: var(--mb-nav-phone-fs);
@@ -2919,9 +2929,6 @@ h4.about-mb-subtitle {
     }
     
     .team-grid-group {
-/*         position: relative;
-        grid-template-columns: 1fr;
-        gap: calc(var(--bnr-mb-float-right-subtitle-fs) * 0.5); */
         display: flex;
         transition: transform 0.5s ease;
         width: calc(100% * 6);

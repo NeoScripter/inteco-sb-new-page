@@ -176,7 +176,7 @@ emailLinks.forEach(link => {
 });
 
 
-// Review and team member carousels 
+// Team member carousels 
 const teamGridGroup = document.querySelector('.team-grid-group');
 const teamMembers = document.querySelectorAll('.team-member');
 let offset = 0;
@@ -214,5 +214,46 @@ window.addEventListener('resize', () => {
     if (window.innerWidth > 600) {
         offset = 0; 
         teamGridGroup.style.transform = 'translateX(0)';
+    }
+});
+
+// Review carousels 
+const reviewGridGroup = document.querySelector('.reviews-grid-group');
+const reviews = document.querySelectorAll('.review');
+let offsetReviews = 0;
+let reviewStartX; 
+
+function changeReview(direction) {
+    offset = (direction === 'right' ? offset + 1 : offset - 1 + reviews.length) % reviews.length;
+    reviewGridGroup.style.transform = `translateX(-${offset * (100 / reviews.length)}%)`;
+}
+
+document.querySelector('.arrow-left-review').addEventListener('click', () => {
+    changeReview('right');
+});
+
+document.querySelector('.arrow-right-review').addEventListener('click', () => {
+    changeReview('left');
+});
+
+reviewGridGroup.addEventListener('touchstart', (e) => {
+    reviewStartX = e.touches[0].clientX; 
+}, false);
+
+reviewGridGroup.addEventListener('touchend', (e) => {
+    const endX = e.changedTouches[0].clientX;  
+    const threshold = 50;  
+
+    if (reviewStartX - endX > threshold) {
+        changeReview('right');
+    } else if (endX - reviewStartX > threshold) {
+        changeReview('left');
+    }
+}, false);
+
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 600) {
+        offsetReviews = 0; 
+        reviewGridGroup.style.transform = 'translateX(0)';
     }
 });
