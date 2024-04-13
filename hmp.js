@@ -257,3 +257,76 @@ window.addEventListener('resize', () => {
         reviewGridGroup.style.transform = 'translateX(0)';
     }
 });
+
+
+// Expandable images 
+const expandables = document.querySelectorAll('.image-expandable');
+
+    expandables.forEach(element => {
+        element.addEventListener('click', function() {
+            const imgSrc = this.querySelector('img').src;
+            const overlay = document.createElement('div');
+            overlay.className = 'fullscreen-overlay';
+            
+            const img = document.createElement('img');
+            img.src = imgSrc;
+            img.style.transform = 'scale(0)';
+
+            overlay.appendChild(img);
+
+            document.body.appendChild(overlay);
+
+            overlay.offsetHeight; 
+
+            overlay.style.opacity = '1';
+            img.style.transform = 'scale(1)'; 
+
+            overlay.addEventListener('click', function() {
+                overlay.style.opacity = '0';
+                img.style.transform = 'scale(0)'; 
+                setTimeout(() => {
+                    document.body.removeChild(overlay);
+                }, 300); 
+            });
+        });
+    });
+
+
+// Agreement carousel
+setupOverlay(
+    document.querySelector('.camera-mb-float-button'),
+    document.querySelector('.mobile-overlay'),
+    document.querySelectorAll('.mobile-image'),
+    document.querySelector('.mobile-close')
+);
+
+setupOverlay(
+    document.querySelector('.camera-float-button'),
+    document.querySelector('.desktop-overlay'),
+    document.querySelectorAll('.desktop-image'),
+    document.querySelector('.desktop-close')
+);
+
+function setupOverlay(button, overlay, images, closeBtn) {
+    let currentIndex = 0;
+
+    button.addEventListener('click', () => {
+        overlay.style.display = 'flex';
+        showImage(currentIndex);
+    });
+
+    closeBtn.addEventListener('click', () => {
+        overlay.style.display = 'none';
+    });
+
+    function showImage(index) {
+        images.forEach(img => img.style.display = 'none');
+        images[index].style.display = 'block';
+        images[index].addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % images.length;
+            showImage(currentIndex);
+        });
+    }
+
+    showImage(0);
+}
