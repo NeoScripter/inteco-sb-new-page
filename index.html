@@ -175,7 +175,7 @@
                     <p class="sale-mb-prg">Стандартная стоимость курса - 14 000 руб</p>
                     <p class="sale-mb-prg"><strong>При участии в акции - 0 руб</strong></p>
                     <!-- Здесь нужно будет настроить отправку вебформы с помощью плагина при нажатии на кнопку "принять участие" -->
-                    <button class="sale-mb-invite-btn">принять участие</button>
+                    <button class="sale-mb-invite-btn inv-btn">принять участие</button>
                 </div>
             </div>
             <div class="sale-outer-ctn centering desktop">
@@ -194,16 +194,28 @@
                         <div class="right-subgroup-content">
                             <h2 class="right-subgroup-title">АКЦИЯ</h2>
                             <p>При установке видеонаблюдения под ключ <strong>дарим онлайн курс</strong> по бытовой электрике <br> <span class="sale-subgroup-span">в подарок</span></p>
-                            <button class="invite">
+                            <button class="invite inv-btn">
                                 <!-- Здесь нужно будет настроить отправку вебформы с помощью плагина при нажатии на кнопку "принять участие" -->
                                 принять участие
                             </button>
                         </div>
                     </div>
                 </div>
-                <form action="" class="invite-webform">
-                    
-                </form>
+            </div>
+            <!-- Вот вебформа с готовыми стилями, нужно только настроить ее отправку и появление формы "спасибо" -->
+            <form action="" class="invite-webform">
+                <h4 class="invite-form-title">Оставьте свой номер телефона сейчас и наш специалист свяжется с Вами в ближайшее время!</h4>
+                <div class="invite-form-input-ctn">
+                    <input type="text" id="inv-form-name" class="inv-form-input" name="inv-form-name" placeholder="Ваше имя" required>
+                    <input type="number" id="inv-form-phone" class="inv-form-input"  name="inv-form-phone" placeholder="+7 (999) 999-99-99" required>
+                    <button type="submit" id="inv-form-submit-btn">Отправить</button>
+                </div>
+                <p class="invite-form-prg">Отправляя данные вы соглашаетесь с <a href="https://inteco-sb.ru/policy/" class="inv-form-policy">Политикой конфиденциальности</a></p>
+            </form>
+            <div class="invite-thank-you">
+                <h4 class="thank-you-title">Спасибо за заявку!</h4>
+                <p class="thank-you-prg">Наш специалист свяжется  с Вами в ближайшее время!</p>
+                <button class="thank-you-btn">Вернуться на сайт</button>
             </div>
         </section>    
         <section id="projects">

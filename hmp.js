@@ -34,34 +34,6 @@ emergingCatalogChild.addEventListener('mouseleave', () => {
     }, 200);
 });
 
-
-// Reviews sections gradually appearing and disappearing
-/* document.querySelectorAll('.expand_button').forEach(button => {
-    button.addEventListener('click', function() {
-        const review = this.previousElementSibling;
-        const expandedText = review.querySelector('.expanded');
-        const ellipsis = review.querySelector('.ellipsis');
-
-        if (expandedText.style.display === "none" || !expandedText.style.display) {
-            expandedText.style.display = 'inline';
-            setTimeout(() => { 
-                expandedText.style.opacity = '1'; 
-              }, 150);
-            ellipsis.style.display = 'none';
-            this.textContent = 'Скрыть';
-            button.style.setProperty('--expand-button-after-width', '23%');
-        } else {
-            expandedText.style.opacity = '0'; 
-            setTimeout(() => { 
-                expandedText.style.display = 'none';
-                ellipsis.style.display = 'inline';
-                this.textContent = 'Читать весь отзыв';
-                button.style.removeProperty('--expand-button-after-width');
-              }, 150);
-        }
-    });
-}); */
-
 // Expanding mobile menu
 const mobileExpandedNav = document.querySelector('.nav-mb-unfolding-menu');
 const burgerMenuOpen = document.querySelector('.burger-menu-open');
@@ -270,15 +242,6 @@ const expandables = document.querySelectorAll(selector);
             const overlay = document.createElement('div');
             overlay.className = 'fullscreen-overlay';
             overlay.style.opacity = '0'; 
-            overlay.style.position = 'fixed';
-            overlay.style.top = '0';
-            overlay.style.left = '0';
-            overlay.style.width = '100%';
-            overlay.style.height = '100%';
-            overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
-            overlay.style.display = 'flex';
-            overlay.style.justifyContent = 'center';
-            overlay.style.alignItems = 'center';
             overlay.style.transition = 'opacity 0.3s';
 
             const img = document.createElement('img');
@@ -338,10 +301,6 @@ function setupOverlay(button, overlay, images, closeBtn) {
     function showImage(index) {
         images.forEach(img => img.style.display = 'none');
         images[index].style.display = 'block';
-        setTimeout(() => { 
-            images[index].style.opacity = '1';
-            images[index].style.transform = 'scale(1)';
-        }, 200);
         images[index].addEventListener('click', () => {
             currentIndex = (currentIndex + 1) % images.length;
             showImage(currentIndex);
@@ -429,5 +388,40 @@ function createVideoOverlay(videoPath) {
 document.querySelectorAll('.video-play').forEach(button => {
     button.addEventListener('click', () => {
         createVideoOverlay('assets/video/trailer.mov');
+    });
+});
+
+// Emerging webform 
+const inviteBtns = document.querySelectorAll('.inv-btn');
+const inviteWebform = document.querySelector('.invite-webform');
+
+inviteBtns.forEach(button => {
+    button.addEventListener('click', function() { 
+        const overlay = document.createElement('div');
+        overlay.className = 'fullscreen-overlay';
+        overlay.style.opacity = '0'; 
+        overlay.style.transition = 'opacity 0.3s';
+    
+        inviteWebform.style.transform = 'scale(0)';
+        inviteWebform.style.transition = 'transform 0.5s';
+        inviteWebform.style.display = 'block';
+    
+        overlay.appendChild(inviteWebform);
+        document.body.appendChild(overlay);
+    
+        setTimeout(() => { 
+            overlay.style.opacity = '1';
+            inviteWebform.style.transform = 'scale(1)';
+        }, 200);
+    
+        // Здесь нужно будет добавить механизм закрытия формы и открытия блока с благодарностью в случае успешной валидации вебформы
+        overlay.addEventListener('click', function() {
+            this.style.opacity = '0';
+            inviteWebform.style.transform = 'scale(0)';
+            inviteWebform.style.display = 'none';
+            setTimeout(() => {
+                document.body.removeChild(this);
+            }, 300);
+        });
     });
 });

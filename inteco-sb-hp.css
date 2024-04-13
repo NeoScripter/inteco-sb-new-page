@@ -1443,6 +1443,90 @@ img {
     margin-block: 0.5em;
 }
 
+.invite-webform {
+    width: calc(var(--bnr-price-btn-width) * 2);
+    border: 1.5px solid #025DF8;
+    border-radius: 15px;
+    padding: 2%;
+    display: none;
+    background-color: #fff;
+}
+
+.invite-thank-you {
+    width: calc(var(--bnr-price-btn-width) * 2);
+    border: 1.5px solid #025DF8;
+    border-radius: 15px;
+    padding: 2%;
+    display: none;
+    background-color: #fff;
+}
+
+.invite-thank-you > * {
+    margin-bottom: 10%;
+}
+
+.invite-form-title {
+    font-size: var(--fs-600);
+    font-weight: 500;
+    text-align: center;
+}
+
+.invite-form-input-ctn > * {
+    display: block;
+    margin-block: 6%;
+    width: 100%;
+    height: var(--abt-big-btn-height);
+    border: 1.5px solid #025DF8;
+    border-radius: 10px;
+    text-align: center;
+    font-size: var(--fs-600);
+}
+
+.invite-form-prg {
+    font-size: var(--fs-250);
+    width: 70%;
+    margin-inline: auto;
+    font-weight: 500;
+}
+
+#inv-form-submit-btn {
+    background: var(--header-links-gr);
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.thank-you-title {
+    font-size: var(--fs-800);
+    font-weight: 800;
+    text-align: center;
+}
+
+.thank-you-prg {
+    font-size: var(--fs-600);
+    font-weight: 500;
+    text-align: center;
+}
+
+.thank-you-btn {
+    background: var(--header-links-gr);
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 800;
+    width: 100%;
+    height: var(--abt-big-btn-height);
+    border: 1.5px solid #025DF8;
+    border-radius: 10px;
+    text-align: center;
+    font-size: var(--fs-600);
+}
+
+.inv-form-policy {
+    font-weight: 800;
+    color: black;
+}
+
 /******* About mobile *******/
 
 .about-mb-upper-ctn {
@@ -3117,5 +3201,50 @@ h4.about-mb-subtitle {
     .footer {
         padding-block: 0;
         padding-block: calc(var(--abt-float-bottom-large-fs) * 4);
+    }
+
+    
+    .invite-webform {
+        width: 90%;
+        margin-inline: auto;
+        padding: 4%;
+    }
+
+    .invite-thank-you {
+        width: 90%;
+        margin-inline: auto;
+        padding: 4%;
+    }
+
+    .invite-thank-you > * {
+        margin-bottom: 10%;
+    }
+
+    .invite-form-title {
+        font-size: calc(var(--fs-600) * 2);
+    }
+
+    .invite-form-input-ctn > * {
+        height: calc(var(--abt-big-btn-height) * 2);
+        font-size: calc(var(--fs-600) * 2);
+    }
+
+    .invite-form-prg {
+        font-size: calc(var(--fs-250) * 2);
+    }
+
+    .thank-you-title {
+        font-size: calc(var(--fs-800) * 2);
+        width: 80%;
+        margin-inline: auto;
+    }
+
+    .thank-you-prg {
+        font-size: calc(var(--fs-600) * 2);
+    }
+
+    .thank-you-btn {
+        height: calc(var(--abt-big-btn-height) * 2);
+        font-size: calc(var(--fs-600) * 2);
     }
 }
