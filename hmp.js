@@ -260,37 +260,53 @@ window.addEventListener('resize', () => {
 
 
 // Expandable images 
-const expandables = document.querySelectorAll('.image-expandable');
+
+function setupImageOverlay(selector) {
+const expandables = document.querySelectorAll(selector);
 
     expandables.forEach(element => {
         element.addEventListener('click', function() {
-            const imgSrc = this.querySelector('img').src;
+            const imgSrc = this.querySelector('img').src; // Ensure there's an <img> inside the element
             const overlay = document.createElement('div');
             overlay.className = 'fullscreen-overlay';
-            
+            overlay.style.opacity = '0'; // Start transparent
+            overlay.style.position = 'fixed';
+            overlay.style.top = '0';
+            overlay.style.left = '0';
+            overlay.style.width = '100%';
+            overlay.style.height = '100%';
+            overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+            overlay.style.display = 'flex';
+            overlay.style.justifyContent = 'center';
+            overlay.style.alignItems = 'center';
+            overlay.style.transition = 'opacity 0.3s';
+
             const img = document.createElement('img');
             img.src = imgSrc;
             img.style.transform = 'scale(0)';
+            img.style.transition = 'transform 0.5s';
 
             overlay.appendChild(img);
-
             document.body.appendChild(overlay);
 
-            overlay.offsetHeight; 
-
-            overlay.style.opacity = '1';
-            img.style.transform = 'scale(1)'; 
+            setTimeout(() => { // Ensure CSS is applied
+                overlay.style.opacity = '1';
+                img.style.transform = 'scale(1)';
+            }, 10);
 
             overlay.addEventListener('click', function() {
-                overlay.style.opacity = '0';
-                img.style.transform = 'scale(0)'; 
+                this.style.opacity = '0';
+                img.style.transform = 'scale(0)';
                 setTimeout(() => {
-                    document.body.removeChild(overlay);
-                }, 300); 
+                    document.body.removeChild(this);
+                }, 300);
             });
         });
     });
+}
 
+setupImageOverlay('.image-expandable');
+setupImageOverlay('.review-expandable');
 
 // Agreement carousel
 setupOverlay(
