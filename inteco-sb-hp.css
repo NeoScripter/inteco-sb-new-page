@@ -2301,6 +2301,7 @@ h4.about-mb-subtitle {
 .customers-grid-right {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    gap: 2%;
 }
 
 .partner {
