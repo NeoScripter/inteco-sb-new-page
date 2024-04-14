@@ -316,20 +316,22 @@ function createVideoOverlay(videoPath) {
     overlay.className = 'fullscreen-overlay';
     overlay.style.opacity = '0';
     overlay.style.display = 'flex'; 
+    overlay.style.flexDirection = 'column'; 
 
     const video = document.createElement('video');
     video.setAttribute('src', videoPath);
-    video.style.width = '90%';
-    video.style.height = '90%';
+    video.style.width = '320px';
+    video.style.height = '200px';
     video.style.transform = 'scale(0)'; 
     video.setAttribute('controls', ''); 
-    video.setAttribute('autoplay', ''); 
 
     const closeButton = document.createElement('div');
     closeButton.className = 'close-overlay';
-    closeButton.style.position = 'absolute';
-    closeButton.style.top = '20px';
-    closeButton.style.right = '20px';
+    closeButton.style.position = 'static';
+    closeButton.style.marginLeft = '290px';
+    closeButton.style.marginBottom = '-20px';
+    closeButton.style.top = '40%';
+    closeButton.style.right = '40%';
     closeButton.style.width = '30px';
     closeButton.style.height = '30px';
     closeButton.style.cursor = 'pointer';
@@ -371,9 +373,8 @@ function createVideoOverlay(videoPath) {
     video.addEventListener('click', function(event) {
         event.stopPropagation(); 
     });
-
-    overlay.appendChild(video);
     overlay.appendChild(closeButton);
+    overlay.appendChild(video);
     document.body.appendChild(overlay);
 
     setTimeout(() => {
