@@ -357,7 +357,7 @@ function createVideoOverlay(videoPath) {
     setTimeout(() => {
         overlay.style.opacity = '1';
         video.style.transform = 'scale(1)'; 
-    }, 200); 
+    }, 10); 
 
 
     closeButton.addEventListener('click', function() {
@@ -368,9 +368,8 @@ function createVideoOverlay(videoPath) {
         }, 300);
     });
 
-    // Prevent clicks on the video from propagating to the overlay
     video.addEventListener('click', function(event) {
-        event.stopPropagation(); // This stops the click from reaching the overlay
+        event.stopPropagation(); 
     });
 
     overlay.appendChild(video);
@@ -384,7 +383,6 @@ function createVideoOverlay(videoPath) {
     }, 10);
 }
 
-// Example of setting up a trigger for the overlay
 document.querySelectorAll('.video-play').forEach(button => {
     button.addEventListener('click', () => {
         createVideoOverlay('assets/video/trailer.mov');
@@ -423,5 +421,28 @@ inviteBtns.forEach(button => {
                 document.body.removeChild(this);
             }, 300);
         });
+    });
+});
+
+// Валидация телефона, введенного в вебформу
+document.querySelectorAll('.call-eng-form').forEach(form => {
+    form.addEventListener('submit', function(event) {
+        const phoneInput = this.querySelector('input[type="tel"]');
+        const phoneRegex = /^\+7\s*\(?\d{3}\)?\s*\d{3}-?\d{2}-?\d{2}$/;
+
+        if (!phoneRegex.test(phoneInput.value)) {
+            event.preventDefault(); 
+
+            const originalValue = phoneInput.value; 
+            phoneInput.value = 'Неправильно указан номер'; 
+            phoneInput.classList.add('error'); 
+            phoneInput.disabled = true; 
+
+            setTimeout(() => {
+                phoneInput.value = originalValue; 
+                phoneInput.classList.remove('error'); 
+                phoneInput.disabled = false; 
+            }, 3000);
+        }
     });
 });

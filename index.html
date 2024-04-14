@@ -28,8 +28,8 @@
                 </div>
                 <div class="nav-mb-btm-flex-subgroup">
                     <a href="#" data-phone="+79269615850" class="folding-link copy-phone"><img src="assets/mb-nav/phone-icon.jpg" alt="иконка телефона" class="phone-icon-small-mb"><span class="phone-text">+7 (926) 961-58-50</span></a>
-                    <!-- Здесь нужно сделать заказ звонка точно также как и на старом сайте -->
-                    <a href="" class="order-call">Заказать звонок</a>
+                    <!-- Здесь нужно сделать заказ звонка и валидацию точно также как и на старом сайте -->
+                    <div class="order-call inv-btn">Заказать звонок</div>
                 </div>
             </div>
             <div class="nav-mb-unfolding-menu">
@@ -116,12 +116,13 @@
                             <p class="bnr-mb-float-left-subtitle">выполненных объектов</p>
                         </div>
                     </div>
-                    <div class="bnr-mb-btn-group">
-                        <!-- Здесь нужно будет настроить отправку вебформы с помощью плагина при нажатии на кнопку "вызвать инженера" -->
+                    <!-- Здесь нужно будет настроить отправку вебформы с помощью плагина при нажатии на кнопку "вызвать инженера" -->
+                    <form action="" class="bnr-mb-btn-group call-eng-form">
                         <a href="#calculator" class="bnr-mb-btn price">расчет цены</a>
-                        <input type="number" class="bnr-mb-btn phone" placeholder="+7 (999) 999-99-99" />
-                        <button class="bnr-mb-btn call">вызвать инженера</button>
-                    </div>
+                        <input type="tel" class="bnr-mb-btn phone" placeholder="+7 (999) 999-99-99" required/>
+                        <div class="error-message"></div>
+                        <button type="submit" class="bnr-mb-btn call">вызвать инженера</button>
+                    </form>
                 </div>
             </div>
             <div class="bnr-outer-ctn centering desktop">
@@ -152,11 +153,12 @@
                         </div>
                         <div class="btn-subgroup-outer-ctn">
                             <a href="#calculator" class="bnr-btn price">расчет цены</a>
-                            <div class="btn-subgroup-inner-ctn">
-                                <!-- Здесь нужно будет настроить отправку вебформы с помощью плагина при нажатии на кнопку "вызвать инженера" -->
-                                <input type="number" class="bnr-btn phone" placeholder="+7 (999) 999-99-99" />
-                                <button class="bnr-btn call">вызвать инженера</button>
-                            </div>
+                            <!-- Здесь нужно будет настроить отправку вебформы с помощью плагина при нажатии на кнопку "вызвать инженера" -->
+                            <form action="" class="btn-subgroup-inner-ctn call-eng-form">
+                                <input type="tel" class="bnr-btn phone" placeholder="+7 (999) 999-99-99" required/>
+                                <div class="error-message"></div>
+                                <button type="submit" class="bnr-btn call">вызвать инженера</button>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -590,21 +592,51 @@
                         <p class="customers-subtitle">Компании и бренды, которые доверяют нам много лет</p>
                     </div>
                     <div class="customers-grid-right">
-                        <div class="partner">WILDBERRIES</div>
-                        <div class="partner">WILDBERRIES</div>
-                        <div class="partner">WILDBERRIES</div>
-                        <div class="partner">WILDBERRIES</div>
-                        <div class="partner">WILDBERRIES</div>
-                        <div class="partner">WILDBERRIES</div>
-                        <div class="partner">WILDBERRIES</div>
-                        <div class="partner">WILDBERRIES</div>
-                        <div class="partner">WILDBERRIES</div>
-                        <div class="partner">WILDBERRIES</div>
-                        <div class="partner">WILDBERRIES</div>
-                        <div class="partner">WILDBERRIES</div>
-                        <div class="partner">WILDBERRIES</div>
-                        <div class="partner">WILDBERRIES</div>
-                        <div class="partner">WILDBERRIES</div>
+                        <div class="partner">
+                            <img src="assets/brands/1.jpg" alt="Эвалар">
+                        </div>
+                        <div class="partner">
+                            <img src="assets/brands/2.jpg" alt="Зеленый сок">
+                        </div>
+                        <div class="partner">
+                            <img src="assets/brands/3.jpg" alt="Галактика">
+                        </div>
+                        <div class="partner">
+                            <img src="assets/brands/4.jpg" alt="Русская теннисная академия">
+                        </div>
+                        <div class="partner">
+                            <img src="assets/brands/5.jpg" alt="Корпорация МСП">
+                        </div>
+                        <div class="partner">
+                            <img src="assets/brands/7.jpg" alt="Sela">
+                        </div>
+                        <div class="partner">
+                            <img src="assets/brands/7-1.jpg" alt="Гостиница Будапешт">
+                        </div>
+                        <div class="partner">
+                            <img src="assets/brands/8.jpg" alt="Bartholet">
+                        </div>
+                        <div class="partner">
+                            <img src="assets/brands/9.jpg" alt="Ahmad Tea London">
+                        </div>
+                        <div class="partner">
+                            <img src="assets/brands/10.jpg" alt="Автобан">
+                        </div>
+                        <div class="partner">
+                            <img src="assets/brands/11.jpg" alt="Афимолл сити">
+                        </div>
+                        <div class="partner">
+                            <img src="assets/brands/12.jpg" alt="Буйский химический завод">
+                        </div>
+                        <div class="partner">
+                            <img src="assets/brands/13.jpg" alt="Кей техника и человек">
+                        </div>
+                        <div class="partner">
+                            <img src="assets/brands/14.jpg" alt="Wildberries">
+                        </div>
+                        <div class="partner">
+                            <img src="assets/brands/15.jpg" alt="ЦДС строим для жизни">
+                        </div>
                     </div>
                 </div>
             </div>

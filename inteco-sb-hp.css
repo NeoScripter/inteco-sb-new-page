@@ -346,10 +346,11 @@ img {
 
 .nav-link {
     word-wrap: none;
-    font-weight: 600;
+    font-weight: 500;
     color: #000;
     text-decoration: none;
     font-size: var(--fs-400);
+    letter-spacing: 0.08em;
 }
 
 .main-logo {
@@ -539,6 +540,7 @@ img {
     text-decoration-color: #545756;
     text-decoration-thickness: 2px;
     text-underline-offset: 0.5em;
+    cursor: pointer;
 }
 
 .phone-icon-small-mb {
@@ -547,6 +549,21 @@ img {
 
 .nav-mb-btm-flex-subgroup {
     display: block;
+}
+
+input[type="tel"]::-webkit-inner-spin-button,
+input[type="tel"]::-webkit-outer-spin-button {
+    -webkit-appearance: none !important;
+    margin: 0 !important;
+}
+
+input[type="tel"] {
+    -moz-appearance: textfield; 
+}
+
+input[type="tel"].error {
+    border: 2px solid red; 
+    color: red;
 }
 
 /****** Banner section *******/
@@ -2287,12 +2304,15 @@ h4.about-mb-subtitle {
 }
 
 .partner {
-    font-size: calc(var(--fs-800) * 0.8);
-    font-weight: 600;
+    width: 100%;
+    height: 100%;
 }
 
-.partner:first-of-type {
-    color: rgb(149, 98, 199);
+.partner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
 /****** Reviews section *******/
